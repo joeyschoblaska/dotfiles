@@ -64,4 +64,7 @@ rm -rf ~/.config/bat
 cp -r bat ~/.config/
 
 
+echo "installing slate config"
+cp dots/slate.js ~/.slate.js
+
 echo "done!"
