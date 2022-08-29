@@ -75,6 +75,12 @@ bat cache --build
 brew install --cask mattr-slate
 ```
 
+### hammerspoon and karabiner
+* https://github.com/Hammerspoon/hammerspoon
+* https://karabiner-elements.pqrs.org/
+
+Set the 1Password shortcut to "CMD + ALT + CTRL + P". The hammerspoon config maps "CMD + \" to send that shortcut IN CHROME ONLY (otherwise, "CMD + \" triggers 1Password from any app and it's super annoying).
+
 ## nvim
 To sync packages after changing plugins, run `:PackerSync`
 
