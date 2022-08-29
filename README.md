@@ -4,6 +4,9 @@
 ### tmux
 https://linuxize.com/post/getting-started-with-tmux/#installing-tmux
 
+### fzf
+* https://github.com/junegunn/fzf
+
 #### Ubuntu
 May need to manually load keybindings (like `ctrl-r`) in `.bashrc_local`: https://unix.stackexchange.com/questions/665689/fzf-ctlr-r-not-triggering-history-search-on-command-line
 
