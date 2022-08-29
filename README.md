@@ -33,6 +33,9 @@ Run `checkhealth` to see what providers are needed.
 ### nerd-fonts
 Use `Droid Sans Mono Slashed Nerd Font.ttf` to get glyphs in some LSP symbol menus (see `lspkind`).
 
+### lazygit
+* https://github.com/jesseduffield/lazygit
+
 ### LSP
 * [Solargraph: A Ruby Language Server](https://solargraph.org/)
 * [typescript-language-server/typescript-language-server: TypeScript & JavaScript Language Server](https://github.com/typescript-language-server/typescript-language-server)
@@ -54,6 +57,8 @@ If delta is giving a "memory allocation of <big number> bytes failed" error, see
 
 
 ### bat
+* https://github.com/sharkdp/bat
+
 After changing any themes or other settings, you probably need to re-build the bat cache:
 
 ```
