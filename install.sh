@@ -67,4 +67,20 @@ cp -r bat ~/.config/
 echo "installing slate config"
 cp dots/slate.js ~/.slate.js
 
+
+if [ -d "$HOME/Library/Application Support/Karabiner" ]; then
+  echo "installing karabiner config (old format)"
+  cp karabiner/private.xml "$HOME/Library/Application Support/Karabiner/private.xml"
+elif [ -d "$HOME/.config/Karabiner" ]; then
+  echo "installing karabiner config"
+  # mkdir -p $HOME/Library/KeyBindings/ # this was in my old install script but not sure if I need it
+  cp karabiner/karabiner.json $HOME/.config/karabiner/
+
+  echo "installing hammerspoon config"
+  mkdir -p $HOME/.hammerspoon
+  cp hammerspoon/init.lua $HOME/.hammerspoon/
+else
+  echo "skipping karabiner config"
+fi
+
 echo "done!"
