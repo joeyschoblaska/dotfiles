@@ -1,0 +1,59 @@
+# set prompt
+PS1="\u@\h:\W \$ "
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+PATH=$PATH\:/usr/games/bin ; export PATH
+PATH="$PATH:$(yarn global bin)" ; export PATH
+[ -f /opt/homebrew/bin/brew ] && eval "$(/opt/homebrew/bin/brew shellenv)"
+
+unamestr=`uname`
+
+if [[ "$unamestr" == 'Darwin' ]]; then
+  export PGHOST=localhost
+  alias pico8="/Applications/PICO-8.app/Contents/MacOS/pico8 -windowed 1 -width 550 -height 550"
+  alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
+fi
+
+export GOPATH=$HOME/go
+export GOBIN=$GOPATH/bin
+export PATH=$PATH:${GOPATH//://bin:}/bin
+export PATH=$HOME/.cargo/bin:$PATH
+export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
+export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
+export PATH=$HOME/.local/bin:$PATH
+export PATH=$HOME/projects/scripts/bin:$PATH
+export BASH_SILENCE_DEPRECATION_WARNING=1
+export RIPGREP_CONFIG_PATH=$HOME/.ripgreprc
+export LYNX_CFG=$HOME/.lynxrc
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+[ -f $HOME/.rvm/scripts/rvm ] && source $HOME/.rvm/scripts/rvm
+
+export EDITOR=nvim
+alias vim="nvim"
+
+alias be="bundle exec "
+alias lynx="lynx -accept_all_cookies"
+
+alias de="docker-compose exec "
+alias dr="docker-compose run "
+
+alias ibrew="arch -x86_64 /usr/local/homebrew/bin/brew"
+alias mbrew="arch -arm64e /opt/homebrew/bin/brew"
+alias archi="arch -x86_64"
+alias archm="arch -arm64e"
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+# https://github.com/rvm/rvm/issues/4968#issuecomment-755456773
+export LDFLAGS="-L/opt/homebrew/opt/libffi/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/libffi/include"
+export PKG_CONFIG_PATH="/opt/homebrew/opt/libffi/lib/pkgconfig"
+
+source ~/.git-completion.bash
+
+[ -f ~/.bashrc_local ] && source ~/.bashrc_local

@@ -1,0 +1,40 @@
+#!/bin/bash
+
+# Toggle a pane in tmux: https://superuser.com/a/1456552
+# How do you hide a tmux pane? https://unix.stackexchange.com/a/145866
+
+# tmux cheat sheet
+#   show (show-options)
+#     -w: for window (as opposed to server, session, or pane-level options)
+#     -q: do not return error if option is unset
+#     -v: show value only
+#   lsp (list-panes)
+#     -F: specify the format of each line
+#   set (set-option)
+#     -w: (same as show)
+#     -u: unset the option
+#   splitw (split-window)
+#     -P: print information about the new window after it has been created
+#   breakp (break-pane): break a pane out into a new window
+#     -d: do not focus new window after creating it
+#     -s: source pane to break
+#   joinp (join-pane): insert pane into current window in a new split
+#     -s: (same as breakp)
+#     -l: size of new pane
+
+# @togglepane is a user option that will store the tmux id of the togglepane
+# pane. it's a window-level variable (so each window in a session can have its
+# own togglepane)
+P=$(tmux show -wqv @togglepane)
+
+if [ -n "$P" ] && tmux lsp -F '#{pane_id}' | grep -q ^$P; then
+  # @togglepane is set (-n: "not blank") and pane is visible in current window
+  tmux breakp -d -s $P
+elif [ -n "$P" ] && tmux lsp -s -F '#{pane_id}' | grep -q ^$P; then
+  # @togglepane is set and pane exists somewhere in the session (-s)
+  tmux joinp -s $P -l 10
+else
+  # @togglepane died or is not set
+  P=$(tmux splitw -P -F'#{pane_id}' -l 10)
+  tmux set -w @togglepane "$P"
+fi

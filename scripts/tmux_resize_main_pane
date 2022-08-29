@@ -1,0 +1,17 @@
+#!/bin/bash
+
+W=$(tmux display -p '#{window_width}')
+H=$(tmux display -p '#{window_height}')
+
+W_RESIZE=$(expr $W \* 2 / 3)
+
+# leave at least 65 cols for remaining panes
+[[ $(expr $W - $W_RESIZE) -lt 65 ]] && W_RESIZE=$(expr $W - 65)
+
+# don't leave more than 100 cols for remaining panes
+[[ $(expr $W - $W_RESIZE) -gt 100 ]] && W_RESIZE=$(expr $W - 100)
+
+H_RESIZE=$(expr $H - 10)
+
+tmux resize-pane -x $W_RESIZE
+tmux resize-pane -y $H_RESIZE
