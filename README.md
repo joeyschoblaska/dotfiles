@@ -58,6 +58,15 @@ bat cache --clear
 bat cache --build
 ```
 
+### slate
+* https://github.com/mattr-/slate
+
+(TODO: this project is no longer maintened and it's recommended to move to Hammerspoon)
+
+```
+brew install --cask mattr-slate
+```
+
 ## nvim
 To sync packages after changing plugins, run `:PackerSync`
 
