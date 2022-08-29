@@ -79,7 +79,6 @@ elif [ -d "$HOME/.config/Karabiner" ]; then
   rm -rf $HOME/.hammerspoon
   mkdir -p $HOME/.hammerspoon
   cp -r hammerspoon/ $HOME/.hammerspoon/
-
 else
   echo "skipping karabiner config"
 fi
