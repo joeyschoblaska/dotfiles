@@ -1,0 +1,65 @@
+[user]
+  name = Joey Schoblaska
+  email = joey.schoblaska@gusto.com
+[core]
+  excludesfile = /Users/joey.schoblaska/.gitignore
+  pager=delta
+  hooksPath = /Users/joey.schoblaska/.gusto/githooks
+[branch "main"]
+  remote = origin
+  merge = refs/heads/main
+  rebase = true
+[help]
+  autocorrect = 1
+[push]
+  default = current
+[pull]
+  ff = only
+[init]
+  defaultBranch = main
+[interactive]
+  diffFilter = delta --color-only # part of necessary delta config
+[add.interactive]
+  useBuiltin = false # part of necessary delta config # required for git 2.37.0
+[merge]
+  conflictstyle = diff3 # part of necessary delta config
+[diff]
+  colorMoved = default # part of necessary delta config
+[color]
+  ui = auto
+[color "branch"]
+  current = yellow reverse
+  local = yellow
+  remote = green
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
+[color "status"]
+  added = green
+  changed = yellow
+  untracked = cyan
+[delta]
+  navigate = true    # use n and N to move between diff sections
+  light = false      # set to true if you're in a terminal w/ a light background color (e.g. the default macOS terminal)
+  syntax-theme = Catppuccin-mocha
+  file-decoration-style = none
+  file-style = omit
+  hunk-style = "#fab387"
+  hunk-header-decoration-style = "#cdd6f4" box ul
+  hunk-header-file-style = "#fab387"
+  hunk-header-line-number-style = "#fab387"
+  hunk-header-style = file line-number syntax
+  line-numbers = true
+  line-numbers-left-style = "#6c7086"
+  line-numbers-minus-style = "#f38ba8"
+  line-numbers-plus-style = "#a6e3a1"
+  line-numbers-right-style = "#6c7086"
+  line-numbers-zero-style = "#cdd6f4"
+  minus-emph-style = "#f38ba8" "#7e4f65"
+  minus-style = "#f38ba8" "#33293a"
+  plus-emph-style = "#a6e3a1" "#4e6356"
+  plus-style = "#a6e3a1" "#2c323a"
+[credential]
+  helper = osxkeychain

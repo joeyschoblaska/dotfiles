@@ -1,8 +1,14 @@
 #!/bin/bash
 
+
+[ -d "$HOME/.gusto" ] && echo "gusto laptop detected"
+
+#################################################################################
+
 echo "installing nvim config"
+
 rm -rf ~/.vim
-rm -rf ~/.nvim
+[ ! -d "$HOME/.gusto" ] && rm -rf ~/.nvim
 
 if [ -d "$HOME/.config/nvim/plugin" ]; then
   echo "...compiled plugins detected"
@@ -28,17 +34,28 @@ if [ -f "$HOME/.config/nvim_local.lua" ]; then
   mv ~/.config/nvim_local.lua ~/.config/nvim/lua/local.lua
 fi
 
+#################################################################################
 
 echo "installing tmux config"
+
 cp dots/tmux.conf ~/.tmux.conf
 
+#################################################################################
 
 echo "installing prettier config"
-cp dots/prettierrc ~/.prettierrc
 
+[ ! -d "$HOME/.gusto" ] && cp dots/prettierrc ~/.prettierrc
+
+#################################################################################
 
 echo "installing bash config"
-cp dots/bash_profile ~/.bash_profile
+
+if [ -d "$HOME/.gusto" ]; then
+  grep -q bashrc ~/.bash_profile || echo "[ -r ${HOME}/.bashrc ] && source ${HOME}/.bashrc" >> ~/.bash_profile
+else
+  cp dots/bash_profile ~/.bash_profile
+fi
+
 cp dots/bashrc ~/.bashrc
 cp dots/git-completion.bash ~/.git-completion.bash
 
@@ -47,26 +64,40 @@ if [ -d "$HOME/Library/Application Support/lazygit" ]; then
   cp dots/lazygit.yml ~/Library/Application\ Support/lazygit/config.yml
 fi
 
+#################################################################################
 
-echo "installing scripts"
+echo "installing dotscripts"
+
 rm -rf ~/.config/dotscripts
 mkdir -p ~/.config/dotscripts
 cp -r scripts/ ~/.config/dotscripts
 
+#################################################################################
 
 echo "installing git config"
-cp dots/gitconfig ~/.gitconfig
+
+if [ -d "$HOME/.gusto" ]; then
+  cp dots/gitconfig_gusto ~/.gitconfig
+else
+  cp dots/gitconfig ~/.gitconfig
+fi
+
 cp dots/gitignore ~/.gitignore
 
+#################################################################################
 
 echo "installing bat config"
+
 rm -rf ~/.config/bat
 cp -r bat ~/.config/
 
+#################################################################################
 
 echo "installing slate config"
+
 cp dots/slate.js ~/.slate.js
 
+#################################################################################
 
 if [ -d "$HOME/Library/Application Support/Karabiner" ]; then
   echo "installing karabiner config (old format)"
@@ -82,5 +113,7 @@ elif [ -d "$HOME/.config/Karabiner" ]; then
 else
   echo "skipping karabiner config"
 fi
+
+#################################################################################
 
 echo "done!"
