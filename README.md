@@ -18,10 +18,10 @@ sudo npm install --global yarn
 ```
 
 ### ripgrep
-**rg:** https://github.com/BurntSushi/ripgrep#installation
+* https://github.com/BurntSushi/ripgrep#installation
 
 ### fd
-**fd:** https://github.com/sharkdp/fd
+* https://github.com/sharkdp/fd
 
 ### nvim
 Run `checkhealth` to see what providers are needed.
