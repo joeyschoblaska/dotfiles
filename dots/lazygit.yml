@@ -10,5 +10,6 @@ git:
   paging:
     colorArg: always
     pager: delta --dark --paging=never
+  disableForcePushing: true
 
 promptToReturnFromSubprocess: false # suppresses a terminal message when re-entering lazygit after editing a file
