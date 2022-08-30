@@ -25,6 +25,7 @@ export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
 export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
 export PATH=$HOME/.local/bin:$PATH
 export PATH=$HOME/projects/scripts/bin:$PATH
+export PATH=$HOME/.config/dotscripts:$PATH
 export BASH_SILENCE_DEPRECATION_WARNING=1
 export RIPGREP_CONFIG_PATH=$HOME/.ripgreprc
 export LYNX_CFG=$HOME/.lynxrc

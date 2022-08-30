@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# tm <dir> = start a new tmux session named <dir> with cwd of <dir>
+
+if [ "$1" != "" ]; then
+  cd $1
+fi
+
+DIR_NAME=${PWD##*/}
+
+tmux has-session -t $DIR_NAME 2>/dev/null
+if [ $? -eq 1 ]; then
+  tmux new -s $DIR_NAME # \; split-window -h \; select-pane -t 0 \; split-window \; resize-pane -x 85 \; select-pane -t 2
+else
+  tmux attach -t $DIR_NAME
+fi
