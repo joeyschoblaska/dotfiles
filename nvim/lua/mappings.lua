@@ -23,8 +23,8 @@ local mappings = {
 	{ "n", "<leader>gs", ":Telescope git_status<CR>" },
 	{ "n", "<leader>gc", ":Telescope git_commits<CR>" },
 	{ "n", "<leader>gb", ":Telescope git_branches<CR>" },
-	{ "n", "<leader>nt", ":Telescope find_files cwd=$HOME/Dropbox/notes/obsidian<CR>" },
-	{ "n", "<leader>na", ":Telescope live_grep_args cwd=$HOME/Dropbox/notes/obsidian<CR>" },
+	{ "n", "<leader>nt", ":Telescope find_files cwd=$NOTES_DIR<CR>" },
+	{ "n", "<leader>na", ":Telescope live_grep_args cwd=$NOTES_DIR<CR>" },
 
 	-- [a f]ile
 	{ "v", "af", ":<C-U>silent! normal! ggVG<CR>", { noremap = true } },
