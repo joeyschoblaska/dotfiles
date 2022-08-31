@@ -12,6 +12,7 @@
 -- LSP
 -- LSP setup (document and workspace symbols; references; def; nvim-cmp (see cmp-nvim-lsp))
 -- mason for server management
+-- new Ruby debugger stuff? https://blog.testdouble.com/talks/2022-08-22-debugging-ruby-on-rails-with-vscode/
 --
 -- GENERAL EDITING
 -- better search highlighting (highlight all matches while typing; clear on ESC or anything evanseco clears on)
