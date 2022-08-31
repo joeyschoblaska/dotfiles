@@ -24,6 +24,7 @@ return require("packer").startup(function(use)
 	use(require("plugins.toggleterm")) -- wrapper around :term; used for lazygit
 	use(require("plugins.colorizer")) -- highlight hex values with their corresponding color
 	use(require("plugins.slime")) -- send text to another tmux window
+	use(require("plugins.octo")) -- github issues and pull requests in neovim
 
 	-- syntax
 	use(require("plugins.treesitter")) -- syntax parsing for highlighting and indenting
