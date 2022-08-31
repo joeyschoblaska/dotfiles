@@ -24,6 +24,7 @@
 -- maybe add JoosepAlviste/nvim-ts-context-commentstring once this is fixed: https://github.com/neovim/neovim/issues/12587
 -- some way to lock versions and do manual upgrades - I don't want to be suprised by breaking changes when I need to get work done
 -- treesitter-powered pair matching? https://github.com/andymass/vim-matchup
+-- fidget? ("LSP eye candy for the impatient"): https://github.com/j-hui/fidget.nvim
 --
 -- OTHER
 -- snippets? (nvchad: luasnip, friendly-snippets, cmp_luasnip; lunarvim: ?)
