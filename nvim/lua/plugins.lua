@@ -13,6 +13,7 @@ end
 return require("packer").startup(function(use)
 	use("wbthomason/packer.nvim") -- without this, packer will try to delete itself on sync
 
+	use(require("plugins.telescope")) -- framework for fuzzy finding / picking
 	use(require("plugins.gitsigns")) -- highlighting number col with git status
 	use(require("plugins.lualine")) -- statusline
 	use(require("plugins.tabline")) -- tabline
@@ -42,10 +43,6 @@ return require("packer").startup(function(use)
 	use("neovim/nvim-lspconfig")
 	use(require("plugins.null_ls"))
 	use(require("plugins.lsp_format")) -- hooks into null-ls for formatting on save
-
-	-- telescope
-	use(require("plugins.telescope"))
-	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
 
 	if packer_bootstrap then
 		require("packer").sync()

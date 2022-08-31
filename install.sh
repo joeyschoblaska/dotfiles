@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 [ -d "$HOME/.gusto" ] && echo "gusto laptop detected"
 
 #################################################################################
@@ -58,6 +57,8 @@ fi
 
 cp dots/bashrc ~/.bashrc
 cp dots/git-completion.bash ~/.git-completion.bash
+
+#################################################################################
 
 if [ -d "$HOME/Library/Application Support/lazygit" ]; then
   echo "installing lazygit config"
