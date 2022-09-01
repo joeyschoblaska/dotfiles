@@ -35,7 +35,7 @@
 -- crib from lvim lualine (or at least put some LSP stuff in there) https://github.com/LunarVim/LunarVim/blob/rolling/lua/lvim/core/lualine/styles.lua#L68
 -- (persistent?) scratch buffers
 -- start a new `dotfiles` project for updated configs; push to public repo; archive current project in private `dotfiles-old` repo
--- hide col left of numbers unless it's being used by diagnostics or whatever
+-- hide col left of numbers unless it's being used by diagnostics or whatever? https://www.reddit.com/r/neovim/comments/oiyq17/comment/hkky89o/?utm_source=reddit&utm_medium=web2x&context=3
 -- weird idea, but a plugin that lets me show a little pop-up window on demand (this, probably: https://github.com/nvim-lua/popup.nvim). I could map one to `?` that has keymaps and hints for how to use my config that someone who was pairing with me could reference
 -- use https://github.com/christoomey/vim-tmux-navigator - maybe use karabiner / qmk to make tab work as a modifier key for hjkl
 -- define a function that does `rm -rf ~/.local/share/nvim` and PackerSync?
