@@ -41,7 +41,7 @@ return require("packer").startup(function(use)
 	use({ "catppuccin/nvim", as = "catppuccin" })
 
 	-- lsp
-	use("neovim/nvim-lspconfig")
+	use(require("plugins.nvim_lspconfig"))
 	use(require("plugins.null_ls")) -- allows non-LSP sources (eg, prettier) to hook into nvim's LSP client
 	use(require("plugins.lsp_format")) -- hooks into null-ls for formatting on save
 
