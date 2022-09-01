@@ -10,3 +10,6 @@ vim.cmd("hi TabLineFill guibg=#181825")
 
 -- cursorline highlights line number only
 vim.cmd("hi clear CursorLine")
+
+-- make comments a little brighter
+vim.cmd("hi Comment guifg=#6c7086") -- default: #585b70
