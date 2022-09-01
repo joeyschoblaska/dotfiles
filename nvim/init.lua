@@ -27,6 +27,7 @@
 -- maybe add JoosepAlviste/nvim-ts-context-commentstring once this is fixed: https://github.com/neovim/neovim/issues/12587
 -- some way to lock versions and do manual upgrades - I don't want to be suprised by breaking changes when I need to get work done
 -- treesitter-powered pair matching? https://github.com/andymass/vim-matchup
+-- use fzf-lua for faster file-finding, maybe as a configurable option per-project?
 --
 -- OTHER
 -- snippets? (nvchad: luasnip, friendly-snippets, cmp_luasnip; lunarvim: ?)
