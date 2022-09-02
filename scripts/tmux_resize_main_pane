@@ -3,7 +3,7 @@
 W=$(tmux display -p '#{window_width}')
 H=$(tmux display -p '#{window_height}')
 
-W_RESIZE=$(expr $W \* 2 / 3)
+W_RESIZE=$(expr $W \* 3 / 4)
 
 # leave at least 65 cols for remaining panes
 [[ $(expr $W - $W_RESIZE) -lt 65 ]] && W_RESIZE=$(expr $W - 65)
