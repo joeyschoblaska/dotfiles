@@ -18,7 +18,7 @@ local mappings = {
 	{ "n", "<leader>a", ":Telescope live_grep_args<CR>" },
 	{ "v", "<leader>a", [["9y<ESC>:Telescope live_grep_args default_text=<c-r>9<CR>]] }, -- yank selection into reg 9 and grep for it
 	{ "n", "<leader>km", ":Telescope keymaps<CR>" },
-	{ "n", "<leader>be", ":Telescope buffers sort_mru=true<CR>" },
+	{ "n", "<leader>be", ":Telescope buffers<CR>" },
 	{ "n", "<leader>fb", ":Telescope file_browser<CR>" },
 	{ "n", "<leader>fo", ":Telescope file_browser files=false<CR>" }, -- open browser in folder mode
 	{ "n", "<leader>ff", ":Telescope file_browser path=%:p:h select_buffer=true<CR>" }, -- open current file in browser

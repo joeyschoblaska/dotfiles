@@ -28,6 +28,22 @@ return {
 					preview_cutoff = 120,
 				},
 			},
+
+			pickers = {
+				buffers = {
+					sort_mru = true,
+				},
+
+				find_files = {
+					find_command = { "rg", "--files", "--hidden", "-g", "!.git" }, -- show hidden files but ignore the .git dir
+				},
+			},
+
+			extensions = {
+				file_browser = {
+					hidden = true,
+				},
+			},
 		})
 
 		telescope.load_extension("fzf")
