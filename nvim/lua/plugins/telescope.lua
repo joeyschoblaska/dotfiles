@@ -11,6 +11,25 @@ return {
 	config = function()
 		local telescope = require("telescope")
 
+		telescope.setup({
+			defaults = {
+				sorting_strategy = "ascending",
+				layout_config = {
+					horizontal = {
+						prompt_position = "top",
+						preview_width = 0.55,
+						results_width = 0.8,
+					},
+					vertical = {
+						mirror = false,
+					},
+					width = 0.95,
+					height = 0.95,
+					preview_cutoff = 120,
+				},
+			},
+		})
+
 		telescope.load_extension("fzf")
 		telescope.load_extension("live_grep_args")
 		telescope.load_extension("file_browser")
