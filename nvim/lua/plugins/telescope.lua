@@ -27,6 +27,7 @@ return {
 					height = 0.95,
 					preview_cutoff = 120,
 				},
+				file_ignore_patterns = { "^.git/" },
 			},
 
 			pickers = {
@@ -35,7 +36,7 @@ return {
 				},
 
 				find_files = {
-					find_command = { "rg", "--files", "--hidden", "-g", "!.git" }, -- show hidden files but ignore the .git dir
+					hidden = true,
 				},
 			},
 
