@@ -9,8 +9,10 @@ return {
 	},
 
 	config = function()
-		require("telescope").load_extension("fzf")
-		require("telescope").load_extension("live_grep_args")
-		require("telescope").load_extension("file_browser")
+		local telescope = require("telescope")
+
+		telescope.load_extension("fzf")
+		telescope.load_extension("live_grep_args")
+		telescope.load_extension("file_browser")
 	end,
 }
