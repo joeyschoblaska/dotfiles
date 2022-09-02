@@ -131,8 +131,5 @@ return {
 				end,
 			},
 		})
-
-		-- https://github.com/windwp/nvim-autopairs#you-need-to-add-mapping-cr-on-nvim-cmp-setupcheck-readmemd-on-nvim-cmp-repo
-		cmp.event:on("confirm_done", require("nvim-autopairs.completion.cmp").on_confirm_done())
 	end,
 }
