@@ -14,6 +14,7 @@ return require("packer").startup(function(use)
 	use("wbthomason/packer.nvim") -- without this, packer will try to delete itself on sync
 
 	use(require("plugins.telescope")) -- framework for fuzzy finding / picking
+	use(require("plugins.fzf_lua")) -- faster file finder, good for large repos
 	use(require("plugins.gitsigns")) -- highlighting number col with git status
 	use(require("plugins.lualine")) -- statusline
 	use(require("plugins.tabline")) -- tabline
