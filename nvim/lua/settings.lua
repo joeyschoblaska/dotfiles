@@ -1,5 +1,6 @@
 local default_settings = {
-	catppuccin_flavor = "mocha",
+	before_config = function() end,
+	after_config = function() end,
 }
 
 local present, _ = pcall(require, "local")

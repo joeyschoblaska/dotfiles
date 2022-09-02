@@ -42,6 +42,10 @@
 -- use https://github.com/christoomey/vim-tmux-navigator - maybe use karabiner / qmk to make tab work as a modifier key for hjkl
 -- define a function that does `rm -rf ~/.local/share/nvim` and PackerSync?
 
+local settings = require("settings")
+
+settings.before_config()
+
 require("plugins")
 
 require("opts")
@@ -49,5 +53,4 @@ require("colors.catppuccin")
 require("mappings")
 require("autocmds")
 
--- when called via pcall, require will not raise an error if file does not exist
-pcall(require, "local")
+settings.after_config()
