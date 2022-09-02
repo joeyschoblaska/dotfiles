@@ -20,7 +20,8 @@ local mappings = {
 	{ "n", "<leader>km", ":Telescope keymaps<CR>" },
 	{ "n", "<leader>be", ":Telescope buffers sort_mru=true<CR>" },
 	{ "n", "<leader>fb", ":Telescope file_browser<CR>" },
-	{ "n", "<leader>ff", ":Telescope file_browser path=%:p:h select_buffer=true<CR>" },
+	{ "n", "<leader>fo", ":Telescope file_browser files=false<CR>" }, -- open browser in folder mode
+	{ "n", "<leader>ff", ":Telescope file_browser path=%:p:h select_buffer=true<CR>" }, -- open current file in browser
 	{ "n", "<leader>gs", ":Telescope git_status<CR>" },
 	{ "n", "<leader>gc", ":Telescope git_commits<CR>" },
 	{ "n", "<leader>gb", ":Telescope git_branches<CR>" },
