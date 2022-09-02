@@ -8,6 +8,7 @@
 -- FORMATTING
 -- range formatting, or format only new code (so I can use prettier / whatever in codebases that don't have a fixer set up)
 -- per-project formatting configuration (this? https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTIN_CONFIG.md#conditional-sources or this? https://prettier.io/docs/en/configuration.html#configuration-overrides or this? https://github.com/tamago324/nlsp-settings.nvim)
+-- https://www.npmjs.com/package/eslint_d
 --
 -- LSP
 -- LSP setup (document and workspace symbols; references; def; nvim-cmp (see cmp-nvim-lsp))
