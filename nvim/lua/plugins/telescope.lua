@@ -43,6 +43,7 @@ return {
 			extensions = {
 				file_browser = {
 					hidden = true,
+					file_ignore_patterns = { ".git" }, -- the "^.git/" pattern wasn't working for some reason...
 				},
 			},
 		})
