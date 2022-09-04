@@ -1,4 +1,4 @@
-local default_settings = {
+local settings = {
 	before_config = function() end,
 	after_config = function() end,
 }
@@ -9,8 +9,8 @@ if present then
 	local overrides = require("local")
 
 	for k, v in pairs(overrides) do
-		default_settings[k] = v
+		settings[k] = v
 	end
 end
 
-return default_settings
+return settings
