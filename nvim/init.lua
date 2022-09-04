@@ -34,6 +34,7 @@
 -- some way to lock versions and do manual upgrades - I don't want to be suprised by breaking changes when I need to get work done
 -- treesitter-powered pair matching? https://github.com/andymass/vim-matchup
 -- use fzf-lua for faster file-finding, maybe as a configurable option per-project?
+--   possible to configure how fzf-lua abbreviates filesnames in the left pane? I want to always see the pack at least
 -- I think evanseco (or some other plugin / setting) is messing with the default # and * behavior...
 --
 -- OTHER
