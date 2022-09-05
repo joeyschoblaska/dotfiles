@@ -24,7 +24,6 @@
 --
 -- GENERAL EDITING
 -- better search highlighting (highlight all matches while typing; clear on ESC or anything evanseco clears on)
--- syntax highlighting in markdown code blocks
 -- for markdown editing, auto-insert bullets when starting a new line in a list
 --
 -- PLUGINS
