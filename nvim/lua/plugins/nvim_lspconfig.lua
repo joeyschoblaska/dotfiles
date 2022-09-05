@@ -3,6 +3,7 @@ return {
 
 	config = function()
 		local lspconfig = require("lspconfig")
+		local settings = require("settings")
 
 		local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
 
@@ -52,7 +53,7 @@ return {
 			buf_set_keymap("n", "<space>f", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
 		end
 
-		local servers = { "solargraph" }
+		local servers = settings.nvim_lsp_servers or {}
 
 		for _, lsp in ipairs(servers) do
 			lspconfig[lsp].setup({

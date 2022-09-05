@@ -5,9 +5,10 @@ return {
 	after = { "lsp-format.nvim" },
 	config = function()
 		local null_ls = require("null-ls")
+		local settings = require("settings")
 
 		null_ls.setup({
-			sources = {
+			sources = settings.null_ls_sources or {
 				null_ls.builtins.formatting.stylua,
 				null_ls.builtins.formatting.prettierd.with({
 					filetypes = {

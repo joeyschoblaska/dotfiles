@@ -17,6 +17,7 @@
 --
 -- LSP
 -- LSP setup (document and workspace symbols; references; def; nvim-cmp (see cmp-nvim-lsp))
+--   in progress: see nvim_lspconfig.lua. need to move those keymappings and have easy-to-config per-project settings
 -- use this for Ruby? https://github.com/Shopify/ruby-lsp
 -- add sorbet server / integration?
 -- mason for server management

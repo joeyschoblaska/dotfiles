@@ -1,6 +1,8 @@
 local settings = {
 	before_config = function() end,
 	after_config = function() end,
+	null_ls_sources = nil,
+	nvim_lsp_servers = nil,
 }
 
 local present, _ = pcall(require, "local")
