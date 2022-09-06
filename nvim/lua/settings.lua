@@ -3,6 +3,7 @@ local settings = {
 	after_config = function() end,
 	null_ls_sources = nil,
 	nvim_lsp_servers = nil,
+	file_find_cmd = nil,
 }
 
 local present, _ = pcall(require, "local")

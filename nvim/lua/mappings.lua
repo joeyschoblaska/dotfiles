@@ -1,3 +1,5 @@
+local settings = require("settings")
+
 vim.g.mapleader = " "
 
 local mappings = {
@@ -14,7 +16,7 @@ local mappings = {
 	{ "n", "<leader>0", ":tabnew<CR>:setlocal nobuflisted<CR>" }, -- nobuflisted: don't list empty tabs in buffer list
 
 	-- telescope
-	{ "n", "<leader>t", ":Telescope find_files<CR>" },
+	{ "n", "<leader>t", settings.file_find_cmd or ":Telescope find_files<CR>" },
 	{ "n", "<leader>a", ":Telescope live_grep_args<CR>" },
 	{ "v", "<leader>a", [["9y<ESC>:Telescope live_grep_args default_text=<c-r>9<CR>]] }, -- yank selection into reg 9 and grep for it
 	{ "n", "<leader>km", ":Telescope keymaps<CR>" },
