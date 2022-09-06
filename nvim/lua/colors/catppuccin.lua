@@ -8,8 +8,5 @@ vim.cmd("hi TabLineSeparatorSel guifg=#74c7ec")
 vim.cmd("hi TabLine guifg=#585B70 guibg=#181825")
 vim.cmd("hi TabLineFill guibg=#181825")
 
--- cursorline highlights line number only
-vim.cmd("hi clear CursorLine")
-
 -- make comments a little brighter
 vim.cmd("hi Comment guifg=#6c7086") -- default: #585b70
