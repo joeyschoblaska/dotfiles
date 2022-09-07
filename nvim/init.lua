@@ -37,6 +37,7 @@
 --   possible to configure how fzf-lua abbreviates filesnames in the left pane? I want to always see the pack at least
 --   also, it'd be cool if the selected file reset when I change something in the search input field: https://github.com/junegunn/fzf/issues/1331
 -- I think evanseco (or some other plugin / setting) is messing with the default # and * behavior...
+-- trouble.nvim for diagnostics violations
 --
 -- OTHER
 -- snippets? (nvchad: luasnip, friendly-snippets, cmp_luasnip; lunarvim: ?)
