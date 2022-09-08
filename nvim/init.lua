@@ -39,6 +39,7 @@
 -- I think evanseco (or some other plugin / setting) is messing with the default # and * behavior...
 -- trouble.nvim for diagnostics violations
 -- possible to configure telescope git pickers to use delta / bat for paging?
+-- https://github.com/rlane/pounce.nvim
 --
 -- OTHER
 -- snippets? (nvchad: luasnip, friendly-snippets, cmp_luasnip; lunarvim: ?)
