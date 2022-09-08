@@ -6,9 +6,8 @@ return {
 	config = function()
 		local null_ls = require("null-ls")
 		local settings = require("settings")
-
-		null_ls.setup({
-			sources = settings.null_ls_sources or {
+		local sources = settings.null_ls_sources(null_ls)
+			or {
 				null_ls.builtins.formatting.stylua,
 				null_ls.builtins.formatting.prettierd.with({
 					filetypes = {
@@ -30,8 +29,10 @@ return {
 
 					extra_filetypes = { "ruby" },
 				}),
-			},
+			}
 
+		null_ls.setup({
+			sources = sources,
 			on_attach = require("lsp-format").on_attach,
 		})
 	end,
