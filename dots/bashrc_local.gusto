@@ -1,0 +1,3 @@
+PS1="joey@gusto:\W \$ "
+export NOTES_DIR="$HOME/Dropbox (Gusto)/obsidian"
+export GEM_HOME="$HOME/.gem"
