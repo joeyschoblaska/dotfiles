@@ -12,20 +12,27 @@ if [[ ${localenv} == "gusto" ]]; then
   # we are not using the force flag, so fail if any local configs differ from
   # what's in the repo
   if [[ $1 != "-f" ]]; then
-    if ! cmp -s "$HOME/.config/nvim/lua/local.lua" "nvim/locals/gusto.lua"; then
+    abort="false"
+
+    if ! cmp -s "nvim/locals/gusto.lua" "$HOME/.config/nvim/lua/local.lua"; then
+      abort="true"
       echo "🚨 local nvim config differs from repo - aborting"
-      exit 1 
+      diff "nvim/locals/gusto.lua" "$HOME/.config/nvim/lua/local.lua"
     fi
 
-    if ! cmp -s "$HOME/.bashrc_local" "dots/bashrc_local.gusto"; then
-      echo "🚨 local bash config differs from repo - aborting"
-      exit 1 
+    if ! cmp -s "dots/bashrc_local.gusto" "$HOME/.bashrc_local"; then
+      abort="true"
+      printf "\n🚨 local bash config differs from repo - aborting"
+      delta "dots/bashrc_local.gusto" "$HOME/.bashrc_local"
     fi
 
-    if ! cmp -s "$HOME/.gitconfig" "dots/gitconfig.gusto"; then
-      echo "🚨 local git config differs from repo - aborting"
-      exit 1 
+    if ! cmp -s "dots/gitconfig.gusto" "$HOME/.gitconfig"; then
+      abort="true"
+      printf "\n🚨 local git config differs from repo - aborting"
+      delta "dots/gitconfig.gusto" "$HOME/.gitconfig";
     fi
+
+    [[ ${abort} == "true" ]] && exit 1
   fi
 fi
 
