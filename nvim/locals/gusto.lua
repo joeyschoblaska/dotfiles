@@ -1,13 +1,10 @@
--- if vim.fn.getcwd():match(homedir .. "/projects/dotfiles") then
--- 	settings.catppuccin_flavor = "frappe"
--- else
--- 	settings.catppuccin_flavor = "mocha"
--- end
+local settings = {}
+local homedir = vim.fn.expand("$HOME")
 
-return {
-	file_find_cmd = ":FzfLua files <CR>",
+if vim.fn.getcwd():match(homedir .. "/workspace/zenpayroll") then
+	settings.file_find_cmd = ":FzfLua files <CR>"
 
-	null_ls_sources = function(null_ls)
+	settings.null_ls_sources = function(null_ls)
 		return {
 			null_ls.builtins.formatting.stylua,
 			null_ls.builtins.formatting.rubocop.with({
@@ -17,5 +14,7 @@ return {
 				command = "bin/rubocop_server",
 			}),
 		}
-	end,
-}
+	end
+end
+
+return settings
