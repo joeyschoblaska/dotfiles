@@ -13,17 +13,18 @@
 [push]
   default = current
 [pull]
-	ff = only
+  rebase = true
+  ff = only
 [init]
-	defaultBranch = main
+  defaultBranch = main
 [interactive]
-    diffFilter = delta --color-only # part of necessary delta config
+  diffFilter = delta --color-only # part of necessary delta config
 [add.interactive]
-    useBuiltin = false # part of necessary delta config # required for git 2.37.0
+  useBuiltin = false # part of necessary delta config # required for git 2.37.0
 [merge]
   conflictstyle = diff3 # part of necessary delta config
 [diff]
-    colorMoved = default # part of necessary delta config
+  colorMoved = default # part of necessary delta config
 [color]
   ui = auto
 [color "branch"]
