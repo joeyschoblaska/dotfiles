@@ -8,10 +8,10 @@ if vim.fn.getcwd():match(homedir .. "/workspace/zenpayroll") then
 		return {
 			null_ls.builtins.formatting.stylua,
 			null_ls.builtins.formatting.rubocop.with({
-				command = "bin/rubocop_server",
+				command = "/Users/joey.schoblaska/projects/utils/rubocop_server",
 			}),
 			null_ls.builtins.diagnostics.rubocop.with({
-				command = "bin/rubocop_server",
+				command = "/Users/joey.schoblaska/projects/utils/rubocop_server",
 			}),
 		}
 	end
