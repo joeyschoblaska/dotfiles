@@ -43,6 +43,7 @@
 * FzfLua catppuccin colors
 
 ## Other
+* figure out why vim randomly goes into insert mode if I'm in insert mode, hit escape, then hit a key sequence (like jk) really fast
 * snippets? (nvchad: luasnip, friendly-snippets, cmp_luasnip; lunarvim: ?)
 * easy way to switch themes without reloading (eg, switching to a light theme temporarily while working outside)
 * filepath completion (including in live grep args - or fzf in live grep args...?) (it might be easier to scope files by setting cwd via file-browser, now that I have an easy way to reset cwd to project root)
