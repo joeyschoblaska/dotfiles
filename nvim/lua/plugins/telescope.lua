@@ -45,6 +45,7 @@ return {
 					hidden = true,
 					file_ignore_patterns = { ".git" }, -- the "^.git/" pattern wasn't working for some reason...
 					depth = 2,
+					display_stat = false, -- don't display date or file size
 				},
 			},
 		})
