@@ -2,9 +2,11 @@
 * octo.nvim
 * easy way to browse history of a file
 * easy way to git blame file / explore revisions
+* easy way to explore PR diffs
 
 ## File browsing
 * [telescope-file-browser tree view](https://github.com/nvim-telescope/telescope-file-browser.nvim/issues/165#issuecomment-1242515366)
+* nmap h / imap <C-h> in file-browser resets cwd to project root
 
 ## Formatting
 * range formatting, or format only new code (so I can use prettier / whatever in codebases that don't have a fixer set up)
@@ -35,6 +37,7 @@
 * trouble.nvim for diagnostics violations
 * possible to configure telescope git pickers to use delta / bat for paging?
 * https://github.com/rlane/pounce.nvim
+* FzfLua catppuccin colors
 
 ## Other
 * snippets? (nvchad: luasnip, friendly-snippets, cmp_luasnip; lunarvim: ?)
