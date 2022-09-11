@@ -25,7 +25,6 @@
 * new Ruby debugger stuff? https://blog.testdouble.com/talks/2022-08-22-debugging-ruby-on-rails-with-vscode/
 
 ## General editing
-* better search highlighting (highlight all matches while typing; clear on ESC or anything evanseco clears on)
 * for markdown editing, auto-insert bullets when starting a new line in a list
 
 ## Plugins
@@ -36,7 +35,6 @@
 * treesitter-powered pair matching? https://github.com/andymass/vim-matchup
 * possible to configure how fzf-lua abbreviates filenames in the left pane? I want to always see the pack at least
 * fzf-lua: reset selected file when I change something in the search input field: https://github.com/junegunn/fzf/issues/1331
-* I think evanseco (or some other plugin / setting) is messing with the default # and * behavior...
 * trouble.nvim for diagnostics violations
 * possible to configure telescope git pickers to use delta / bat for paging?
 * https://github.com/rlane/pounce.nvim

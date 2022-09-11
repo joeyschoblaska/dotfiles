@@ -19,7 +19,7 @@ return require("packer").startup(function(use)
 	use(require("plugins.lualine")) -- statusline
 	use(require("plugins.tabline")) -- tabline
 	use("kyazdani42/nvim-web-devicons") -- icons, mostly for filetypes
-	use("pgdouyon/vim-evanesco") -- search highlighting
+	use(require("plugins.hlslens")) -- advanced search highlighting
 	use(require("plugins.nvim_cmp")) -- completion window
 	use("tversteeg/registers.nvim") -- show popup with register contents on `"` press
 	use(require("plugins.toggleterm")) -- wrapper around :term; used for lazygit

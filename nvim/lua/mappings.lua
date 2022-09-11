@@ -2,6 +2,8 @@ local settings = require("settings")
 
 vim.g.mapleader = " "
 
+local norm_silent = { noremap = true, silent = true }
+
 local mappings = {
 	-- tabs
 	{ "n", "<leader>1", "1gt<CR>" },
@@ -24,7 +26,7 @@ local mappings = {
 	{ "n", "<leader>fb", ":Telescope file_browser<CR>" },
 	{ "n", "<leader>fo", ":Telescope file_browser files=false<CR>" }, -- open browser in folder mode
 	{ "n", "<leader>ff", ":Telescope file_browser path=%:p:h select_buffer=true<CR>" }, -- open current file in browser
-	{ "n", "<leader>fh", ":cd " .. vim.fn.getcwd() .. "<CR>" },
+	{ "n", "<leader>fh", ":cd " .. vim.fn.getcwd() .. "<CR>" }, -- reset cwd to its value when vim session began
 	{ "n", "<leader>gs", ":Telescope git_status<CR>" },
 	{ "n", "<leader>gc", ":Telescope git_commits<CR>" },
 	{ "n", "<leader>gb", ":Telescope git_branches<CR>" },
@@ -59,10 +61,28 @@ local mappings = {
 	{ "n", "<Down>", 'v:count || mode(1)[0:1] == "no" ? "j" : "gj"', { expr = true } },
 
 	-- open lazygit (function is defined in plugins.toggleterm)
-	{ "n", "<leader>lg", ":lua _lazygit_toggle()<CR>", { noremap = true, silent = true } },
+	{ "n", "<leader>lg", ":lua _lazygit_toggle()<CR>", norm_silent },
 
 	-- resend the last line in the next tmux window
-	{ "n", "<leader>ll", [[:SlimeSend0 "!!\r"<CR>]], { noremap = true, silent = true } },
+	{ "n", "<leader>ll", [[:SlimeSend0 "!!\r"<CR>]], norm_silent },
+
+	-- hlslens
+	{
+		"n",
+		"n",
+		[[<Cmd>execute('normal! ' . v:count1 . 'n')<CR><Cmd>lua require('hlslens').start()<CR>]],
+		norm_silent,
+	},
+	{
+		"n",
+		"N",
+		[[<Cmd>execute('normal! ' . v:count1 . 'N')<CR><Cmd>lua require('hlslens').start()<CR>]],
+		norm_silent,
+	},
+	{ "n", "*", [[*<Cmd>lua require('hlslens').start()<CR>]], norm_silent },
+	{ "n", "#", [[#<Cmd>lua require('hlslens').start()<CR>]], norm_silent },
+	{ "n", "g*", [[g*<Cmd>lua require('hlslens').start()<CR>]], norm_silent },
+	{ "n", "g#", [[g#<Cmd>lua require('hlslens').start()<CR>]], norm_silent },
 }
 
 for _, m in ipairs(mappings) do
