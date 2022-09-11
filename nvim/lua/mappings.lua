@@ -5,6 +5,13 @@ vim.g.mapleader = " "
 local norm_silent = { noremap = true, silent = true }
 
 local mappings = {
+	-- fix for when I press, eg, CAPS + j to escape and go down, but hold CAPS
+	-- too long and end up sending <Down> instead
+	{ "i", "<Up>", "<Esc><Up><Right>", { noremap = true } },
+	{ "i", "<Down>", "<Esc><Down><Right>", { noremap = true } },
+	{ "i", "<Left>", "<Esc><Left><Right>", { noremap = true } },
+	{ "i", "<Right>", "<Esc><Right><Right>", { noremap = true } },
+
 	-- tabs
 	{ "n", "<leader>1", "1gt<CR>" },
 	{ "n", "<leader>2", "2gt<CR>" },
