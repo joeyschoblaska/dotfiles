@@ -13,4 +13,7 @@ vim.cmd("hi Comment guifg=#6c7086") -- default: #585b70
 
 -- hlslens / search highlight
 vim.cmd("hi IncSearch guifg=#1e1e2e guibg=#74c7ec")
-vim.cmd("hi Search guibg=#585b70")
+vim.cmd("hi Search guibg=#3C5970")
+vim.cmd("hi HlSearchLens guibg=#2A374A")
+vim.cmd("hi HlSearchLensNear guibg=#3C5970")
+vim.cmd("hi HlSearchFloat guibg=#3C5970")
