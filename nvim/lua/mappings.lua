@@ -90,6 +90,7 @@ local mappings = {
 	{ "n", "#", [[#<Cmd>lua require('hlslens').start()<CR>]], norm_silent },
 	{ "n", "g*", [[g*<Cmd>lua require('hlslens').start()<CR>]], norm_silent },
 	{ "n", "g#", [[g#<Cmd>lua require('hlslens').start()<CR>]], norm_silent },
+	{ "n", "<Esc>", ":noh<CR>", norm_silent },
 }
 
 for _, m in ipairs(mappings) do
