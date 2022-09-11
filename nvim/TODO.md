@@ -47,6 +47,6 @@
 * filepath completion (including in live grep args - or fzf in live grep args...?) (it might be easier to scope files by setting cwd via file-browser, now that I have an easy way to reset cwd to project root)
 * crib from lvim lualine (or at least put some LSP stuff in there) https://github.com/LunarVim/LunarVim/blob/rolling/lua/lvim/core/lualine/styles.lua#L68
 * (persistent?) scratch buffers
-* only show signcolumn when active config supports diagnostics
+* only show signcolumn when active config supports diagnostics?
 * weird idea, but a plugin that lets me show a little pop-up window on demand (this, probably: https://github.com/nvim-lua/popup.nvim). I could map one to `?` that has keymaps and hints for how to use my config that someone who was pairing with me could reference
 * use https://github.com/christoomey/vim-tmux-navigator - maybe use karabiner / qmk to make tab work as a modifier key for hjkl
