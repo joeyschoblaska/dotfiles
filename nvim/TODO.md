@@ -6,10 +6,12 @@
 
 ## File browsing
 * [telescope-file-browser tree view](https://github.com/nvim-telescope/telescope-file-browser.nvim/issues/165#issuecomment-1242515366)
+* telescope-fb: more intuitive mappings, especially in insert mode (eg, `imap <C-foo>` should always do the same as `nmap foo`)
 * nmap h / imap <C-h> in file-browser resets cwd to project root (replace proof-of-concept <leader>fh mapping)
 * monorepo ergonomics?
   * maybe a custom telescope picker to select packs, then file find and grep are scoped to just those packs: https://github.com/nvim-telescope/telescope.nvim/blob/master/developers.md
   * or just additional mappings that scope file find or grep to the pack containing the current file
+  * show current pack in lualine instead of file type
 
 ## Formatting
 * range formatting, or format only new code (so I can use prettier / whatever in codebases that don't have a fixer set up)

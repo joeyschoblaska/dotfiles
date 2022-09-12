@@ -40,6 +40,9 @@ local mappings = {
 	{ "n", "<leader>nt", ":Telescope find_files cwd=$NOTES_DIR<CR>" },
 	{ "n", "<leader>na", ":Telescope live_grep_args cwd=$NOTES_DIR<CR>" },
 
+	-- symbols
+	{ "n", "<leader>so", ":AerialOpen left<CR>" }, -- symbols outline (via aerial)
+
 	-- [a f]ile
 	{ "v", "af", ":<C-U>silent! normal! ggVG<CR>", { noremap = true } },
 	{ "o", "af", ":normal Vaf<CR>" },

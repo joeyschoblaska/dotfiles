@@ -6,6 +6,7 @@ return {
 		{ "nvim-telescope/telescope-fzf-native.nvim", run = "make" },
 		"nvim-telescope/telescope-live-grep-args.nvim",
 		"nvim-telescope/telescope-file-browser.nvim",
+		"stevearc/aerial.nvim",
 	},
 
 	config = function()
@@ -53,5 +54,6 @@ return {
 		telescope.load_extension("fzf")
 		telescope.load_extension("live_grep_args")
 		telescope.load_extension("file_browser")
+		telescope.load_extension("aerial")
 	end,
 }

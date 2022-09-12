@@ -16,8 +16,8 @@ return require("packer").startup(function(use)
 	use(require("plugins.telescope")) -- framework for fuzzy finding / picking
 	use(require("plugins.fzf_lua")) -- faster file finder, good for large repos
 	use(require("plugins.gitsigns")) -- highlighting number col with git status
-	use(require("plugins.lualine")) -- statusline
-	use(require("plugins.tabline")) -- tabline
+	use(require("plugins.tabline")) -- tabline (top)
+	use(require("plugins.lualine")) -- statusline (bottom)
 	use("kyazdani42/nvim-web-devicons") -- icons, mostly for filetypes
 	use(require("plugins.hlslens")) -- advanced search highlighting
 	use(require("plugins.nvim_cmp")) -- completion window
@@ -34,6 +34,7 @@ return require("packer").startup(function(use)
 	use(require("plugins.comment")) -- adding / removing comments
 	use(require("plugins.autopairs")) -- closing pairs ((), {}, [], "", etc)
 	use("lukas-reineke/indent-blankline.nvim") -- vertical line showing block indent levels
+	use(require("plugins.aerial"))
 
 	-- colors
 	use("Mofiqul/dracula.nvim")
