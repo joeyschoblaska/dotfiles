@@ -19,6 +19,8 @@
   * https://www.npmjs.com/package/eslint_d ?
 
 ## LSP
+* customize entry display for telescope lsp refs / defs (if possible?)
+  * maybe here (ENTRY_DISPLAY): https://github.com/nvim-telescope/telescope.nvim/blob/master/doc/telescope.txt#L2136
 * integrate with nvim_cmp
 * mason for server management
 * new Ruby debugger stuff? https://blog.testdouble.com/talks/2022-08-22-debugging-ruby-on-rails-with-vscode/
