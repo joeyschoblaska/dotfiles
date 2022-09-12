@@ -40,8 +40,11 @@ local mappings = {
 	{ "n", "<leader>nt", ":Telescope find_files cwd=$NOTES_DIR<CR>" },
 	{ "n", "<leader>na", ":Telescope live_grep_args cwd=$NOTES_DIR<CR>" },
 
-	-- symbols
-	{ "n", "<leader>so", ":AerialOpen left<CR>" }, -- symbols outline (via aerial)
+	-- symbols / lsp
+	{ "n", "<leader>so", ":AerialOpen float<CR>" }, -- symbols outline (via aerial)
+	{ "n", "gd", ":Telescope lsp_definitions<CR>" },
+	{ "n", "gr", ":Telescope lsp_references<CR>" },
+	{ "n", "K", ":lua vim.lsp.buf.hover()<CR>" },
 
 	-- [a f]ile
 	{ "v", "af", ":<C-U>silent! normal! ggVG<CR>", { noremap = true } },

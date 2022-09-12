@@ -19,10 +19,7 @@
   * https://www.npmjs.com/package/eslint_d ?
 
 ## LSP
-* LSP setup (document and workspace symbols; references; def; nvim-cmp (see cmp-nvim-lsp))
-  * in progress: see nvim_lspconfig.lua. need to move those keymappings and have easy-to-config per-project settings
-* use this for Ruby? https://github.com/Shopify/ruby-lsp
-* add sorbet server / integration?
+* integrate with nvim_cmp
 * mason for server management
 * new Ruby debugger stuff? https://blog.testdouble.com/talks/2022-08-22-debugging-ruby-on-rails-with-vscode/
 
