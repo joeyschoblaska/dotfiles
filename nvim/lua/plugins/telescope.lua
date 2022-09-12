@@ -39,6 +39,10 @@ return {
 				find_files = {
 					hidden = true,
 				},
+
+				lsp_references = {
+					include_declaration = false,
+				},
 			},
 
 			extensions = {
