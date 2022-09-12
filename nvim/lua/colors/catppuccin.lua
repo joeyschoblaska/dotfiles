@@ -1,19 +1,30 @@
+local mocha = require("catppuccin/palettes/mocha")
+local utils = require("catppuccin/utils/colors")
+
+local hi = function(group, colors)
+	vim.api.nvim_set_hl(0, group, colors)
+end
+
 vim.g.catppuccin_flavour = "mocha" -- latte, frappe, macchiato, mocha
 
 vim.cmd("colorscheme catppuccin")
 
 -- tabs
-vim.cmd("hi TabLineSel guifg=#CDD6F4 guibg=#1E1E2E")
-vim.cmd("hi TabLineSeparatorSel guifg=#74c7ec")
-vim.cmd("hi TabLine guifg=#585B70 guibg=#181825")
-vim.cmd("hi TabLineFill guibg=#181825")
+hi("TabLineSel", { fg = mocha.text, bg = mocha.base })
+hi("TabLineSeparatorSel", { fg = mocha.sapphire })
+hi("TabLine", { fg = mocha.surface2, bg = mocha.mantle })
+hi("TabLineFill", { bg = mocha.mantle })
 
 -- make comments a little brighter
-vim.cmd("hi Comment guifg=#6c7086") -- default: #585b70
+hi("Comment", { fg = mocha.overlay0 }) -- default: surface2
 
 -- hlslens / search highlight
-vim.cmd("hi IncSearch guifg=#1e1e2e guibg=#74c7ec")
-vim.cmd("hi Search guibg=#3C5970")
-vim.cmd("hi HlSearchLens guibg=#2A374A")
-vim.cmd("hi HlSearchLensNear guibg=#3C5970")
-vim.cmd("hi HlSearchFloat guibg=#3C5970")
+local search_hl = mocha.sapphire
+local search_hl_dark = utils.blend(search_hl, mocha.base, 0.35)
+local search_hl_darker = utils.blend(search_hl, mocha.base, 0.2)
+
+hi("IncSearch", { fg = mocha.base, bg = search_hl })
+hi("Search", { fg = mocha.text, bg = search_hl_dark })
+hi("HlSearchLens", { fg = mocha.overlay2, bg = search_hl_darker })
+hi("HlSearchLensNear", { fg = mocha.text, bg = search_hl_dark })
+hi("HlSearchFloat", { fg = mocha.text, bg = search_hl_dark })
