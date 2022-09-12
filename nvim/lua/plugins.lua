@@ -34,7 +34,7 @@ return require("packer").startup(function(use)
 	use(require("plugins.comment")) -- adding / removing comments
 	use(require("plugins.autopairs")) -- closing pairs ((), {}, [], "", etc)
 	use("lukas-reineke/indent-blankline.nvim") -- vertical line showing block indent levels
-	use(require("plugins.aerial"))
+	use(require("plugins.aerial")) -- give a symbol outline of the current file
 
 	-- colors
 	use("Mofiqul/dracula.nvim")
