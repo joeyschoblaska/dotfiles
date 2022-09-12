@@ -34,11 +34,9 @@
 * some way to lock versions and do manual upgrades - I don't want to be suprised by breaking changes when I need to get work done
 * treesitter-powered pair matching? https://github.com/andymass/vim-matchup
 * possible to configure how fzf-lua abbreviates filenames in the left pane? I want to always see the pack at least
-* fzf-lua: reset selected file when I change something in the search input field: https://github.com/junegunn/fzf/issues/1331
 * trouble.nvim for diagnostics violations
 * possible to configure telescope git pickers to use delta / bat for paging?
 * https://github.com/rlane/pounce.nvim
-* FzfLua catppuccin colors
 
 ## Other
 * snippets? (nvchad: luasnip, friendly-snippets, cmp_luasnip; lunarvim: ?)
