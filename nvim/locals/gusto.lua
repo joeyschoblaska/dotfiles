@@ -15,6 +15,8 @@ if vim.fn.getcwd():match(homedir .. "/workspace/zenpayroll") then
 			}),
 		}
 	end
+
+	settings.nvim_lsp_servers = { "sorbet", "solargraph" }
 end
 
 return settings
