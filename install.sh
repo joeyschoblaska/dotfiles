@@ -32,6 +32,12 @@ if [[ ${localenv} == "gusto" ]]; then
       delta "dots/gitconfig.gusto" "$HOME/.gitconfig";
     fi
 
+    if ! cmp -s "dots/gitignore.gusto" "$HOME/.gitignore"; then
+      abort="true"
+      printf "\n🚨 local git ignore differs from repo - aborting"
+      delta "dots/gitignore.gusto" "$HOME/.gitignore";
+    fi
+
     [[ ${abort} == "true" ]] && exit 1
   fi
 fi
@@ -125,11 +131,11 @@ echo "installing git config"
 
 if [[ ${localenv} == "gusto" ]]; then
   cp dots/gitconfig.gusto ~/.gitconfig
+  cp dots/gitignore.gusto ~/.gitignore
 else
   cp dots/gitconfig ~/.gitconfig
+  cp dots/gitignore ~/.gitignore
 fi
-
-cp dots/gitignore ~/.gitignore
 
 #################################################################################
 
