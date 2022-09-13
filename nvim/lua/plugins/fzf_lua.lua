@@ -2,6 +2,8 @@ return {
 	"ibhagwan/fzf-lua",
 
 	config = function()
+		local settings = require("settings")
+
 		require("fzf-lua").setup({
 			winopts = {
 				width = 0.95,
@@ -30,7 +32,9 @@ return {
 				},
 
 				preview = {
+					layout = settings.fzf_lua_layout_strategy or "flex",
 					horizontal = "right:50%",
+					vertical = "up:60%",
 					title_align = "center",
 					delay = 0,
 				},

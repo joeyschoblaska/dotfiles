@@ -7,6 +7,7 @@ local settings = {
 	nvim_lsp_servers = nil,
 	file_find_cmd = nil,
 	telescope_layout_strategy = nil,
+	fzf_lua_layout_strategy = nil,
 }
 
 local present, _ = pcall(require, "local")
