@@ -29,5 +29,5 @@ hi("HlSearchLensNear", { fg = mocha.text, bg = search_hl_dark })
 hi("HlSearchFloat", { fg = mocha.text, bg = search_hl_dark })
 
 -- fidget
-hi("FidgetTitle", { fg = mocha.blue, bg = mocha.mantle })
-hi("FidgetTask", { fg = mocha.subtext0, bg = mocha.mantle })
+hi("FidgetTitle", { fg = mocha.mauve, bg = mocha.base })
+hi("FidgetTask", { fg = mocha.mantle, bg = mocha.mauve })
