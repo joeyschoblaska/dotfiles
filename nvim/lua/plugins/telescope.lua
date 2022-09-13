@@ -54,6 +54,7 @@ return {
 
 				lsp_dynamic_workspace_symbols = {
 					show_line = false,
+					fname_width = 45,
 				},
 			},
 
