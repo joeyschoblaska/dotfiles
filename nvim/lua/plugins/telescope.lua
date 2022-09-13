@@ -12,23 +12,25 @@ return {
 	config = function()
 		local telescope = require("telescope")
 		local fb_actions = require("telescope").extensions.file_browser.actions
+		local settings = require("settings")
 
 		telescope.setup({
 			defaults = {
 				sorting_strategy = "ascending",
+				layout_strategy = settings.telescope_layout_strategy or "flex",
 				wrap_results = true,
 				layout_config = {
 					horizontal = {
 						prompt_position = "top",
-						preview_width = 0.55,
-						results_width = 0.8,
+						preview_width = 0.5,
+						results_width = 0.5,
 					},
 					vertical = {
-						mirror = false,
+						prompt_position = "top",
+						preview_height = 0.60,
 					},
 					width = 0.95,
 					height = 0.95,
-					preview_cutoff = 120,
 				},
 				file_ignore_patterns = { "^.git/" },
 			},
