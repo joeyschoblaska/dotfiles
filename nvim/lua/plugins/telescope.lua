@@ -15,6 +15,7 @@ return {
 		telescope.setup({
 			defaults = {
 				sorting_strategy = "ascending",
+				wrap_results = true,
 				layout_config = {
 					horizontal = {
 						prompt_position = "top",
@@ -38,7 +39,6 @@ return {
 
 				find_files = {
 					hidden = true,
-					wrap_results = true,
 				},
 
 				lsp_references = {
