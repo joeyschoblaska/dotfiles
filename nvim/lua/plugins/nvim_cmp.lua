@@ -97,10 +97,6 @@ return {
 				fetching_timeout = 500,
 			},
 
-			completion = {
-				autocomplete = false,
-			},
-
 			snippet = {
 				expand = function(args)
 					require("luasnip").lsp_expand(args.body)
@@ -141,23 +137,6 @@ return {
 				end,
 			},
 		})
-
-		-- https://github.com/hrsh7th/nvim-cmp/issues/715#issuecomment-1069059428
-		-- delay before showing the completion window while typing
-		vim.api.nvim_exec(
-			[[
-let s:timer = 0
-autocmd TextChangedI * call s:on_text_changed()
-function! s:on_text_changed() abort
-  call timer_stop(s:timer)
-  let s:timer = timer_start(500, function('s:complete'))
-endfunction
-function! s:complete(...) abort
-  lua require('cmp').complete({ reason = require('cmp').ContextReason.Auto })
-endfunction
-]],
-			false
-		)
 
 		-- https://github.com/windwp/nvim-autopairs#you-need-to-add-mapping-cr-on-nvim-cmp-setupcheck-readmemd-on-nvim-cmp-repo
 		cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done())
