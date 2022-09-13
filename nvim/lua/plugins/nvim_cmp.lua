@@ -71,7 +71,7 @@ return {
 		local max_width = 50
 
 		cmp.setup({
-			-- -- uncomment below to re-enable SUPER tab, or delete if I like the auto complete
+			-- -- uncomment below to disable automatic completion window
 			-- completion = {
 			-- 	autocomplete = true,
 			-- },

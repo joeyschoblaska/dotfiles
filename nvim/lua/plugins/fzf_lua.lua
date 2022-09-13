@@ -3,9 +3,6 @@ return {
 
 	config = function()
 		require("fzf-lua").setup({
-			fzf_opts = {
-				["--keep-right"] = "", -- not sure if this is working...
-			},
 			winopts = {
 				width = 0.95,
 				height = 0.95,
