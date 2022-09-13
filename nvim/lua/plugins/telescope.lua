@@ -48,6 +48,7 @@ return {
 				},
 
 				lsp_definitions = {
+					jump_type = "vsplit",
 					include_declaration = false,
 					show_line = false,
 				},
