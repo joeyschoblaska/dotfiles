@@ -11,6 +11,7 @@ return {
 
 	config = function()
 		local telescope = require("telescope")
+		local fb_actions = require("telescope").extensions.file_browser.actions
 
 		telescope.setup({
 			defaults = {
@@ -49,9 +50,23 @@ return {
 			extensions = {
 				file_browser = {
 					hidden = true,
+					wrap_results = false,
 					file_ignore_patterns = { ".git" }, -- the "^.git/" pattern wasn't working for some reason...
 					depth = 2,
 					display_stat = false, -- don't display date or file size
+
+					mappings = {
+						["i"] = {
+							["<C-h>"] = function()
+								-- go to home dir
+							end,
+							["<C-c>"] = fb_actions.create,
+						},
+						["n"] = {
+							-- your custom normal mode mappings
+							-- thd xues
+						},
+					},
 				},
 			},
 		})

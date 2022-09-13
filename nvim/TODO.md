@@ -27,6 +27,7 @@
 
 ## General editing
 * figure out how to add a delay to cmp window: https://github.com/hrsh7th/nvim-cmp/issues/715#issuecomment-1069059428
+  * this link for disabling prompt in telescope: https://github.com/hrsh7th/nvim-cmp/issues/60#issuecomment-905632958
 * for markdown editing, auto-insert bullets when starting a new line in a list
 * treesitter for text objects? lua snippets? https://www.reddit.com/r/neovim/comments/v9e85n/what_do_you_use_treesitter_for_other_than/
 
