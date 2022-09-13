@@ -37,7 +37,7 @@ local mappings = {
 	{ "n", "<leader>gs", ":Telescope git_status<CR>" },
 	{ "n", "<leader>gc", ":Telescope git_commits<CR>" },
 	{ "n", "<leader>gb", ":Telescope git_branches<CR>" },
-	{ "n", "<leader>nt", ":Telescope find_files cwd=$NOTES_DIR<CR>" },
+	{ "n", "<leader>nt", ":Telescope find_files hidden=false cwd=$NOTES_DIR<CR>" },
 	{ "n", "<leader>na", ":Telescope live_grep_args cwd=$NOTES_DIR<CR>" },
 
 	-- symbols / lsp
