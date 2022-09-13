@@ -46,6 +46,15 @@ return {
 					include_declaration = false,
 					show_line = false,
 				},
+
+				lsp_definitions = {
+					include_declaration = false,
+					show_line = false,
+				},
+
+				lsp_dynamic_workspace_symbols = {
+					show_line = false,
+				},
 			},
 
 			extensions = {
