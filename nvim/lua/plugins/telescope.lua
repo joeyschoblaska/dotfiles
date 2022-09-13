@@ -44,6 +44,7 @@ return {
 
 				lsp_references = {
 					include_declaration = false,
+					show_line = false,
 				},
 			},
 

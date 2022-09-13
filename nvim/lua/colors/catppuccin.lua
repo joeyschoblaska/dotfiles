@@ -6,7 +6,6 @@ local hi = function(group, colors)
 end
 
 vim.g.catppuccin_flavour = "mocha" -- latte, frappe, macchiato, mocha
-
 vim.cmd("colorscheme catppuccin")
 
 -- tabs
@@ -28,3 +27,7 @@ hi("Search", { fg = mocha.text, bg = search_hl_dark })
 hi("HlSearchLens", { fg = mocha.overlay2, bg = search_hl_darker })
 hi("HlSearchLensNear", { fg = mocha.text, bg = search_hl_dark })
 hi("HlSearchFloat", { fg = mocha.text, bg = search_hl_dark })
+
+-- fidget
+hi("FidgetTitle", { fg = mocha.blue, bg = mocha.mantle })
+hi("FidgetTask", { fg = mocha.subtext0, bg = mocha.mantle })
