@@ -71,25 +71,30 @@ return {
 		local max_width = 50
 
 		cmp.setup({
-			completion = {
-				autocomplete = false,
-			},
+			-- -- uncomment below to re-enable SUPER tab, or delete if I like the auto complete
+			-- completion = {
+			-- 	autocomplete = true,
+			-- },
 
-			mapping = {
-				-- SUPER tab: https://github.com/hrsh7th/nvim-cmp/wiki/Example-mappings#luasnip
-				["<Tab>"] = cmp.mapping(function(fallback)
-					if cmp.visible() then
-						cmp.select_next_item()
-					-- elseif luasnip.expand_or_jumpable() then
-					-- 	luasnip.expand_or_jump()
-					elseif has_words_before() then
-						cmp.complete({
-							reason = cmp.ContextReason.Auto,
-						})
-					else
-						fallback()
-					end
-				end, { "i", "s" }),
+			-- mapping = {
+			-- 	-- SUPER tab: https://github.com/hrsh7th/nvim-cmp/wiki/Example-mappings#luasnip
+			-- 	["<Tab>"] = cmp.mapping(function(fallback)
+			-- 		if cmp.visible() then
+			-- 			cmp.select_next_item()
+			-- 		-- elseif luasnip.expand_or_jumpable() then
+			-- 		-- 	luasnip.expand_or_jump()
+			-- 		elseif has_words_before() then
+			-- 			cmp.complete({
+			-- 				reason = cmp.ContextReason.Auto,
+			-- 			})
+			-- 		else
+			-- 			fallback()
+			-- 		end
+			-- 	end, { "i", "s" }),
+			-- },
+
+			performance = {
+				fetching_timeout = 500,
 			},
 
 			snippet = {
