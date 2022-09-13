@@ -93,6 +93,10 @@ return {
 			-- 	end, { "i", "s" }),
 			-- },
 
+			completion = {
+				keyword_length = 3,
+			},
+
 			performance = {
 				fetching_timeout = 500,
 			},
