@@ -40,6 +40,9 @@ local mappings = {
 	{ "n", "<leader>nt", ":Telescope find_files hidden=false cwd=$NOTES_DIR<CR>" },
 	{ "n", "<leader>na", ":Telescope live_grep_args cwd=$NOTES_DIR<CR>" },
 
+	-- copy path to current file to system clipboard
+	{ "n", "<leader>fc", ":let @+ = expand('%')<CR>" },
+
 	-- symbols / lsp
 	{ "n", "<leader>so", ":AerialOpen float<CR>" }, -- symbols outline (via aerial)
 	{ "n", "gd", ":Telescope lsp_definitions<CR>" },
