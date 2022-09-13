@@ -5,6 +5,8 @@ return {
 		require("fzf-lua").setup({
 			fzf_opts = {
 				["--keep-right"] = "",
+				["--preview"] = "echo {}",
+				["--preview-window"] = "down:2",
 			},
 			winopts = {
 				width = 0.95,

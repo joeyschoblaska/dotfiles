@@ -38,6 +38,7 @@ return {
 
 				find_files = {
 					hidden = true,
+					wrap_results = true,
 				},
 
 				lsp_references = {
