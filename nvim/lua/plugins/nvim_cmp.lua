@@ -76,22 +76,22 @@ return {
 			-- 	autocomplete = true,
 			-- },
 
-			-- mapping = {
-			-- 	-- SUPER tab: https://github.com/hrsh7th/nvim-cmp/wiki/Example-mappings#luasnip
-			-- 	["<Tab>"] = cmp.mapping(function(fallback)
-			-- 		if cmp.visible() then
-			-- 			cmp.select_next_item()
-			-- 		-- elseif luasnip.expand_or_jumpable() then
-			-- 		-- 	luasnip.expand_or_jump()
-			-- 		elseif has_words_before() then
-			-- 			cmp.complete({
-			-- 				reason = cmp.ContextReason.Auto,
-			-- 			})
-			-- 		else
-			-- 			fallback()
-			-- 		end
-			-- 	end, { "i", "s" }),
-			-- },
+			mapping = {
+				-- SUPER tab: https://github.com/hrsh7th/nvim-cmp/wiki/Example-mappings#luasnip
+				["<Tab>"] = cmp.mapping(function(fallback)
+					if cmp.visible() then
+						cmp.select_next_item()
+					-- elseif luasnip.expand_or_jumpable() then
+					-- 	luasnip.expand_or_jump()
+					elseif has_words_before() then
+						cmp.complete({
+							reason = cmp.ContextReason.Auto,
+						})
+					else
+						fallback()
+					end
+				end, { "i", "s" }),
+			},
 
 			completion = {
 				keyword_length = 3,
