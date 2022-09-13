@@ -48,6 +48,7 @@ local mappings = {
 	{ "n", "gd", ":Telescope lsp_definitions<CR>" },
 	{ "n", "gr", ":Telescope lsp_references<CR>" },
 	{ "n", "K", ":lua vim.lsp.buf.hover()<CR>" },
+	{ "n", "<leader>di", ":TroubleToggle<CR>" }, -- toggle diagnostics window
 
 	-- [a f]ile
 	{ "v", "af", ":<C-U>silent! normal! ggVG<CR>", { noremap = true } },

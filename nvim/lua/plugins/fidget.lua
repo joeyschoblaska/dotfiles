@@ -13,6 +13,20 @@ return {
 			},
 			fmt = {
 				stack_upwards = false,
+
+				-- override the defaults just to add a little padding to the return string
+				-- https://github.com/j-hui/fidget.nvim/blob/main/lua/fidget.lua#L51-L61
+				fidget = function(fidget_name, spinner)
+					return string.format("%s %s ", spinner, fidget_name)
+				end,
+				task = function(task_name, message, percentage)
+					return string.format(
+						" %s%s [%s] ",
+						message,
+						percentage and string.format(" (%.0f%%)", percentage) or "",
+						task_name
+					)
+				end,
 			},
 		})
 	end,

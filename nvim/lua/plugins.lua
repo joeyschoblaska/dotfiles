@@ -48,6 +48,7 @@ return require("packer").startup(function(use)
 	use(require("plugins.null_ls")) -- allows non-LSP sources (eg, prettier) to hook into nvim's LSP client
 	use(require("plugins.lsp_format")) -- hooks into null-ls for formatting on save
 	use(require("plugins.fidget")) -- lsp progress indicator
+	use(require("plugins.trouble")) -- workplace diagnostics window
 
 	if packer_bootstrap then
 		require("packer").sync()

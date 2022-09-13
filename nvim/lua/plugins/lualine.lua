@@ -12,7 +12,7 @@ return {
 				lualine_a = {},
 				lualine_b = {},
 				lualine_c = {},
-				lualine_x = { "branch", "diff" },
+				lualine_x = { { "diagnostics", sources = { "nvim_workspace_diagnostic" } }, "branch", "diff" },
 				lualine_y = { "filetype" },
 				lualine_z = { "filename" },
 			},
