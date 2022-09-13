@@ -28,6 +28,7 @@
 ## General editing
 * for markdown editing, auto-insert bullets when starting a new line in a list
 * treesitter for text objects? lua snippets? https://www.reddit.com/r/neovim/comments/v9e85n/what_do_you_use_treesitter_for_other_than/
+* expirment with using nvim-cmp more normally? (have the window pop up automatically after a pause)
 
 ## Plugins
 * automatically do PackerSync and MasonWhatever, as needed. maybe this? https://github.com/junnplus/lsp-setup.nvim#lua-dev
