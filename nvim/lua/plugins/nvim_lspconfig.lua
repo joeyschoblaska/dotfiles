@@ -13,15 +13,28 @@ return {
 			vim.fn.sign_define(hl, { text = icon, texthl = hl })
 		end
 
-		local servers = settings.nvim_lsp_servers or {}
+		local servers = settings.nvim_lsp_servers
+			or {
+				"tsserver",
+
+				{
+					"solargraph",
+					{
+						init_options = { formatting = false },
+						settings = {
+							solargraph = {
+								diagnostics = false,
+							},
+						},
+					},
+				},
+			}
 
 		for _, lsp in ipairs(servers) do
-			lspconfig[lsp].setup({
-				on_attach = on_attach,
-				flags = {
-					debounce_text_changes = 150,
-				},
-			})
+			local name = type(lsp) == "table" and lsp[1] or lsp
+			local config = type(lsp) == "table" and lsp[2] or {}
+
+			lspconfig[name].setup(config)
 		end
 	end,
 }
