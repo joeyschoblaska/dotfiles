@@ -26,7 +26,7 @@ return {
 						prompt_position = "top",
 						preview_width = 0.5,
 						results_width = 0.5,
-						preview_cutoff = 1, -- set to a low value since flex will handle swapping to vertical if necessary
+						preview_cutoff = 90, -- set to a low value since flex will handle swapping to vertical if necessary
 					},
 					vertical = {
 						prompt_position = "top",
@@ -35,7 +35,7 @@ return {
 					flex = {
 						flip_columns = 140, -- use horizontal mode if buffer has at least this many columns
 					},
-					width = 0.95,
+					width = { 0.95, max = 160 },
 					height = 0.95,
 				},
 				file_ignore_patterns = { "^.git/" },
@@ -84,6 +84,14 @@ return {
 					file_ignore_patterns = { ".git" }, -- the "^.git/" pattern wasn't working for some reason...
 					depth = 2,
 					display_stat = false, -- don't display date or file size
+					layout_strategy = "horizontal",
+
+					layout_config = {
+						horizontal = {
+							preview_width = 0.45,
+							results_width = 0.55,
+						},
+					},
 
 					mappings = {
 						i = {
