@@ -4,6 +4,8 @@ return {
 		require("aerial").setup({
 			close_on_select = true,
 			highlight_on_jump = false,
+			max_width = 0.95,
+			min_width = 60,
 
 			-- -- would love to override these but doesn't seem possible currently
 			-- default_bindings = false,
