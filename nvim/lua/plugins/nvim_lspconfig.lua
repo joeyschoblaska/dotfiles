@@ -4,7 +4,6 @@ return {
 	config = function()
 		local lspconfig = require("lspconfig")
 		local settings = require("settings")
-
 		local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
 
 		for type, icon in pairs(signs) do
