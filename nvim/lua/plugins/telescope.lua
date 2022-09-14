@@ -24,10 +24,14 @@ return {
 						prompt_position = "top",
 						preview_width = 0.5,
 						results_width = 0.5,
+						preview_cutoff = 1, -- set to a low value since flex will handle swapping to vertical if necessary
 					},
 					vertical = {
 						prompt_position = "top",
 						preview_height = 0.60,
+					},
+					flex = {
+						flip_columns = 120, -- use horizontal mode if buffer has at least this many columns
 					},
 					width = 0.95,
 					height = 0.95,
