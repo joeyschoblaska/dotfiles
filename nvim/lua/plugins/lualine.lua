@@ -4,6 +4,18 @@ return {
 	config = function()
 		local settings = require("settings")
 
+		-- if on a git branch that starts with "jms.", only show portion of the
+		-- branch name after the final period.
+		-- eg: "jms.JIRA-1234.implement-foo" -> "implement-foo"
+		local shortgit = function(branch)
+			if string.find(branch, "^jms%..") then
+				local _, _, description = string.find(branch, "%.([^%.]+)$")
+				return description or branch
+			else
+				return branch
+			end
+		end
+
 		local context = settings.lualine_context_fn
 			or function()
 				local path = vim.fn.expand("%:.") -- path relative to cwd
@@ -28,7 +40,7 @@ return {
 				lualine_c = {},
 				lualine_x = {
 					{ "diagnostics", sources = { "nvim_workspace_diagnostic" } },
-					{ "branch", separator = "" },
+					{ "branch", separator = "", fmt = shortgit },
 					{ "diff", padding = { left = 0, right = 1 } },
 				},
 				lualine_y = { context },
