@@ -25,7 +25,6 @@ return {
 					horizontal = {
 						prompt_position = "top",
 						preview_width = 0.5,
-						results_width = 0.5,
 						preview_cutoff = 90, -- set to a low value since flex will handle swapping to vertical if necessary
 					},
 					vertical = {
@@ -89,7 +88,6 @@ return {
 					layout_config = {
 						horizontal = {
 							preview_width = 0.45,
-							results_width = 0.55,
 						},
 					},
 
