@@ -11,7 +11,6 @@
 * monorepo ergonomics?
   * maybe a custom telescope picker to select packs, then file find and grep are scoped to just those packs: https://github.com/nvim-telescope/telescope.nvim/blob/master/developers.md
   * or just additional mappings that scope file find or grep to the pack containing the current file
-  * show current pack in lualine instead of file type
 
 ## Formatting
 * range formatting, or format only new code (so I can use prettier / whatever in codebases that don't have a fixer set up)
@@ -45,7 +44,6 @@
 * snippets? (nvchad: luasnip, friendly-snippets, cmp_luasnip; lunarvim: ?)
 * easy way to switch themes without reloading (eg, switching to a light theme temporarily while working outside)
 * filepath completion (including in live grep args - or fzf in live grep args...?) (it might be easier to scope files by setting cwd via file-browser, now that I have an easy way to reset cwd to project root)
-* crib from lvim lualine (or at least put some LSP stuff in there) https://github.com/LunarVim/LunarVim/blob/rolling/lua/lvim/core/lualine/styles.lua#L68
 * (persistent?) scratch buffers
 * only show signcolumn when active config supports diagnostics?
 * weird idea, but a plugin that lets me show a little pop-up window on demand (this, probably: https://github.com/nvim-lua/popup.nvim). I could map one to `?` that has keymaps and hints for how to use my config that someone who was pairing with me could reference

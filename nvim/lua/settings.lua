@@ -8,6 +8,7 @@ local settings = {
 	file_find_cmd = nil,
 	telescope_layout_strategy = nil,
 	fzf_lua_layout_strategy = nil,
+	lualine_context_fn = nil,
 }
 
 local present, _ = pcall(require, "local")
