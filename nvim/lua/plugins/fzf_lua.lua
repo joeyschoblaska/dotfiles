@@ -35,6 +35,7 @@ return {
 					layout = settings.fzf_lua_layout_strategy or "flex",
 					horizontal = "right:50%",
 					vertical = "up:60%",
+					flip_columns = 140, -- use horizontal mode if buffer has at least this many columns
 					title_align = "center",
 					delay = 0,
 				},
