@@ -27,6 +27,7 @@ return require("packer").startup(function(use)
 	use(require("plugins.slime")) -- send text to another tmux window
 	use(require("plugins.octo")) -- github issues and pull requests in neovim
 	use(require("plugins.filetype")) -- filetype settings / definitions
+	use(require("plugins.diffview")) -- for viewing git diffs
 
 	-- syntax
 	use(require("plugins.treesitter")) -- syntax parsing for highlighting and indenting
@@ -38,9 +39,9 @@ return require("packer").startup(function(use)
 	use(require("plugins.aerial")) -- give a symbol outline of the current file
 
 	-- colors
-	use("Mofiqul/dracula.nvim")
-	use("sainnhe/sonokai")
-	use("bluz71/vim-nightfly-guicolors")
+	-- use("Mofiqul/dracula.nvim")
+	-- use("sainnhe/sonokai")
+	-- use("bluz71/vim-nightfly-guicolors")
 	use({ "catppuccin/nvim", as = "catppuccin" })
 
 	-- lsp

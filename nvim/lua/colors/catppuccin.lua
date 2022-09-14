@@ -31,3 +31,9 @@ hi("HlSearchFloat", { fg = mocha.text, bg = search_hl_dark })
 -- fidget
 hi("FidgetTitle", { fg = mocha.mauve, bg = mocha.base })
 hi("FidgetTask", { fg = mocha.mantle, bg = mocha.mauve })
+
+-- diffview
+hi("DiffAdd", { bg = utils.blend(mocha.green, mocha.base, 0.20) })
+hi("DiffDelete", { bg = utils.blend(mocha.red, mocha.base, 0.20) })
+hi("DiffChange", { bg = utils.blend(mocha.yellow, mocha.base, 0.10) })
+hi("DiffText", { bg = utils.blend(mocha.yellow, mocha.base, 0.30) })

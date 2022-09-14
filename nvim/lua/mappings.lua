@@ -34,9 +34,6 @@ local mappings = {
 	{ "n", "<leader>fo", ":Telescope file_browser files=false<CR>" }, -- open browser in folder mode
 	{ "n", "<leader>ff", ":Telescope file_browser path=%:p:h select_buffer=true<CR>" }, -- open current file in browser
 	{ "n", "<leader>fh", ":cd " .. vim.fn.getcwd() .. "<CR>" }, -- reset cwd to its value when vim session began
-	{ "n", "<leader>gs", ":Telescope git_status<CR>" },
-	{ "n", "<leader>gc", ":Telescope git_commits<CR>" },
-	{ "n", "<leader>gb", ":Telescope git_branches<CR>" },
 	{ "n", "<leader>nt", ":Telescope find_files hidden=false cwd=$NOTES_DIR<CR>" },
 	{ "n", "<leader>na", ":Telescope live_grep_args cwd=$NOTES_DIR<CR>" },
 
@@ -49,6 +46,13 @@ local mappings = {
 	{ "n", "gr", ":Telescope lsp_references<CR>" },
 	{ "n", "K", ":lua vim.lsp.buf.hover()<CR>" },
 	{ "n", "<leader>er", ":TroubleToggle<CR>" }, -- toggle diagnostics window (ERrors)
+
+	-- git
+	{ "n", "<leader>gs", ":Telescope git_status<CR>" },
+	{ "n", "<leader>gc", ":Telescope git_commits<CR>" },
+	{ "n", "<leader>gb", ":Telescope git_branches<CR>" },
+	{ "n", "<leader>lg", ":lua _lazygit_toggle()<CR>", norm_silent },
+	{ "n", "<leader>gh", ":DiffviewFileHistory %<CR>", norm_silent }, -- git history for current file
 
 	-- [a f]ile
 	{ "v", "af", ":<C-U>silent! normal! ggVG<CR>", { noremap = true } },
@@ -76,9 +80,6 @@ local mappings = {
 	{ "n", "k", 'v:count || mode(1)[0:1] == "no" ? "k" : "gk"', { expr = true } },
 	{ "n", "<Up>", 'v:count || mode(1)[0:1] == "no" ? "k" : "gk"', { expr = true } },
 	{ "n", "<Down>", 'v:count || mode(1)[0:1] == "no" ? "j" : "gj"', { expr = true } },
-
-	-- open lazygit (function is defined in plugins.toggleterm)
-	{ "n", "<leader>lg", ":lua _lazygit_toggle()<CR>", norm_silent },
 
 	-- resend the last line in the next tmux window
 	{ "n", "<leader>ll", [[:SlimeSend0 "!!\r"<CR>]], norm_silent },
