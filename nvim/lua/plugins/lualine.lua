@@ -6,7 +6,7 @@ return {
 
 		local context = settings.lualine_context_fn
 			or function()
-				local path = vim.fn.expand("%")
+				local path = vim.fn.expand("%:.") -- path relative to cwd
 				local _, _, parent = string.find(path, "([^/]+)/[^/]*$")
 
 				if parent then

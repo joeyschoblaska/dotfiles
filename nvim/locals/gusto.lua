@@ -31,7 +31,7 @@ if vim.fn.getcwd():match(homedir .. "/workspace/zenpayroll") then
 			end
 		end
 
-		local path = vim.fn.expand("%")
+		local path = vim.fn.expand("%:.") -- path relative to cwd
 		local _, _, parent = string.find(path, "([^/]+)/[^/]*$")
 		local _, _, pack = string.find(path, "^packs/([^/]+)/")
 		local _, _, component = string.find(path, "^frontend/javascripts.*/components/([^/]+)/")
