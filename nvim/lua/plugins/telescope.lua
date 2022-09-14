@@ -21,6 +21,7 @@ return {
 				sorting_strategy = "ascending",
 				layout_strategy = settings.telescope_layout_strategy or "flex",
 				wrap_results = true,
+				path_display = settings.telescope_path_display or {},
 				layout_config = {
 					horizontal = {
 						prompt_position = "top",

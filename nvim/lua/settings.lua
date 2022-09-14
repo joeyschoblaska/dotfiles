@@ -9,6 +9,7 @@ local settings = {
 	telescope_layout_strategy = nil,
 	fzf_lua_layout_strategy = nil,
 	lualine_context_fn = nil,
+	telescope_path_display = nil,
 }
 
 local present, _ = pcall(require, "local")
