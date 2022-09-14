@@ -65,7 +65,7 @@ return {
 				},
 
 				lsp_definitions = {
-					jump_type = "vsplit",
+					jump_type = "never",
 					include_declaration = false,
 					show_line = false,
 				},
