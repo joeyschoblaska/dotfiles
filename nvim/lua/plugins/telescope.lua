@@ -22,6 +22,17 @@ return {
 				layout_strategy = settings.telescope_layout_strategy or "flex",
 				wrap_results = true,
 				path_display = settings.telescope_path_display or {},
+				vimgrep_arguments = { --defaults: https://github.com/nvim-telescope/telescope.nvim/blob/master/doc/telescope.txt#L522
+					"rg",
+					"--color=never",
+					"--no-heading",
+					"--with-filename",
+					"--line-number",
+					"--column",
+					"--smart-case",
+					"--only-matching",
+					"--replace=", -- hide matches by replacing them with nothing
+				},
 				layout_config = {
 					horizontal = {
 						prompt_position = "top",
@@ -85,6 +96,7 @@ return {
 					depth = 2,
 					display_stat = false, -- don't display date or file size
 					layout_strategy = "horizontal",
+					path_display = {},
 
 					layout_config = {
 						horizontal = {
@@ -92,7 +104,7 @@ return {
 						},
 					},
 
-					mappings = {
+					mappings = { -- TODO
 						i = {
 							["<C-h>"] = function()
 								-- go to home dir

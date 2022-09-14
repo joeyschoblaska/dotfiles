@@ -61,6 +61,7 @@ if vim.fn.getcwd():match(homedir .. "/workspace/zenpayroll") then
 	settings.telescope_path_display = function(opts, path)
 		local replacements = {
 			{ vim.loop.cwd(), "" },
+			{ "^/", "" },
 			{ "^packs/", "p/" },
 			{ "^frontend/javascripts/", "fe/js/" },
 			{ "/app/controllers/", "/a/c/" },
@@ -73,6 +74,8 @@ if vim.fn.getcwd():match(homedir .. "/workspace/zenpayroll") then
 			{ "/spec/services/", "/s/s/" },
 			{ "/spec/helpers/", "/s/h/" },
 			{ "/spec/views/", "/s/v/" },
+			{ "/packages/", "/pkgs/" },
+			{ "/components/", "/cmps/" },
 		}
 
 		for _, r in ipairs(replacements) do
