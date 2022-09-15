@@ -46,7 +46,7 @@ return {
 						icon_only = true,
 						colored = false,
 						separator = "",
-						padding = { right = 0, left = 1 },
+						padding = { left = 1, right = 0 },
 					},
 					"filename",
 				},
