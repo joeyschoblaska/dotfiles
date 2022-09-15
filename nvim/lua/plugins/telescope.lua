@@ -80,6 +80,12 @@ return {
 					jump_type = "never",
 					include_declaration = false,
 					show_line = false,
+					layout_config = {
+						vertical = {
+							prompt_position = "top",
+							preview_height = 0.75,
+						},
+					},
 				},
 
 				lsp_dynamic_workspace_symbols = {
