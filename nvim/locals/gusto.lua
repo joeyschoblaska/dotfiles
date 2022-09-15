@@ -24,11 +24,7 @@ if vim.fn.getcwd():match(homedir .. "/workspace/zenpayroll") then
 
 	settings.lualine_context_fn = function()
 		local join = function(parent, child)
-			if parent then
-				return parent .. "/" .. child
-			else
-				return child
-			end
+			return parent and (parent .. "/" .. child) or child
 		end
 
 		local path = vim.fn.expand("%:.") -- path relative to cwd
