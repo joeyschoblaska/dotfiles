@@ -1,4 +1,5 @@
 # TODO
+* **consolidate mappings:** mappings.lua can export mappings for other plugins (that need to be set in the plugin's setup call)
 * **git diffing:** probably using diffview
   * file history
   * PR review (the whole path from looking at something in GH to viewing diff in nvim)
