@@ -10,6 +10,7 @@
 * **telescope fb mappings:** more intuitive mappings, especially in insert mode (eg, `imap <C-foo>` should always do the same as `nmap foo`)
 * **return to project dir:** nmap h / imap <C-h> in file-browser resets cwd to project root (replace proof-of-concept <leader>fh mapping). a way to reset after changing cwd
   * or just use :tcd to change dir for the current tab? show in lualine, maybe this solves the monorepo scoping issue too?
+  * or add custom keymaps to filebrowser to launch live grep or file find with current dir? this is probably the most simple and flexible
 * **scoping monorepo:** I'm usually only working with a few packs / packages at a time
   * maybe a custom telescope picker to select packs, then file find and grep are scoped to just those packs: https://github.com/nvim-telescope/telescope.nvim/blob/master/developers.md
   * or just additional mappings that scope file find or grep to the pack (or other useful dir - see `context` lualine function containing the current file
