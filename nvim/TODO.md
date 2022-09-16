@@ -3,8 +3,9 @@
 * **git diffing:** probably using diffview
   * file history
   * PR review (the whole path from looking at something in GH to viewing diff in nvim)
-* **git blame:** see who wrote what in current file. easily open a commit in diffviewer
+* **git blame:** see who wrote what in current file. easily open a commit in diffview
   * maybe I can just write this myself? there are a few git-blame options but I don't see any that will give me the diff. see: https://teukka.tech/vimtip-gitlens.html
+  * it would be cool if I could toggle git-blame for the current line, and doing so would also turn on blame for any other lines in the file that belong to that same commit. then, provide some key binding that would open the commit in diffview
 * **telescope fb tree view:** I would need to actually build this into the plugin... [telescope-file-browser tree view](https://github.com/nvim-telescope/telescope-file-browser.nvim/issues/165#issuecomment-1242515366)
 * **telescope fb mappings:** more intuitive mappings, especially in insert mode (eg, `imap <C-foo>` should always do the same as `nmap foo`)
 * **return to project dir:** nmap h / imap <C-h> in file-browser resets cwd to project root (replace proof-of-concept <leader>fh mapping). a way to reset after changing cwd
