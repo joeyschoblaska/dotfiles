@@ -28,7 +28,7 @@
 * **ts-commentstring?:** maybe add JoosepAlviste/nvim-ts-context-commentstring once this is fixed: https://github.com/neovim/neovim/issues/12587
 * **lock plugin versions:** some way to lock versions and do manual upgrades - I don't want to be suprised by breaking changes when I need to get work done
 * **ts pair matching?:** treesitter-powered pair matching? https://github.com/andymass/vim-matchup
-* **fzf-lua result path_display?:** possible to configure how fzf-lua abbreviates filenames (like I do with telescope)?
+* **fzf-lua result path_display?:** possible to configure how fzf-lua abbreviates filenames (like I do with telescope)? https://github.com/junegunn/fzf.vim/issues/960
 * **telescope git highlighting:** possible to configure telescope git pickers to use delta / bat for paging?
 * **theme switching:** easy way to switch themes without reloading (eg, switching to a light theme temporarily while working outside)
 * **scratch:** (persistent?) scratch buffers. maybe store in a NOTES_DIR subfolder?
