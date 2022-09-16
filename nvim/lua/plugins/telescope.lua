@@ -111,6 +111,14 @@ return {
 						},
 					},
 				},
+				live_grep_args = {
+					auto_quoting = false,
+					default_mappings = {
+						i = {
+							["<C-o>"] = require("telescope-live-grep-args.actions").quote_prompt({ postfix = " -g " }),
+						},
+					},
+				},
 			},
 		})
 
