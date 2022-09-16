@@ -12,6 +12,7 @@
   * maybe a custom telescope picker to select packs, then file find and grep are scoped to just those packs: https://github.com/nvim-telescope/telescope.nvim/blob/master/developers.md
   * or just additional mappings that scope file find or grep to the pack (or other useful dir - see `context` lualine function containing the current file
 * **formatting in strange projects:** if I make a small change to a file in a forked repo and the whole file reformats. range formatting, or format only new code (so I can use prettier / whatever in codebases that don't have a fixer set up)
+  * range formatting might be nice for code blocks inside markdown too
 * **nvim_cmp:** integrate LSP servers with nvim_cmp
 * **mason?:** figure out what exactly mason is providing and whether I want to use it
 * **ruby debugger?:** new Ruby debugger stuff? need to research: https://blog.testdouble.com/talks/2022-08-22-debugging-ruby-on-rails-with-vscode/
