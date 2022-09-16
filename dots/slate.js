@@ -44,7 +44,7 @@ var gutterWidth = function () {
 
 var altCenterWidth = function () {
   if (numColumns() > 1) {
-    return columnWidth() * 1.35;
+    return columnWidth() * 1.66;
   } else {
     return columnWidth();
   }
