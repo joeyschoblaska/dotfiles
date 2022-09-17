@@ -37,7 +37,7 @@ return {
 						prompt_position = "top",
 						preview_width = 0.5,
 						preview_cutoff = 90, -- set to a low value since flex will handle swapping to vertical if necessary
-						width = { 0.95, max = 180 },
+						width = { 0.95, max = 200 },
 					},
 					vertical = {
 						prompt_position = "top",
