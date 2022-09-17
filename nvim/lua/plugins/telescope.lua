@@ -110,10 +110,7 @@ return {
 					auto_quoting = false,
 					default_mappings = {
 						i = {
-							["<C-o>"] = {
-								require("telescope-live-grep-args.actions").quote_prompt({ postfix = " -g " }),
-								"quote_prompt", -- string is used as label in help menu
-							},
+							["<C-o>"] = require("telescope-live-grep-args.actions").quote_prompt({ postfix = " -g " }),
 							["<C-f>"] = custom_ts_actions.select_dir_for_grep,
 						},
 					},
