@@ -114,6 +114,9 @@ return {
 							["<C-o>"] = require("telescope-live-grep-args.actions").quote_prompt(),
 							["<C-f>"] = custom_ts_actions.select_dir_for_grep,
 						},
+						n = {
+							["<C-f>"] = custom_ts_actions.select_dir_for_grep,
+						},
 					},
 				},
 			},
