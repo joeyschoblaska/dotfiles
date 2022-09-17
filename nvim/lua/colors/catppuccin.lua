@@ -39,4 +39,6 @@ hi("DiffChange", { bg = utils.blend(mocha.yellow, mocha.base, 0.10) })
 hi("DiffText", { bg = utils.blend(mocha.yellow, mocha.base, 0.30) })
 
 -- indent-blankline
-hi("IndentBlanklineContextChar", { fg = mocha.surface1, nocombine = true })
+hi("IndentBlanklineIndent1", { fg = mocha.surface0, nocombine = true })
+hi("IndentBlanklineIndent2", { fg = mocha.surface1, nocombine = true })
+hi("IndentBlanklineContextChar", { fg = mocha.overlay0, nocombine = true })
