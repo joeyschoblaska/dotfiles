@@ -44,7 +44,7 @@ return {
 						preview_height = 0.60,
 					},
 					flex = {
-						flip_columns = 140, -- use horizontal mode if buffer has at least this many columns
+						flip_columns = 160, -- use horizontal mode if buffer has at least this many columns
 					},
 					width = { 0.95, max = 160 },
 					height = 0.95,
