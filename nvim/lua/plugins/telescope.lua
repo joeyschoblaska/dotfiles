@@ -12,6 +12,7 @@ return {
 	config = function()
 		local telescope = require("telescope")
 		local fb_actions = require("telescope").extensions.file_browser.actions
+		local custom_ts_actions = require("plugins.ts_actions")
 		local settings = require("settings")
 
 		telescope.setup({
@@ -100,14 +101,10 @@ return {
 
 					mappings = { -- TODO
 						i = {
-							["<C-h>"] = function()
-								-- go to home dir
-							end,
 							["<C-c>"] = fb_actions.create,
 						},
 						["n"] = {
-							-- your custom normal mode mappings
-							-- thd xues
+							["a"] = custom_ts_actions.grep_in_dir,
 						},
 					},
 				},
@@ -115,7 +112,11 @@ return {
 					auto_quoting = false,
 					default_mappings = {
 						i = {
-							["<C-o>"] = require("telescope-live-grep-args.actions").quote_prompt({ postfix = " -g " }),
+							["<C-o>"] = {
+								require("telescope-live-grep-args.actions").quote_prompt({ postfix = " -g " }),
+								"quote_prompt", -- string is used as label in help menu
+							},
+							["<C-f>"] = custom_ts_actions.select_dir_for_grep,
 						},
 					},
 				},

@@ -27,12 +27,12 @@ local mappings = {
 	-- telescope
 	{ "n", "<leader>t", settings.file_find_cmd or ":Telescope find_files<CR>" },
 	{ "n", "<leader>a", ":Telescope live_grep_args<CR>" },
-	{ "v", "<leader>a", [["9y<ESC>:Telescope live_grep_args default_text=<c-r>9<CR>]] }, -- yank selection into reg 9 and grep for it
+	{ "v", "<leader>a", [["9y<ESC>:Telescope live_grep_args default_text=<C-r>9<CR>]] }, -- yank selection into reg 9 and grep for it
 	{ "n", "<leader>km", ":Telescope keymaps<CR>" },
 	{ "n", "<leader>be", ":Telescope buffers<CR>" }, -- buffer explore
-	{ "n", "<leader>fb", ":Telescope file_browser<CR>" },
-	{ "n", "<leader>fo", ":Telescope file_browser files=false<CR>" }, -- open browser in folder mode
-	{ "n", "<leader>ff", ":Telescope file_browser path=%:p:h select_buffer=true<CR>" }, -- open current file in browser
+	{ "n", "<leader>fb", ":Telescope file_browser grouped=true<CR>" },
+	{ "n", "<leader>fo", ":Telescope file_browser files=false grouped=true<CR>" }, -- open browser in folder mode
+	{ "n", "<leader>ff", ":Telescope file_browser path=%:p:h select_buffer=true grouped=true<CR>" }, -- open current file in browser
 	{ "n", "<leader>fh", ":cd " .. vim.fn.getcwd() .. "<CR>" }, -- reset cwd to its value when vim session began
 	{ "n", "<leader>nt", ":Telescope find_files hidden=false cwd=$NOTES_DIR<CR>" },
 	{ "n", "<leader>na", ":Telescope live_grep_args cwd=$NOTES_DIR<CR>" },
