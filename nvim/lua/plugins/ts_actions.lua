@@ -16,10 +16,13 @@ return {
 					local fb_finder = fb_picker.finder
 					local entry_path = action_state.get_selected_entry().Path
 
-					fb_finder.path = entry_path:is_dir() and entry_path:absolute() or entry_path:parent():absolute()
+					local absolute = entry_path:is_dir() and entry_path:absolute() or entry_path:parent():absolute()
+					local relative = entry_path:is_dir() and entry_path:make_relative(vim.fn.getcwd())
+						or entry_path:parent():make_relative(vim.fn.getcwd())
 
 					live_grep_args.live_grep_args({
-						cwd = fb_finder.path,
+						results_title = relative .. "/",
+						cwd = absolute,
 						default_text = current_line,
 					})
 				end)
