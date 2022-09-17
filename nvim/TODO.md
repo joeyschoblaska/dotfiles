@@ -8,12 +8,6 @@
   * it would be cool if I could toggle git-blame for the current line, and doing so would also turn on blame for any other lines in the file that belong to that same commit. then, provide some key binding that would open the commit in diffview
 * **telescope fb tree view:** I would need to actually build this into the plugin... [telescope-file-browser tree view](https://github.com/nvim-telescope/telescope-file-browser.nvim/issues/165#issuecomment-1242515366)
 * **telescope fb mappings:** more intuitive mappings, especially in insert mode (eg, `imap <C-foo>` should always do the same as `nmap foo`)
-* **return to project dir:** nmap h / imap <C-h> in file-browser resets cwd to project root (replace proof-of-concept <leader>fh mapping). a way to reset after changing cwd
-  * or just use :tcd to change dir for the current tab? show in lualine, maybe this solves the monorepo scoping issue too?
-  * or add custom keymaps to filebrowser to launch live grep or file find with current dir? this is probably the most simple and flexible. example action (change_cwd) here: https://github.com/nvim-telescope/telescope-file-browser.nvim/blob/master/lua/telescope/_extensions/file_browser/actions.lua#L556-L572
-* **scoping monorepo:** I'm usually only working with a few packs / packages at a time
-  * maybe a custom telescope picker to select packs, then file find and grep are scoped to just those packs: https://github.com/nvim-telescope/telescope.nvim/blob/master/developers.md
-  * or just additional mappings that scope file find or grep to the pack (or other useful dir - see `context` lualine function containing the current file
 * **formatting in strange projects:** if I make a small change to a file in a forked repo and the whole file reformats. range formatting, or format only new code (so I can use prettier / whatever in codebases that don't have a fixer set up)
   * range formatting might be nice for code blocks inside markdown too
 * **nvim_cmp:** integrate LSP servers with nvim_cmp

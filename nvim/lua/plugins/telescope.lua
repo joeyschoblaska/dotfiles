@@ -103,9 +103,7 @@ return {
 						i = {
 							["<C-c>"] = fb_actions.create,
 						},
-						["n"] = {
-							["a"] = custom_ts_actions.grep_in_dir,
-						},
+						["n"] = {},
 					},
 				},
 				live_grep_args = {
