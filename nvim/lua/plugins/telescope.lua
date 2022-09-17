@@ -37,6 +37,7 @@ return {
 						prompt_position = "top",
 						preview_width = 0.5,
 						preview_cutoff = 90, -- set to a low value since flex will handle swapping to vertical if necessary
+						width = { 0.95, max = 180 },
 					},
 					vertical = {
 						prompt_position = "top",
@@ -110,7 +111,7 @@ return {
 					auto_quoting = false,
 					default_mappings = {
 						i = {
-							["<C-o>"] = require("telescope-live-grep-args.actions").quote_prompt({ postfix = " -g " }),
+							["<C-o>"] = require("telescope-live-grep-args.actions").quote_prompt(),
 							["<C-f>"] = custom_ts_actions.select_dir_for_grep,
 						},
 					},
