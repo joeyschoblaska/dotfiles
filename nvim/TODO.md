@@ -33,4 +33,5 @@
 * **theme switching:** easy way to switch themes without reloading (eg, switching to a light theme temporarily while working outside)
 * **scratch:** (persistent?) scratch buffers. maybe store in a NOTES_DIR subfolder?
 * **? cheat sheet:** weird idea, but a plugin that lets me show a little pop-up window on demand (this, probably: https://github.com/nvim-lua/popup.nvim). I could map one to `?` that has keymaps and hints for how to use my config that someone who was pairing with me could reference
+  * just use whichkey?
 * **vim-tmux-navigator?:** see if this would be an improvement to my workflow: https://github.com/christoomey/vim-tmux-navigator - maybe use karabiner / qmk to make tab work as a modifier key for hjkl
