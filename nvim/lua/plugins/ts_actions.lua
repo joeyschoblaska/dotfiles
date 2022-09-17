@@ -2,6 +2,8 @@ local action_state = require("telescope.actions.state")
 local fb = require("telescope").extensions.file_browser
 
 return {
+	-- I'm not doing this right at all
+	-- maybe this? https://www.reddit.com/r/neovim/comments/n9vt6d/chaining_2_telescope_pickers/
 	select_dir_for_grep = function(prompt_bufnr)
 		local current_picker = action_state.get_current_picker(prompt_bufnr)
 		local current_line = action_state.get_current_line() -- the current prompt contents, I think?
