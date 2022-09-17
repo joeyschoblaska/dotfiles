@@ -6,6 +6,7 @@
 * **telescope fb mappings:** more intuitive mappings, especially in insert mode (eg, `imap <C-foo>` should always do the same as `nmap foo`)
 * **scratch:** (persistent?) scratch buffers. shortcut opens or creates SCRATCH_DIR/<project>.md - put in dropbox to sync across machines
 * **nvim_cmp:** integrate LSP servers with nvim_cmp
+* **select_dir_for_grep warnings?:** sometimes I get a warning about a var being a table instead of a number or something. probably easiest to use a local copy of telescope and try to get a stack trace of where exactly it's coming from
 * **git blame:** see who wrote what in current file. easily open a commit in diffview
   * maybe I can just write this myself? there are a few git-blame options but I don't see any that will give me the diff. see: https://teukka.tech/vimtip-gitlens.html
   * it would be cool if I could toggle git-blame for the current line, and doing so would also turn on blame for any other lines in the file that belong to that same commit. then, provide some key binding that would open the commit in diffview
