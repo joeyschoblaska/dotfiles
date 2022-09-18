@@ -10,6 +10,7 @@
 * **git blame:** see who wrote what in current file. easily open a commit in diffview
   * maybe I can just write this myself? there are a few git-blame options but I don't see any that will give me the diff. see: https://teukka.tech/vimtip-gitlens.html
   * it would be cool if I could toggle git-blame for the current line, and doing so would also turn on blame for any other lines in the file that belong to that same commit. then, provide some key binding that would open the commit in diffview
+  * maybe a "gc" (Go to Commit) binding that opens up the last commit to touch the current line in diffview
 * **fzf-lua result path_display?:** possible to configure how fzf-lua abbreviates filenames (like I do with telescope)? https://github.com/junegunn/fzf.vim/issues/960
 * **markdown bullets:** for markdown editing, auto-insert bullets when starting a new line in a list
 * **formatting in strange projects:** if I make a small change to a file in a forked repo and the whole file reformats. range formatting, or format only new code (so I can use prettier / whatever in codebases that don't have a fixer set up)
