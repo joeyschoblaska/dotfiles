@@ -80,7 +80,12 @@ return {
 
 				lsp_dynamic_workspace_symbols = {
 					show_line = false,
-					fname_width = 45,
+					fname_width = 80,
+					symbol_width = 55,
+					layout_strategy = "vertical",
+
+					-- https://github.com/nvim-telescope/telescope.nvim/issues/2104#issuecomment-1223790155
+					sorter = telescope.extensions.fzf.native_fzf_sorter(),
 				},
 			},
 

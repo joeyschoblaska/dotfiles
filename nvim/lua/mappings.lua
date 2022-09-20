@@ -47,6 +47,7 @@ local mappings = {
 	{ "n", "gr", ":Telescope lsp_references<CR>" },
 	{ "n", "K", ":lua vim.lsp.buf.hover()<CR>" },
 	{ "n", "<leader>er", ":TroubleToggle<CR>" }, -- toggle diagnostics window (ERrors)
+	{ "n", "<leader>ws", ":Telescope lsp_dynamic_workspace_symbols<CR>" },
 
 	-- git
 	{ "n", "<leader>gs", ":Telescope git_status<CR>" },
