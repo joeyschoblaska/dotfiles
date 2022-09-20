@@ -10,11 +10,13 @@ return {
 				file_panel = {
 					["<c-u>"] = actions.scroll_view(-0.25),
 					["<c-d>"] = actions.scroll_view(0.25),
+					["q"] = ":DiffviewClose<CR>",
 				},
 
 				file_history_panel = {
 					["<c-u>"] = actions.scroll_view(-0.25),
 					["<c-d>"] = actions.scroll_view(0.25),
+					["q"] = ":DiffviewClose<CR>",
 				},
 			},
 		})
