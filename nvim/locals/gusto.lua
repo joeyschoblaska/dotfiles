@@ -18,7 +18,7 @@ if vim.fn.getcwd():match(homedir .. "/workspace/zenpayroll") then
 		}
 	end
 
-	settings.nvim_lsp_servers = { "sorbet", "solargraph", "tsserver" }
+	settings.nvim_lsp_servers = { "sorbet", "tsserver" }
 	settings.telescope_layout_strategy = "vertical"
 	settings.fzf_lua_layout_strategy = "vertical"
 
