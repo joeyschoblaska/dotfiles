@@ -17,7 +17,7 @@ if [[ ${localenv} == "gusto" ]]; then
     if ! cmp -s "nvim/locals/gusto.lua" "$HOME/.config/nvim/lua/local.lua"; then
       abort="true"
       echo "🚨 local nvim config differs from repo - aborting"
-      diff "nvim/locals/gusto.lua" "$HOME/.config/nvim/lua/local.lua"
+      delta "nvim/locals/gusto.lua" "$HOME/.config/nvim/lua/local.lua"
     fi
 
     if ! cmp -s "dots/bashrc_local.gusto" "$HOME/.bashrc_local"; then
