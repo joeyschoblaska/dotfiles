@@ -81,6 +81,11 @@ brew install --cask mattr-slate
 
 Set the 1Password shortcut to "CMD + ALT + CTRL + P". The hammerspoon config maps "CMD + \" to send that shortcut IN CHROME ONLY (otherwise, "CMD + \" triggers 1Password from any app and it's super annoying).
 
+## Optional packages
+* [dust](https://github.com/bootandy/dust): "du + rust = dust. Like du but more intuitive."
+* [exa](https://the.exa.website/): "A modern replacement for ls"
+* [vivid](https://github.com/sharkdp/vivid): Themable, colorized output for commands like ls, tree, fd, dust, and others
+
 ## nvim
 To sync packages after changing plugins, run `:PackerSync`
 
