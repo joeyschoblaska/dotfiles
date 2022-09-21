@@ -17,25 +17,25 @@ if [[ ${localenv} == "gusto" ]]; then
     if ! cmp -s "nvim/locals/gusto.lua" "$HOME/.config/nvim/lua/local.lua"; then
       abort="true"
       echo "🚨 local nvim config differs from repo - aborting"
-      delta "nvim/locals/gusto.lua" "$HOME/.config/nvim/lua/local.lua"
+      delta "$HOME/.config/nvim/lua/local.lua" "nvim/locals/gusto.lua"
     fi
 
     if ! cmp -s "dots/bashrc_local.gusto" "$HOME/.bashrc_local"; then
       abort="true"
       printf "\n🚨 local bash config differs from repo - aborting"
-      delta "dots/bashrc_local.gusto" "$HOME/.bashrc_local"
+      delta "$HOME/.bashrc_local" "dots/bashrc_local.gusto"
     fi
 
     if ! cmp -s "dots/gitconfig.gusto" "$HOME/.gitconfig"; then
       abort="true"
       printf "\n🚨 local git config differs from repo - aborting"
-      delta "dots/gitconfig.gusto" "$HOME/.gitconfig";
+      delta "$HOME/.gitconfig" "dots/gitconfig.gusto"
     fi
 
     if ! cmp -s "dots/gitignore.gusto" "$HOME/.gitignore"; then
       abort="true"
       printf "\n🚨 local git ignore differs from repo - aborting"
-      delta "dots/gitignore.gusto" "$HOME/.gitignore";
+      delta "$HOME/.gitignore" "dots/gitignore.gusto" 
     fi
 
     [[ ${abort} == "true" ]] && exit 1
