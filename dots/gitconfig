@@ -14,7 +14,6 @@
   default = current
 [pull]
   rebase = true
-  ff = only
 [init]
   defaultBranch = main
 [interactive]
