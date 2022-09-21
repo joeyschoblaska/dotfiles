@@ -97,7 +97,6 @@ return {
 					depth = 2,
 					display_stat = false, -- don't display date or file size
 					layout_strategy = "horizontal",
-					path_display = {},
 
 					layout_config = {
 						horizontal = {
