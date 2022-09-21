@@ -18,7 +18,22 @@ if vim.fn.getcwd():match(homedir .. "/workspace/zenpayroll") then
 		}
 	end
 
-	settings.nvim_lsp_servers = { "sorbet", "solargraph", "tsserver" }
+	settings.nvim_lsp_servers = {
+		"solargraph",
+		"tsserver",
+		{
+			"sorbet",
+			handlers = {
+				-- make definition and references callbacks for sorbet no-ops. this
+				-- prevents an issue where both solargraph and sorbet will respond with
+				-- suggestions, causing the telescope window to flash (or to re-open if
+				-- it was closed after one server responded but before the other did)
+				["textDocument/definition"] = function(...) end,
+				["textDocument/references"] = function(...) end,
+			},
+		},
+	}
+
 	settings.telescope_layout_strategy = "vertical"
 	settings.fzf_lua_layout_strategy = "vertical"
 
