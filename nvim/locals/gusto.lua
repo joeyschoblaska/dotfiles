@@ -13,7 +13,25 @@ if vim.fn.getcwd():match(homedir .. "/workspace/zenpayroll") then
 			null_ls.builtins.formatting.stylua,
 			null_ls.builtins.formatting.rubocop.with(rcop_server),
 			null_ls.builtins.diagnostics.rubocop.with(rcop_server),
-			null_ls.builtins.formatting.prettierd,
+			null_ls.builtins.formatting.prettierd.with({
+				-- defaults minus markdown
+				filetypes = {
+					"css",
+					"graphql",
+					"handlebars",
+					"html",
+					"javascript",
+					"javascriptreact",
+					"json",
+					"jsonc",
+					"less",
+					"scss",
+					"typescript",
+					"typescriptreact",
+					"vue",
+					"yaml",
+				},
+			}),
 			null_ls.builtins.formatting.eslint_d,
 		}
 	end

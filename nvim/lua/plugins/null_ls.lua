@@ -10,6 +10,7 @@ return {
 			or {
 				null_ls.builtins.formatting.stylua,
 				null_ls.builtins.formatting.prettierd.with({
+					-- defaults minus markdown
 					filetypes = {
 						"css",
 						"graphql",
