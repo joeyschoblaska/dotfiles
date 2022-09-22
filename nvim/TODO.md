@@ -12,7 +12,6 @@
   * it would be cool if I could toggle git-blame for the current line, and doing so would also turn on blame for any other lines in the file that belong to that same commit. then, provide some key binding that would open the commit in diffview
   * maybe a "gc" (Go to Commit) binding that opens up the last commit to touch the current line in diffview. see git-blame.nvim's get_sha function: https://github.com/f-person/git-blame.nvim/blob/master/lua/gitblame/init.lua#L294  - https://stackoverflow.com/questions/71143517/how-to-bind-a-luafunction-to-keypress-in-vim
 * **fzf-lua result path_display?:** possible to configure how fzf-lua abbreviates filenames (like I do with telescope)? https://github.com/junegunn/fzf.vim/issues/960
-* **markdown bullets:** for markdown editing, auto-insert bullets when starting a new line in a list
 * **formatting in strange projects:** if I make a small change to a file in a forked repo and the whole file reformats. range formatting, or format only new code (so I can use prettier / whatever in codebases that don't have a fixer set up)
   * range formatting might be nice for code blocks inside markdown too
 * **mason?:** figure out what exactly mason is providing and whether I want to use it
