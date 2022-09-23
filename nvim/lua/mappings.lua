@@ -34,9 +34,12 @@ local mappings = {
 	{ "n", "<leader>fo", ":Telescope file_browser files=false<CR>" }, -- open browser in folder mode
 	{ "n", "<leader>ff", ":Telescope file_browser path=%:p:h select_buffer=true<CR>" }, -- open current file in browser
 	{ "n", "<leader>fh", ":cd " .. vim.fn.getcwd() .. "<CR>" }, -- reset cwd to its value when vim session began
-	{ "n", "<leader>nt", ":Telescope find_files hidden=false cwd=$NOTES_DIR<CR>" },
-	{ "n", "<leader>na", ":Telescope live_grep_args cwd=$NOTES_DIR<CR>" },
 	{ "n", "<leader>ba", ":Telescope live_grep grep_open_files=true<CR>" }, -- live grep in all open buffers
+
+	-- notes
+	{ "n", "<leader>nt", ":Telescope find_files hidden=false cwd=$NOTES_DIR<CR>" }, -- open file in notes dir
+	{ "n", "<leader>na", ":Telescope live_grep_args cwd=$NOTES_DIR<CR>" }, -- grep in notes dir
+	{ "n", "<leader>no", [[:exec '!open obsidian://open?path="' . expand('%:.') . '"'<CR><CR>]] }, -- open file in obsidian (https://help.obsidian.md/Advanced+topics/Using+obsidian+URI)
 
 	-- copy path to current file to system clipboard
 	{ "n", "<leader>fc", ":let @+ = expand('%:.')<CR>" },
