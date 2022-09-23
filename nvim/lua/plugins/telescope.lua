@@ -91,6 +91,7 @@ return {
 
 			extensions = {
 				file_browser = {
+					path_display = {},
 					hidden = true,
 					wrap_results = false,
 					file_ignore_patterns = { ".git" }, -- the "^.git/" pattern wasn't working for some reason...
