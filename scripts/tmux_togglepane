@@ -25,16 +25,21 @@
 # @togglepane is a user option that will store the tmux id of the togglepane
 # pane. it's a window-level variable (so each window in a session can have its
 # own togglepane)
-P=$(tmux show -wqv @togglepane)
 
-if [ -n "$P" ] && tmux lsp -F '#{pane_id}' | grep -q ^$P; then
+# set up a tmux binding to call this script:
+# bind "'" run-shell "/path/to/tmux_togglepane"
+
+PANE=$(tmux show -wqv @togglepane)
+PANE_HEIGHT=10
+
+if [ -n "$PANE" ] && tmux lsp -F '#{pane_id}' | grep -q ^$PANE; then
   # @togglepane is set (-n: "not blank") and pane is visible in current window
-  tmux breakp -d -s $P
-elif [ -n "$P" ] && tmux lsp -s -F '#{pane_id}' | grep -q ^$P; then
+  tmux breakp -d -s $PANE
+elif [ -n "$PANE" ] && tmux lsp -s -F '#{pane_id}' | grep -q ^$PANE; then
   # @togglepane is set and pane exists somewhere in the session (-s)
-  tmux joinp -s $P -l 10
+  tmux joinp -s $PANE -l $PANE_HEIGHT
 else
   # @togglepane died or is not set
-  P=$(tmux splitw -P -F'#{pane_id}' -l 10)
-  tmux set -w @togglepane "$P"
+  PANE=$(tmux splitw -P -F'#{pane_id}' -l $PANE_HEIGHT)
+  tmux set -w @togglepane "$PANE"
 fi
