@@ -28,6 +28,7 @@ return require("packer").startup(function(use)
 	use(require("plugins.filetype")) -- filetype settings / definitions
 	use(require("plugins.diffview")) -- for viewing git diffs
 	use(require("plugins.autolist")) -- list completion for markdown docs
+	use(require("plugins.gitlinker")) -- generate github link for cursor position
 
 	-- syntax
 	use(require("plugins.treesitter")) -- syntax parsing for highlighting and indenting
