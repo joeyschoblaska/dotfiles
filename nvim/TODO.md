@@ -1,9 +1,7 @@
 # TODO
 * **consolidate mappings:** mappings.lua can export mappings for other plugins (that need to be set in the plugin's setup call)
-* **git diffing:** probably using diffview
-  * file history
-  * PR review (the whole path from looking at something in GH to viewing diff in nvim)
-* **telescope fb mappings:** more intuitive mappings, especially in insert mode (eg, `imap <C-foo>` should always do the same as `nmap foo`)
+* **PR review:** convenient way to check out a PR and open in diffview
+* * **telescope fb mappings:** more intuitive mappings, especially in insert mode (eg, `imap <C-foo>` should always do the same as `nmap foo`)
 * **scratch:** (persistent?) scratch buffers. shortcut opens or creates SCRATCH_DIR/<project>.md - put in dropbox to sync across machines
 * **nvim_cmp:** integrate LSP servers with nvim_cmp
 * **select_dir_for_grep warnings?:** sometimes I get a warning about a var being a table instead of a number or something. probably easiest to use a local copy of telescope and try to get a stack trace of where exactly it's coming from
