@@ -33,10 +33,10 @@ hi("FidgetTitle", { fg = mocha.mauve, bg = mocha.base })
 hi("FidgetTask", { fg = mocha.mantle, bg = mocha.mauve })
 
 -- diffview
-hi("DiffAdd", { bg = utils.blend(mocha.green, mocha.base, 0.20) })
-hi("DiffDelete", { bg = utils.blend(mocha.red, mocha.base, 0.20) })
-hi("DiffChange", { bg = utils.blend(mocha.yellow, mocha.base, 0.10) })
-hi("DiffText", { bg = utils.blend(mocha.yellow, mocha.base, 0.30) })
+hi("DiffAdd", { bg = utils.blend(mocha.green, mocha.crust, 0.25) })
+hi("DiffDelete", { bg = utils.blend(mocha.red, mocha.crust, 0.25) })
+hi("DiffChange", { bg = utils.blend(mocha.yellow, mocha.crust, 0.15) })
+hi("DiffText", { bg = utils.blend(mocha.yellow, mocha.crust, 0.35) })
 
 -- indent-blankline
 hi("IndentBlanklineIndent1", { fg = mocha.surface0, nocombine = true })
