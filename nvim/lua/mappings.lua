@@ -58,6 +58,7 @@ local mappings = {
 	{ "n", "<leader>gb", ":Telescope git_branches<CR>" },
 	{ "n", "<leader>lg", ":lua _lazygit_toggle()<CR>", norm_silent },
 	{ "n", "<leader>gh", ":DiffviewFileHistory %<CR>", norm_silent }, -- git history for current file
+	{ "n", "<leader>gd", ":DiffviewOpen main...head<CR>", norm_silent }, -- git diff for current branch against main
 
 	-- [a f]ile
 	{ "v", "af", ":<C-U>silent! normal! ggVG<CR>", { noremap = true } },
