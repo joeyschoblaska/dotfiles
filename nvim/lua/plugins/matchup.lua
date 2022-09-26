@@ -1,6 +1,9 @@
 return {
 	"andymass/vim-matchup",
 
+	requires = "nvim-treesitter/nvim-treesitter",
+	after = "nvim-treesitter",
+
 	config = function()
 		vim.g.matchup_surround_enabled = 1
 

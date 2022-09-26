@@ -1,5 +1,9 @@
 return {
 	"stevearc/aerial.nvim",
+
+	requires = "nvim-treesitter/nvim-treesitter",
+	after = "nvim-treesitter",
+
 	config = function()
 		require("aerial").setup({
 			close_on_select = true,

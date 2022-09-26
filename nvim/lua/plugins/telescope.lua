@@ -9,6 +9,8 @@ return {
 		"stevearc/aerial.nvim",
 	},
 
+	after = "aerial.nvim",
+
 	config = function()
 		local telescope = require("telescope")
 		local fb_actions = require("telescope").extensions.file_browser.actions
