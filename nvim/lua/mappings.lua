@@ -108,6 +108,9 @@ local mappings = {
 	{ "n", "g*", [[g*<Cmd>lua require('hlslens').start()<CR>]], norm_silent },
 	{ "n", "g#", [[g#<Cmd>lua require('hlslens').start()<CR>]], norm_silent },
 	{ "n", "<Esc>", ":noh<CR>", norm_silent },
+
+	-- markdown preview
+	{ "n", "<leader>mp", ":MarkdownPreview<CR>" },
 }
 
 for _, m in ipairs(mappings) do
