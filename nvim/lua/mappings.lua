@@ -116,9 +116,14 @@ local mappings = {
 	{ "n", "<", [[:lua require("harpoon.ui").nav_prev()<CR>]], norm_silent },
 	{ "n", ">", [[:lua require("harpoon.ui").nav_next()<CR>]], norm_silent },
 	{ "n", "H", [[mh:lua require("harpoon.mark").add_file()<CR>:echo "harpooned"<CR>]], { noremap = true } },
-	{ "n", "<leader>ha", [[:lua require("harpoon.ui").toggle_quick_menu()<CR>]], { noremap = true } },
-	{ "n", "<leader>ht", [[:Telescope harpoon marks<CR>]], { noremap = true } },
-	{ "n", "<leader>hc", [[:lua require("harpoon.mark").clear_all()<CR>:]], { noremap = true } }, -- _h_arpoon _c_lear
+	{ "n", "<leader>ha", [[:lua require("harpoon.ui").toggle_quick_menu()<CR>]], norm_silent },
+	{ "n", "<leader>ht", [[:Telescope harpoon marks<CR>]], norm_silent },
+	{
+		"n",
+		"<leader>hc", -- _h_arpoon _c_lear
+		[[:lua require("harpoon.mark").clear_all()<CR>:echo "harpoon cleared"<CR>]],
+		{ noremap = true },
+	},
 }
 
 for _, m in ipairs(mappings) do
