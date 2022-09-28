@@ -32,7 +32,7 @@ return require("packer").startup(function(use)
 	use(require("plugins.markdown_preview")) -- live in-browser preview of markdown buffer
 	use(require("plugins.harpoon")) -- mark files and jump between them
 
-	-- syntax
+	-- syntax / treesitter
 	use(require("plugins.treesitter")) -- syntax parsing for highlighting and indenting
 	use({ "nvim-treesitter/playground", after = "nvim-treesitter" }) -- for debugging treesitter / hl groups
 	use(require("plugins.context")) -- show context of visible buffer
@@ -41,6 +41,7 @@ return require("packer").startup(function(use)
 	use(require("plugins.indent_blankline")) -- vertical line showing block indent levels
 	use(require("plugins.aerial")) -- give a symbol outline of the current file
 	use(require("plugins.matchup")) -- useful operations on sets of matched (eg, parens, brackets, if ... end) text
+	use(require("plugins.surround")) -- add / delete / change "surrounds" (brackets, quotes, backticks, html tags, etc)
 
 	-- colors
 	-- use("Mofiqul/dracula.nvim")
