@@ -31,6 +31,7 @@ return require("packer").startup(function(use)
 	use(require("plugins.gitlinker")) -- generate github link for cursor position
 	use(require("plugins.markdown_preview")) -- live in-browser preview of markdown buffer
 	use("ThePrimeagen/harpoon") -- mark files and jump between them
+	use(require("plugins.marks")) -- show marks in signcol
 
 	-- syntax
 	use(require("plugins.treesitter")) -- syntax parsing for highlighting and indenting
