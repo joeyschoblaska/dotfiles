@@ -113,8 +113,8 @@ local mappings = {
 	{ "n", "<leader>mp", ":MarkdownPreview<CR>" },
 
 	-- harpoon
-	{ "n", "<", [[:lua require("harpoon.ui").nav_prev()<CR>]], { noremap = true } },
-	{ "n", ">", [[:lua require("harpoon.ui").nav_next()<CR>]], { noremap = true } },
+	{ "n", "<", [[:lua require("harpoon.ui").nav_prev()<CR>]], norm_silent },
+	{ "n", ">", [[:lua require("harpoon.ui").nav_next()<CR>]], norm_silent },
 	{ "n", "H", [[mh:lua require("harpoon.mark").add_file()<CR>:echo "harpooned"<CR>]], { noremap = true } },
 	{ "n", "<leader>ha", [[:lua require("harpoon.ui").toggle_quick_menu()<CR>]], { noremap = true } },
 	{ "n", "<leader>ht", [[:Telescope harpoon marks<CR>]], { noremap = true } },
