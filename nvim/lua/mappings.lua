@@ -90,7 +90,7 @@ local mappings = {
 	-- resend the last line in the next tmux window
 	{ "n", "<leader>ll", [[:SlimeSend0 "!!\r"<CR>]], norm_silent },
 
-	-- hlslens
+	-- hlslens (these mappings are part of the setup instructions)
 	{
 		"n",
 		"n",
@@ -107,10 +107,17 @@ local mappings = {
 	{ "n", "#", [[#<Cmd>lua require('hlslens').start()<CR>]], norm_silent },
 	{ "n", "g*", [[g*<Cmd>lua require('hlslens').start()<CR>]], norm_silent },
 	{ "n", "g#", [[g#<Cmd>lua require('hlslens').start()<CR>]], norm_silent },
-	{ "n", "<Esc>", ":noh<CR>", norm_silent },
+	{ "n", "<Esc>", ":noh<CR>", norm_silent }, -- clear highlights on escape
 
 	-- markdown preview
 	{ "n", "<leader>mp", ":MarkdownPreview<CR>" },
+
+	-- harpoon
+	{ "n", "<", [[:lua require("harpoon.ui").nav_prev()<CR>]], { noremap = true } },
+	{ "n", ">", [[:lua require("harpoon.ui").nav_next()<CR>]], { noremap = true } },
+	{ "n", "H", [[:lua require("harpoon.mark").add_file()<CR>]], { noremap = true } },
+	{ "n", "<leader>ha", [[:lua require("harpoon.ui").toggle_quick_menu()<CR>]], { noremap = true } },
+	{ "n", "<leader>ht", [[:Telescope harpoon marks<CR>]], { noremap = true } },
 }
 
 for _, m in ipairs(mappings) do
