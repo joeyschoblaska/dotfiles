@@ -81,6 +81,15 @@ brew install --cask mattr-slate
 
 Set the 1Password shortcut to "CMD + ALT + CTRL + P". The hammerspoon config maps "CMD + \" to send that shortcut IN CHROME ONLY (otherwise, "CMD + \" triggers 1Password from any app and it's super annoying).
 
+### vivid
+* https://github.com/sharkdp/vivid
+
+`coreutils` for `gls` in `alias ls="gls --color"`
+
+```
+brew install vivid coreutils
+```
+
 ## Optional packages
 * [dust](https://github.com/bootandy/dust): "du + rust = dust. Like du but more intuitive."
 * [exa](https://the.exa.website/): "A modern replacement for ls"

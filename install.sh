@@ -175,4 +175,12 @@ cp dots/irbrc ~/.irbrc
 
 #################################################################################
 
+echo "installing vivid config"
+
+rm -rf ~/.config/vivid
+mkdir -p ~/.config/vivid
+cp -r vivid/ ~/.config/vivid
+
+#################################################################################
+
 echo "done!"

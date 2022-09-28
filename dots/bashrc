@@ -30,6 +30,7 @@ export BASH_SILENCE_DEPRECATION_WARNING=1
 export RIPGREP_CONFIG_PATH=$HOME/.ripgreprc
 export LYNX_CFG=$HOME/.lynxrc
 export NOTES_DIR=$HOME/Dropbox/notes/obsidian
+export LS_COLORS="$(vivid generate $HOME/.config/vivid/catppuccin_mocha.yml)"
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
@@ -48,6 +49,8 @@ alias ibrew="arch -x86_64 /usr/local/homebrew/bin/brew"
 alias mbrew="arch -arm64e /opt/homebrew/bin/brew"
 alias archi="arch -x86_64"
 alias archm="arch -arm64e"
+
+alias ls="gls --color" # colorized ls output - managed by vivid config
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
