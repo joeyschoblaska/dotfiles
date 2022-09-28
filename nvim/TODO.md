@@ -9,6 +9,7 @@
   * maybe I can just write this myself? there are a few git-blame options but I don't see any that will give me the diff. see: https://teukka.tech/vimtip-gitlens.html
   * it would be cool if I could toggle git-blame for the current line, and doing so would also turn on blame for any other lines in the file that belong to that same commit. then, provide some key binding that would open the commit in diffview
   * maybe a "gc" (Go to Commit) binding that opens up the last commit to touch the current line in diffview. see git-blame.nvim's get_sha function: https://github.com/f-person/git-blame.nvim/blob/master/lua/gitblame/init.lua#L294  - https://stackoverflow.com/questions/71143517/how-to-bind-a-luafunction-to-keypress-in-vim
+* **clear marks and harpoon?:** clear harpoon list and any "manual" marks (a-zA-Z) every time I quit vim? nvim stores mark info in shada (`:h shada`)
 * **fzf-lua result path_display?:** possible to configure how fzf-lua abbreviates filenames (like I do with telescope)? https://github.com/junegunn/fzf.vim/issues/960
 * **formatting in strange projects:** if I make a small change to a file in a forked repo and the whole file reformats. range formatting, or format only new code (so I can use prettier / whatever in codebases that don't have a fixer set up)
   * range formatting might be nice for code blocks inside markdown too
