@@ -1,7 +1,7 @@
 # TODO
 * **consolidate mappings:** mappings.lua can export mappings for other plugins (that need to be set in the plugin's setup call)
 * **PR review:** convenient way to check out a PR and open in diffview
-  *  maybe a custom command that calls `gh` and Diffview: `:ghpr 1234`
+  *  maybe a custom command that calls `gh` and Diffview: `:PR 1234`
 * * **telescope fb mappings:** more intuitive mappings, especially in insert mode (eg, `imap <C-foo>` should always do the same as `nmap foo`)
 * **scratch:** (persistent?) scratch buffers. shortcut opens or creates SCRATCH_DIR/<project>.md - put in dropbox to sync across machines
 * **nvim_cmp:** integrate LSP servers with nvim_cmp
