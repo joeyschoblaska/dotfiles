@@ -118,6 +118,7 @@ local mappings = {
 	{ "n", "H", [[mh:lua require("harpoon.mark").add_file()<CR>:echo "harpooned"<CR>]], { noremap = true } },
 	{ "n", "<leader>ha", [[:lua require("harpoon.ui").toggle_quick_menu()<CR>]], { noremap = true } },
 	{ "n", "<leader>ht", [[:Telescope harpoon marks<CR>]], { noremap = true } },
+	{ "n", "<leader>hc", [[:lua require("harpoon.mark").clear_all()<CR>:]], { noremap = true } }, -- _h_arpoon _c_lear
 }
 
 for _, m in ipairs(mappings) do
