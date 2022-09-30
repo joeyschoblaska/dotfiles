@@ -13,7 +13,7 @@
 * **fzf-lua result path_display?:** possible to configure how fzf-lua abbreviates filenames (like I do with telescope)? https://github.com/junegunn/fzf.vim/issues/960
 * **formatting in strange projects:** if I make a small change to a file in a forked repo and the whole file reformats. range formatting, or format only new code (so I can use prettier / whatever in codebases that don't have a fixer set up)
   * range formatting might be nice for code blocks inside markdown too
-* **mason?:** figure out what exactly mason is providing and whether I want to use it
+* **mason? lsp-zero?:** look into using these plugins to simplify my lsp setup (and per-project configs)
 * **telescope git highlighting:** possible to configure telescope git pickers to use delta / bat for paging?
 * **nvim_cmp delay:** figure out how to add a delay to cmp window: https://github.com/hrsh7th/nvim-cmp/issues/715#issuecomment-1069059428
   * this link for disabling prompt in telescope: https://github.com/hrsh7th/nvim-cmp/issues/60#issuecomment-905632958
