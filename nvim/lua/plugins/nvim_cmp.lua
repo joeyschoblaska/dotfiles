@@ -71,10 +71,9 @@ return {
 		local max_width = 50
 
 		cmp.setup({
-			-- -- uncomment below to disable automatic completion window
-			-- completion = {
-			-- 	autocomplete = true,
-			-- },
+			completion = {
+				autocomplete = true,
+			},
 
 			mapping = {
 				-- SUPER tab: https://github.com/hrsh7th/nvim-cmp/wiki/Example-mappings#luasnip
@@ -91,10 +90,6 @@ return {
 						fallback()
 					end
 				end, { "i", "s" }),
-			},
-
-			completion = {
-				keyword_length = 3,
 			},
 
 			performance = {
