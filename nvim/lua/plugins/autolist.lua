@@ -1,6 +1,11 @@
 return {
 	"gaoDean/autolist.nvim",
+
 	config = function()
-		require("autolist").setup({})
+		require("autolist").setup({
+			colon = {
+				priferred = "*",
+			},
+		})
 	end,
 }
