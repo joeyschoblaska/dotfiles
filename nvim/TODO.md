@@ -4,6 +4,7 @@
   * maybe a custom command that calls `gh` and Diffview: `:PR 1234`
   * and another that does `:DiffviewOpen sha^!` (eg, `:GS sha`)
   * is there a cool way do have this commands pop an interactive command prompt window? eg, type `<leader>pr`, then a box pops up asking you for the branch number to pass as argument
+    * yes there is! https://github.com/stevearc/dressing.nvim
 * * **telescope fb mappings:** more intuitive mappings, especially in insert mode (eg, `imap <C-foo>` should always do the same as `nmap foo`)
 * **scratch:** (persistent?) scratch buffers. shortcut opens or creates SCRATCH_DIR/<project>.md - put in dropbox to sync across machines
   * Use `:drop` to switch to scratch tab if already open: https://vimtricks.com/p/quickly-access-project-notes/
@@ -31,4 +32,3 @@
 * **vim-tmux-navigator?:** see if this would be an improvement to my workflow: https://github.com/christoomey/vim-tmux-navigator - maybe use karabiner / qmk to make tab work as a modifier key for hjkl
 * **telescope fb tree view:** I would need to actually build this into the plugin... [telescope-file-browser tree view](https://github.com/nvim-telescope/telescope-file-browser.nvim/issues/165#issuecomment-1242515366)
 * **lazy load plugins?:** impatient.nvim?
-* **autolist tab behavior:** Tab to indent a new Markdown list item also inserts a space. Issue here: https://github.com/gaoDean/autolist.nvim/issues/19
