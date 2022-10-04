@@ -1,7 +1,9 @@
 # TODO
 * **consolidate mappings:** mappings.lua can export mappings for other plugins (that need to be set in the plugin's setup call)
 * **PR review:** convenient way to check out a PR and open in diffview
-  *  maybe a custom command that calls `gh` and Diffview: `:PR 1234`
+  * maybe a custom command that calls `gh` and Diffview: `:PR 1234`
+  * and another that does `:DiffviewOpen sha^!` (eg, `:GS sha`)
+  * is there a cool way do have this commands pop an interactive command prompt window? eg, type `<leader>pr`, then a box pops up asking you for the branch number to pass as argument
 * * **telescope fb mappings:** more intuitive mappings, especially in insert mode (eg, `imap <C-foo>` should always do the same as `nmap foo`)
 * **scratch:** (persistent?) scratch buffers. shortcut opens or creates SCRATCH_DIR/<project>.md - put in dropbox to sync across machines
   * Use `:drop` to switch to scratch tab if already open: https://vimtricks.com/p/quickly-access-project-notes/
