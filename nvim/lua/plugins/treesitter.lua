@@ -1,7 +1,11 @@
 return {
 	"nvim-treesitter/nvim-treesitter",
 
-	requires = { "RRethy/nvim-treesitter-endwise", "windwp/nvim-ts-autotag" },
+	requires = {
+		"RRethy/nvim-treesitter-endwise",
+		"windwp/nvim-ts-autotag",
+		"JoosepAlviste/nvim-ts-context-commentstring",
+	},
 
 	run = function()
 		require("nvim-treesitter.install").update({ with_sync = true })
@@ -17,6 +21,9 @@ return {
 			indent = { enable = true, disable = { "ruby" } },
 			endwise = { enable = true },
 			autotag = { enable = true },
+			context_commentstring = {
+				enable = true,
+			},
 		})
 	end,
 }
