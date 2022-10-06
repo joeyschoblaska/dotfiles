@@ -82,6 +82,22 @@ return {
 					},
 				},
 
+				git_commits = {
+					attach_mappings = function(_, _)
+						local actions = require("telescope.actions")
+
+						actions.select_default:replace(function(prompt_bufnr)
+							local action_state = require("telescope.actions.state")
+							local selection = action_state.get_selected_entry()
+
+							actions.close(prompt_bufnr)
+							vim.cmd("DiffviewOpen " .. selection.value .. "^!")
+						end)
+
+						return true
+					end,
+				},
+
 				lsp_dynamic_workspace_symbols = {
 					show_line = false,
 					fname_width = 80,
