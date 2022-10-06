@@ -22,6 +22,7 @@ return {
 			defaults = {
 				sorting_strategy = "ascending",
 				layout_strategy = settings.telescope_layout_strategy or "flex",
+				dynamic_preview_title = true,
 				wrap_results = true,
 				path_display = settings.telescope_path_display or {},
 				vimgrep_arguments = { --defaults: https://github.com/nvim-telescope/telescope.nvim/blob/master/doc/telescope.txt#L522
