@@ -3,8 +3,13 @@ return {
 
 	config = function()
 		require("gitsigns").setup({
-			signcolumn = false,
-			numhl = true,
+			signs = {
+				add = { text = "│" },
+				change = { text = "│" },
+				delete = { text = "│" },
+			},
+			signcolumn = true,
+			numhl = false,
 		})
 	end,
 }
