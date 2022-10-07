@@ -38,10 +38,11 @@ return {
 				"DiagnosticHint",
 			}
 
+			local signs = { " ", " ", " ", " " }
 			local severity = diagnostics[1].severity
 			local message = diagnostics[1].message
 
-			return "%#" .. hl_groups[severity] .. "#" .. message
+			return "%#" .. hl_groups[severity] .. "#" .. signs[severity] .. message
 		end
 
 		require("lualine").setup({
