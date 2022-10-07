@@ -25,7 +25,8 @@ return {
 			end
 
 		local current_line_diagnostics = function()
-			local diagnostics = vim.lsp.diagnostic.get_line_diagnostics()
+			local bufnr = vim.api.nvim_get_current_buf()
+			local diagnostics = vim.lsp.diagnostic.get_line_diagnostics(bufnr)
 
 			if not next(diagnostics) then
 				return ""
