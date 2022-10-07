@@ -24,6 +24,26 @@ return {
 				return parent and (" " .. parent) or ""
 			end
 
+		local current_line_diagnostics = function()
+			local diagnostics = vim.lsp.diagnostic.get_line_diagnostics()
+
+			if not next(diagnostics) then
+				return ""
+			end
+
+			local hl_groups = {
+				"DiagnosticError",
+				"DiagnosticWarn",
+				"DiagnosticInfo",
+				"DiagnosticHint",
+			}
+
+			local severity = diagnostics[1].severity
+			local message = diagnostics[1].message
+
+			return "%#" .. hl_groups[severity] .. "#" .. message
+		end
+
 		require("lualine").setup({
 			options = {
 				component_separators = { left = "|", right = "|" },
@@ -33,7 +53,7 @@ return {
 			sections = {
 				lualine_a = {},
 				lualine_b = {},
-				lualine_c = {},
+				lualine_c = { current_line_diagnostics },
 				lualine_x = {
 					{ "diagnostics", sources = { "nvim_workspace_diagnostic" } },
 					{ "branch", separator = "", fmt = shortgit },
