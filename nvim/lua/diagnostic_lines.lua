@@ -43,6 +43,7 @@ local draw = function()
 	end
 
 	-- there has to be a simpler way... use loclist + trouble.nvim?
+	-- https://www.reddit.com/r/neovim/comments/og1cdv/neovim_lsp_how_do_you_get_diagnostic_mesages_to/
 	vim.api.nvim_buf_set_lines(bufnr, 0, 1, false, { "HELLO" })
 end
 
