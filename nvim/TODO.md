@@ -1,5 +1,7 @@
 # TODO
 * **consolidate mappings:** mappings.lua can export mappings for other plugins (that need to be set in the plugin's setup call)
+* **testing integration:** This looks super interesting: https://github.com/nvim-neotest/neotest
+  * in addition to running tests, it'd be great to have a way to jump to / automatically create the test file corresponding to the current file
 * **PR review:** convenient way to check out a PR and open in diffview
   * maybe a custom command that calls `gh` and Diffview: `:PR 1234`
   * and another that does `:DiffviewOpen sha^!` (eg, `:GS sha`)
