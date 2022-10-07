@@ -5,6 +5,8 @@ return {
 		require("trouble").setup({
 			auto_open = false,
 			auto_close = true,
+			use_diagnostic_signs = true,
+			mode = "document_diagnostics",
 		})
 	end,
 }
