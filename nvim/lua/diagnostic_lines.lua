@@ -42,6 +42,7 @@ local draw = function()
 		return
 	end
 
+	-- there has to be a simpler way... use loclist + trouble.nvim?
 	vim.api.nvim_buf_set_lines(bufnr, 0, 1, false, { "HELLO" })
 end
 
