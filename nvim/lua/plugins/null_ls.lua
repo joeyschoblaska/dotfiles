@@ -9,6 +9,7 @@ return {
 		local sources = settings.null_ls_sources(null_ls)
 			or {
 				null_ls.builtins.formatting.stylua,
+				null_ls.builtins.diagnostics.rubocop,
 				null_ls.builtins.formatting.prettierd.with({
 					-- defaults minus markdown
 					filetypes = {

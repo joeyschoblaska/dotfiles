@@ -33,4 +33,3 @@
 * **vim-tmux-navigator?:** see if this would be an improvement to my workflow: https://github.com/christoomey/vim-tmux-navigator - maybe use karabiner / qmk to make tab work as a modifier key for hjkl
 * **telescope fb tree view:** I would need to actually build this into the plugin... [telescope-file-browser tree view](https://github.com/nvim-telescope/telescope-file-browser.nvim/issues/165#issuecomment-1242515366)
 * **lazy load plugins?:** impatient.nvim?
-* **diagnostic status line:** The current line diagnostic in lualine gets truncated from the left, which makes it hard to read. Figure out 1) how to truncate from the right, or 2) how to display it somewhere else - maybe in a single-line floating window just above the statusline (how fidget.nvim does it: https://github.com/j-hui/fidget.nvim/blob/1097a86db8ba38e390850dc4035a03ed234a4673/lua/fidget.lua#L291)
