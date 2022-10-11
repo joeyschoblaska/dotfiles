@@ -34,3 +34,4 @@
 * **telescope fb tree view:** I would need to actually build this into the plugin... [telescope-file-browser tree view](https://github.com/nvim-telescope/telescope-file-browser.nvim/issues/165#issuecomment-1242515366)
 * **lazy load plugins?:** impatient.nvim?
 * **vim-rails?:** https://github.com/tpope/vim-rails
+* **leap?:** "Neovim's answer to the mouse" https://github.com/ggandor/leap.nvim
