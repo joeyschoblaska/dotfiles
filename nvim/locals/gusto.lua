@@ -13,6 +13,7 @@ if vim.fn.getcwd():match(homedir .. "/workspace/zenpayroll") then
 			null_ls.builtins.formatting.stylua,
 			null_ls.builtins.formatting.rubocop.with(rcop_server),
 			null_ls.builtins.diagnostics.rubocop.with(rcop_server),
+			null_ls.builtins.diagnostics.tsc,
 			null_ls.builtins.formatting.prettierd.with({
 				-- defaults minus markdown
 				filetypes = {
@@ -33,6 +34,7 @@ if vim.fn.getcwd():match(homedir .. "/workspace/zenpayroll") then
 				},
 			}),
 			null_ls.builtins.formatting.eslint_d,
+			null_ls.builtins.diagnostics.eslint_d,
 		}
 	end
 
