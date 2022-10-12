@@ -126,6 +126,9 @@ local mappings = {
 		[[:lua require("harpoon.mark").clear_all()<CR>:echo "harpoon cleared"<CR>]],
 		{ noremap = true },
 	},
+
+	-- leap
+	{ "n", "s", [[:lua require('leap').leap { target_windows = { vim.fn.win_getid() } }<CR>]], norm_silent },
 }
 
 for _, m in ipairs(mappings) do
