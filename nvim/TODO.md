@@ -2,6 +2,7 @@
 * **consolidate mappings:** mappings.lua can export mappings for other plugins (that need to be set in the plugin's setup call)
 * **testing integration:** This looks super interesting: https://github.com/nvim-neotest/neotest
   * in addition to running tests, it'd be great to have a way to jump to / automatically create the test file corresponding to the current file
+  * vim-rails does some of this (and other things that are probably useful) https://github.com/tpope/vim-rails
 * **PR review:** convenient way to check out a PR and open in diffview
   * maybe a custom command that calls `gh` and Diffview: `:PR 1234`
   * and another that does `:DiffviewOpen sha^!` (eg, `:GS sha`)
@@ -33,4 +34,3 @@
 * **vim-tmux-navigator?:** see if this would be an improvement to my workflow: https://github.com/christoomey/vim-tmux-navigator - maybe use karabiner / qmk to make tab work as a modifier key for hjkl
 * **telescope fb tree view:** I would need to actually build this into the plugin... [telescope-file-browser tree view](https://github.com/nvim-telescope/telescope-file-browser.nvim/issues/165#issuecomment-1242515366)
 * **lazy load plugins?:** impatient.nvim?
-* **vim-rails?:** https://github.com/tpope/vim-rails
