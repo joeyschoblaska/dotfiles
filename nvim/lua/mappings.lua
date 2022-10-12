@@ -50,7 +50,7 @@ local mappings = {
 	{ "n", "gd", ":Telescope lsp_definitions<CR>" },
 	{ "n", "gr", ":Telescope lsp_references<CR>" },
 	{ "n", "K", ":lua vim.lsp.buf.hover()<CR>" },
-	{ "n", "<leader>er", ":TroubleToggle<CR>" }, -- toggle diagnostics window (ERrors)
+	{ "n", "<leader>er", ":TroubleToggle workspace_diagnostics<CR>" }, -- toggle diagnostics window (ERrors)
 	{ "n", "<leader>ws", ":Telescope lsp_dynamic_workspace_symbols<CR>" },
 	{ "n", "E", [[:lua require("scripts").toggle_diagnostic_virtual_text()<CR>]], norm_silent },
 
