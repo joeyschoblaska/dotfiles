@@ -1,8 +1,3 @@
--- TODO
--- open qflist in trouble:
---   command! BookmarksQFListAll exe "lua require'marks'.bookmark_state:all_to_list('quickfixlist')" | copen
--- change qflist format? eg, make less verbose and include bookmark icon
-
 return {
 	"chentoast/marks.nvim",
 

@@ -116,6 +116,9 @@ local mappings = {
 
 	-- leap
 	{ "n", "s", [[:lua require('scripts').leap_all_windows()<CR>]], norm_silent },
+
+	-- marks
+	{ "n", "ml", [[:lua require'marks'.bookmark_state:to_list('quickfixlist', 0)<CR>:Trouble quickfix<CR>]] },
 }
 
 for _, m in ipairs(mappings) do
