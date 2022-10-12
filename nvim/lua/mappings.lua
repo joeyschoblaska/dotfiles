@@ -128,7 +128,7 @@ local mappings = {
 	},
 
 	-- leap
-	{ "n", "s", [[:lua require('leap').leap { target_windows = { vim.fn.win_getid() } }<CR>]], norm_silent },
+	{ "n", "s", [[:lua require('scripts').leap_all_windows()<CR>]], norm_silent },
 }
 
 for _, m in ipairs(mappings) do
