@@ -31,6 +31,7 @@ return require("packer").startup(function(use)
 	use(require("plugins.gitlinker")) -- generate github link for cursor position
 	use(require("plugins.markdown_preview")) -- live in-browser preview of markdown buffer
 	use(require("plugins.leap")) -- "neovim's answer to the mouse"
+	use(require("plugins.marks")) -- improve vim marks and add bookmarks
 
 	-- syntax / treesitter
 	use(require("plugins.treesitter")) -- syntax parsing for highlighting and indenting

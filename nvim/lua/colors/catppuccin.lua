@@ -45,3 +45,7 @@ hi("IndentBlanklineContextChar", { fg = mocha.overlay0, nocombine = true })
 
 -- leap
 hi("LeapLabelPrimary", { fg = mocha.mantle, bg = mocha.red })
+
+-- marks
+hi("MarkSignHL", { fg = mocha.sky })
+hi("MarkVirtTextHL", { fg = mocha.sky })
