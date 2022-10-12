@@ -8,6 +8,7 @@ return {
 		"nvim-telescope/telescope-file-browser.nvim",
 		"stevearc/aerial.nvim",
 		"ThePrimeagen/harpoon",
+		"folke/trouble.nvim",
 	},
 
 	after = "aerial.nvim",
@@ -17,9 +18,14 @@ return {
 		local fb_actions = require("telescope").extensions.file_browser.actions
 		local custom_ts_actions = require("plugins.ts_actions")
 		local settings = require("settings")
+		local trouble = require("trouble.providers.telescope")
 
 		telescope.setup({
 			defaults = {
+				mappings = {
+					i = { ["<c-q>"] = trouble.open_with_trouble },
+					n = { ["<c-q>"] = trouble.open_with_trouble },
+				},
 				sorting_strategy = "ascending",
 				layout_strategy = settings.telescope_layout_strategy or "flex",
 				dynamic_preview_title = true,
