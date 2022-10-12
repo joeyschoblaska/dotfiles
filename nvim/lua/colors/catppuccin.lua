@@ -42,3 +42,6 @@ hi("DiffText", { bg = utils.blend(mocha.yellow, mocha.crust, 0.35) })
 hi("IndentBlanklineIndent1", { fg = mocha.surface0, nocombine = true })
 hi("IndentBlanklineIndent2", { fg = mocha.surface1, nocombine = true })
 hi("IndentBlanklineContextChar", { fg = mocha.overlay0, nocombine = true })
+
+-- leap
+hi("LeapLabelPrimary", { fg = mocha.mantle, bg = mocha.red })
