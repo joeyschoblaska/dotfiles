@@ -5,17 +5,44 @@ return {
 		require("marks").setup({
 			default_mappings = false,
 
-			mappings = {
-				delete_bookmark = "md",
-				annotate = "ma",
-				delete_bookmark0 = "dma",
-				set_bookmark0 = "mm",
-				next_bookmark0 = ">",
-				prev_bookmark0 = "<",
+			bookmark_1 = {
+				sign = "1",
+			},
+
+			bookmark_2 = {
+				sign = "2",
+			},
+
+			bookmark_3 = {
+				sign = "3",
+			},
+
+			bookmark_4 = {
+				sign = "4",
+			},
+
+			bookmark_5 = {
+				sign = "5",
+			},
+
+			bookmark_6 = {
+				sign = "6",
+			},
+
+			bookmark_7 = {
+				sign = "7",
+			},
+
+			bookmark_8 = {
+				sign = "8",
+			},
+
+			bookmark_9 = {
+				sign = "9",
 			},
 
 			bookmark_0 = {
-				sign = "",
+				sign = "0",
 			},
 		})
 	end,

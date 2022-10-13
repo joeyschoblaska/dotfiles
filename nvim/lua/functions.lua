@@ -68,6 +68,31 @@ M.bookmarks = {
 	get_current = function()
 		return vim.g.currentBookmarkNumber or 1
 	end,
+
+	next = function()
+		local current = require("functions").bookmarks.get_current()
+		require("marks")["next_bookmark" .. current]()
+	end,
+
+	prev = function()
+		local current = require("functions").bookmarks.get_current()
+		require("marks")["prev_bookmark" .. current]()
+	end,
+
+	set = function()
+		local current = require("functions").bookmarks.get_current()
+		require("marks")["set_bookmark" .. current]()
+	end,
+
+	delete_all = function()
+		local current = require("functions").bookmarks.get_current()
+		require("marks")["delete_bookmark" .. current]()
+	end,
+
+	quickfix = function()
+		local current = require("functions").bookmarks.get_current()
+		require("marks").bookmark_state:to_list("quickfixlist", current)
+	end,
 }
 
 return M

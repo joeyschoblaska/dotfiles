@@ -42,3 +42,4 @@ vim.opt.spell = false
 vim.opt.spelllang = "en"
 vim.opt.scrolloff = 8 -- is one of my fav
 vim.opt.sidescrolloff = 8
+vim.opt.shada = "!,'0,<50,s10,h" -- default, but changed to not remember marks
