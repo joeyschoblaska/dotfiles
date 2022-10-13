@@ -115,10 +115,13 @@ local mappings = {
 	{ "n", "<leader>mp", ":MarkdownPreview<CR>" },
 
 	-- leap
-	{ "n", "s", [[:lua require('functions').leap_all_windows()<CR>]], norm_silent },
+	{ "n", "s", [[:lua require("functions").leap_all_windows()<CR>]], norm_silent },
 
 	-- marks
-	{ "n", "ml", [[:lua require'marks'.bookmark_state:to_list('quickfixlist', 0)<CR>:Trouble quickfix<CR>]] },
+	{ "n", "ml", [[:lua require("marks").bookmark_state:to_list("quickfixlist", 0)<CR>:Trouble quickfix<CR>]] },
+
+	-- jargom
+	{ "n", "<leader>ja", [[:lua require("functions").jargon_insert_header()<CR>]], norm_silent },
 }
 
 for _, m in ipairs(mappings) do

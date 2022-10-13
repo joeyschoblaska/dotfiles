@@ -44,4 +44,20 @@ M.ts_select_dir_for_grep = function(prompt_bufnr)
 	})
 end
 
+M.jargon_insert_header = function()
+	local line = vim.api.nvim_win_get_cursor(0)[1]
+
+	vim.api.nvim_buf_set_lines(0, line, line, false, {
+		"",
+		"## ",
+		"---",
+		"datetime: " .. string.gsub(vim.fn.system("date -u -Iseconds"), "\n", ""),
+		"tags: ",
+		"public: false",
+		"---",
+	})
+
+	vim.api.nvim_feedkeys("jjA", "n", false)
+end
+
 return M
