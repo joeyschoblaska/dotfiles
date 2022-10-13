@@ -60,4 +60,14 @@ M.jargon_insert_header = function()
 	vim.api.nvim_feedkeys("jjA", "n", false)
 end
 
+M.bookmarks = {
+	set_current = function(n)
+		vim.g.currentBookmarkNumber = n
+	end,
+
+	get_current = function()
+		return vim.g.currentBookmarkNumber or 1
+	end,
+}
+
 return M
