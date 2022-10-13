@@ -52,7 +52,7 @@ local mappings = {
 	{ "n", "K", ":lua vim.lsp.buf.hover()<CR>" },
 	{ "n", "<leader>er", ":TroubleToggle workspace_diagnostics<CR>" }, -- toggle diagnostics window (ERrors)
 	{ "n", "<leader>ws", ":Telescope lsp_dynamic_workspace_symbols<CR>" },
-	{ "n", "E", [[:lua require("scripts").toggle_diagnostic_virtual_text()<CR>]], norm_silent },
+	{ "n", "E", [[:lua require("functions").toggle_diagnostic_virtual_text()<CR>]], norm_silent },
 
 	-- git
 	{ "n", "<leader>gs", ":Telescope git_status<CR>" },
@@ -115,7 +115,7 @@ local mappings = {
 	{ "n", "<leader>mp", ":MarkdownPreview<CR>" },
 
 	-- leap
-	{ "n", "s", [[:lua require('scripts').leap_all_windows()<CR>]], norm_silent },
+	{ "n", "s", [[:lua require('functions').leap_all_windows()<CR>]], norm_silent },
 
 	-- marks
 	{ "n", "ml", [[:lua require'marks'.bookmark_state:to_list('quickfixlist', 0)<CR>:Trouble quickfix<CR>]] },

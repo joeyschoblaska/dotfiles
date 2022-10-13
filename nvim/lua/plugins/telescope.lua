@@ -16,7 +16,7 @@ return {
 	config = function()
 		local telescope = require("telescope")
 		local fb_actions = require("telescope").extensions.file_browser.actions
-		local custom_ts_actions = require("plugins.ts_actions")
+		local select_dir_for_grep = require("functions").ts_select_dir_for_grep
 		local settings = require("settings")
 		local trouble = require("trouble.providers.telescope")
 
@@ -143,10 +143,10 @@ return {
 					default_mappings = {
 						i = {
 							["<C-o>"] = require("telescope-live-grep-args.actions").quote_prompt(),
-							["<C-f>"] = custom_ts_actions.select_dir_for_grep,
+							["<C-f>"] = select_dir_for_grep,
 						},
 						n = {
-							["<C-f>"] = custom_ts_actions.select_dir_for_grep,
+							["<C-f>"] = select_dir_for_grep,
 						},
 					},
 				},
