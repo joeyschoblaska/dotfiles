@@ -3,7 +3,7 @@
 // 27" width: 2560
 // ultrawide: 3440
 
-var minColumnWidth = 900;
+var minColumnWidth = 850;
 var idealGutterWidth = 2;
 
 var screenWidth = function () {
@@ -11,13 +11,14 @@ var screenWidth = function () {
 };
 
 var numColumns = function () {
-  if (screenWidth() < minColumnWidth * 2 + idealGutterWidth) {
-    return 1;
-  } else if (screenWidth() < minColumnWidth * 3 + idealGutterWidth * 2) {
-    return 2;
-  } else {
-    return 3;
-  }
+  return 2;
+  // if (screenWidth() < minColumnWidth * 2 + idealGutterWidth) {
+  //   return 1;
+  // } else if (screenWidth() < minColumnWidth * 3 + idealGutterWidth * 2) {
+  //   return 2;
+  // } else {
+  //   return 3;
+  // }
 };
 
 var columnWidth = function () {
