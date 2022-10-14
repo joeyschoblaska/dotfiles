@@ -3,7 +3,7 @@
 // 27" width: 2560
 // ultrawide: 3440
 
-var minColumnWidth = 700;
+var minColumnWidth = 900;
 var idealGutterWidth = 2;
 
 var screenWidth = function () {
