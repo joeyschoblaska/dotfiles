@@ -21,7 +21,7 @@ return require("packer").startup(function(use)
 	use("kyazdani42/nvim-web-devicons") -- icons, mostly for filetypes
 	use(require("plugins.hlslens")) -- advanced search highlighting
 	use(require("plugins.nvim_cmp")) -- completion window
-	use("tversteeg/registers.nvim") -- show popup with register contents on `"` press
+	use(require("plugins.registers")) -- show popup with register contents on `"` press
 	use(require("plugins.toggleterm")) -- wrapper around :term; used for lazygit
 	use(require("plugins.colorizer")) -- highlight hex values with their corresponding color
 	use(require("plugins.slime")) -- send text to another tmux window
