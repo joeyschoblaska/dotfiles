@@ -1,0 +1,15 @@
+#!/bin/bash
+
+W=$(tmux display -p '#{window_width}')
+
+W_RIGHT=$(expr $W \* 3 / 4)
+
+# at least 65 cols for left width
+[[ $(expr $W - $W_RIGHT) -lt 65 ]] && W_RIGHT=$(expr $W - 65)
+
+# no more than 100 cols for left width
+[[ $(expr $W - $W_RIGHT) -gt 100 ]] && W_RIGHT=$(expr $W - 100)
+
+W_LEFT=$(expr $W - $W_RIGHT)
+
+tmux split-window -hb -d -l $W_LEFT
