@@ -41,7 +41,6 @@ return require("packer").startup(function(use)
 	use(require("plugins.autopairs")) -- closing pairs ((), {}, [], "", etc)
 	use(require("plugins.indent_blankline")) -- vertical line showing block indent levels
 	use(require("plugins.aerial")) -- give a symbol outline of the current file
-	use(require("plugins.matchup")) -- useful operations on sets of matched (eg, parens, brackets, if ... end) text
 	use(require("plugins.surround")) -- add / delete / change "surrounds" (brackets, quotes, backticks, html tags, etc)
 
 	-- colors
