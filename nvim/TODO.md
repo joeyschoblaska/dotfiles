@@ -34,3 +34,4 @@
 * **vim-tmux-navigator?:** see if this would be an improvement to my workflow: https://github.com/christoomey/vim-tmux-navigator - maybe use karabiner / qmk to make tab work as a modifier key for hjkl
 * **telescope fb tree view:** I would need to actually build this into the plugin... [telescope-file-browser tree view](https://github.com/nvim-telescope/telescope-file-browser.nvim/issues/165#issuecomment-1242515366)
 * **lazy load plugins?:** impatient.nvim?
+* **neo-tree:** Look at neo-tree as an alternative / addition to telescope-fb. Neo-tree seems highly configurable, so I can probably make it do what I want
