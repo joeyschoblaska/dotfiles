@@ -182,5 +182,14 @@ mkdir -p ~/.config/vivid
 cp -r vivid/ ~/.config/vivid
 
 #################################################################################
+#
+if [[ -d "$HOME/.config/btop" ]]; then
+  echo "installing btop config"
+  cp dots/btop.conf "$HOME/.config/btop/"
+else
+  echo "skipping btop config"
+fi
+
+#################################################################################
 
 echo "done!"
