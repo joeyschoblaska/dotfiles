@@ -79,7 +79,8 @@ return {
 
 				-- tabs
 				hl.TabLineSel = { fg = c.fg, bg = c.bg }
-				hl.TabLineSeparatorSel = { fg = c.blue1 }
+				hl.TabLineSeparatorSel = { fg = c.green }
+				hl.TabLineSeparator = { fg = c.comment }
 				hl.TabLine = { fg = c.comment, bg = c.black }
 				hl.TabLineFill = { bg = c.black }
 
