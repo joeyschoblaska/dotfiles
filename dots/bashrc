@@ -30,7 +30,7 @@ export BASH_SILENCE_DEPRECATION_WARNING=1
 export RIPGREP_CONFIG_PATH=$HOME/.ripgreprc
 export LYNX_CFG=$HOME/.lynxrc
 export NOTES_DIR=$HOME/Dropbox/notes/obsidian
-export LS_COLORS="$(vivid generate $HOME/.config/vivid/catppuccin_mocha.yml)"
+export LS_COLORS="$(vivid generate $HOME/.config/vivid/tokyonight.yml)"
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"

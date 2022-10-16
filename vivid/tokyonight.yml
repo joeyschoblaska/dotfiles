@@ -1,0 +1,128 @@
+# forked from https://github.com/sharkdp/vivid/blob/master/themes/snazzy.yml
+colors:
+  background_color: "1a1b26"
+  white: "c0caf5"
+  red: "f7768e"
+  green: "9ece6a"
+  yellow: "e0af68"
+  blue: "7aa2f7"
+  pink: "bb9af7"
+  cyan: "7dcfff"
+
+  rose: "db4b4b"
+
+  light_red: "e98ba8"
+  light_green: "a7cd8d"
+  light_yellow: "d8b68b"
+  light_blue: "8cacf7"
+  light_pink: "bca6f7"
+  light_cyan: "8ecefd"
+
+  black: "15161e"
+  gray: "a9b1d6"
+  darkgray: "737aa2"
+  darkergray: "545c7e"
+
+core:
+  normal_text: {}
+  regular_file: {}
+  reset_to_normal: {}
+
+  directory:
+    foreground: blue
+
+  symlink:
+    foreground: pink
+
+  multi_hard_link: {}
+
+  fifo:
+    foreground: black
+    background: blue
+
+  socket:
+    foreground: black
+    background: pink
+
+  door:
+    foreground: black
+    background: pink
+
+  block_device:
+    foreground: cyan
+    background: darkergray
+
+  character_device:
+    foreground: pink
+    background: darkergray
+
+  broken_symlink:
+    foreground: black
+    background: red
+
+  missing_symlink_target:
+    foreground: black
+    background: red
+
+  setuid: {}
+
+  setgid: {}
+
+  file_with_capability: {}
+
+  sticky_other_writable: {}
+
+  other_writable: {}
+
+  sticky: {}
+
+  executable_file:
+    foreground: red
+    font-style: bold
+
+text:
+  special:
+    foreground: background_color
+    background: yellow
+
+  todo:
+    font-style: bold
+
+  licenses:
+    foreground: gray
+
+  configuration:
+    foreground: yellow
+
+  other:
+    foreground: yellow
+
+markup:
+  foreground: yellow
+
+programming:
+  source:
+    foreground: green
+
+  tooling:
+    foreground: light_green
+
+    continuous-integration:
+      foreground: green
+
+media:
+  foreground: light_pink
+
+office:
+  foreground: red
+
+archives:
+  foreground: cyan
+  font-style: underline
+
+executable:
+  foreground: red
+  font-style: bold
+
+unimportant:
+  foreground: darkgray

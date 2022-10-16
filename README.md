@@ -55,7 +55,6 @@ brew install git-delta
 
 If delta is giving a "memory allocation of <big number> bytes failed" error, see this: https://github.com/dandavison/delta/issues/878#issuecomment-1004068761
 
-
 ### bat
 * https://github.com/sharkdp/bat
 

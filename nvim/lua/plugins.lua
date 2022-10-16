@@ -44,10 +44,11 @@ return require("packer").startup(function(use)
 	use(require("plugins.surround")) -- add / delete / change "surrounds" (brackets, quotes, backticks, html tags, etc)
 
 	-- colors
+	use(require("plugins.tokyonight"))
 	-- use("Mofiqul/dracula.nvim")
 	-- use("sainnhe/sonokai")
 	-- use("bluz71/vim-nightfly-guicolors")
-	use({ "catppuccin/nvim", as = "catppuccin" })
+	-- use({ "catppuccin/nvim", as = "catppuccin" })
 
 	-- lsp
 	use(require("plugins.nvim_lspconfig"))

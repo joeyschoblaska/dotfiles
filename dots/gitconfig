@@ -17,13 +17,13 @@
 [init]
   defaultBranch = main
 [interactive]
-  diffFilter = delta --color-only # part of necessary delta config
+  diffFilter = delta --color-only ; part of necessary delta config
 [add.interactive]
-  useBuiltin = false # part of necessary delta config # required for git 2.37.0
+  useBuiltin = false ; part of necessary delta config # required for git 2.37.0
 [merge]
-  conflictstyle = diff3 # part of necessary delta config
+  conflictstyle = diff3 ; part of necessary delta config
 [diff]
-  colorMoved = default # part of necessary delta config
+  colorMoved = default ; part of necessary delta config
 [color]
   ui = auto
 [color "branch"]
@@ -40,11 +40,8 @@
   changed = yellow
   untracked = cyan
 [delta]
-  navigate = true    # use n and N to move between diff sections
-  light = false      # set to true if you're in a terminal w/ a light background color (e.g. the default macOS terminal)
-  syntax-theme = Catppuccin-mocha
-  file-decoration-style = "#fab387" box ul
-  file-style = "#fab387"
+  navigate = true    ; use n and N to move between diff sections
+  light = false      ; set to true if you're in a terminal w/ a light background color (e.g. the default macOS terminal)
   file-added-label = ""
   file-removed-label = ""
   file-copied-label = ""
@@ -56,12 +53,31 @@
   hunk-header-line-number-style = omit
   hunk-header-style = omit
   line-numbers = true
-  line-numbers-left-style = "#6c7086"
-  line-numbers-minus-style = "#f38ba8"
-  line-numbers-plus-style = "#a6e3a1"
-  line-numbers-right-style = "#6c7086"
-  line-numbers-zero-style = "#cdd6f4"
-  minus-emph-style = "#f38ba8" "#7e4f65"
-  minus-style = "#f38ba8" "#33293a"
-  plus-emph-style = "#a6e3a1" "#4e6356"
-  plus-style = "#a6e3a1" "#2c323a"
+
+  ; Catppuccin Mocha
+  ; syntax-theme = Catppuccin-mocha
+  ; file-decoration-style = "#fab387" box ul
+  ; file-style = "#fab387"
+  ; line-numbers-left-style = "#6c7086"
+  ; line-numbers-minus-style = "#f38ba8"
+  ; line-numbers-plus-style = "#a6e3a1"
+  ; line-numbers-right-style = "#6c7086"
+  ; line-numbers-zero-style = "#cdd6f4"
+  ; minus-emph-style = "#f38ba8" "#7e4f65"
+  ; minus-style = "#f38ba8" "#33293a"
+  ; plus-emph-style = "#a6e3a1" "#4e6356"
+  ; plus-style = "#a6e3a1" "#2c323a"
+
+  ; Tokyo Night
+  syntax-theme = Enki-Tokyo-Night
+  file-decoration-style = "#ff9e64" box ul
+  file-style = "#ff9e64"
+  line-numbers-left-style = "#545c7e"
+  line-numbers-minus-style = "#f7768e"
+  line-numbers-plus-style = "#9ece6a"
+  line-numbers-right-style = "#545c7e"
+  line-numbers-zero-style = "#c0caf5"
+  minus-emph-style = "#f7768e" "#723f50"
+  minus-style = "#f7768e" "#462d3b"
+  plus-emph-style = "#9ece6a" "#4f6341"
+  plus-style = "#9ece6a" "#2e3630"
