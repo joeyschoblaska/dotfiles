@@ -59,11 +59,17 @@ export LDFLAGS="-L/opt/homebrew/opt/libffi/lib"
 export CPPFLAGS="-I/opt/homebrew/opt/libffi/include"
 export PKG_CONFIG_PATH="/opt/homebrew/opt/libffi/lib/pkgconfig"
 
-# https://github.com/catppuccin/fzf/blob/main/mocha.md
+# Catppuccin Mocha
+# export FZF_DEFAULT_OPTS=" \
+# --color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
+# --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
+# --color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8"
+
+# Tokyo Night
 export FZF_DEFAULT_OPTS=" \
---color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
---color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
---color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8"
+--color=bg+:#292e42,bg:#1a1b26,spinner:#b4f9f8,hl:#f7768e \
+--color=fg:#c0caf5,header:#f7768e,info:#bb9af7,pointer:#b4f9f8 \
+--color=marker:#b4f9f8,fg+:#c0caf5,prompt:#bb9af7,hl+:#f7768e"
 
 source ~/.git-completion.bash
 
