@@ -8,6 +8,8 @@ return {
 		"saadparwaiz1/cmp_luasnip",
 		"hrsh7th/cmp-buffer",
 		"hrsh7th/cmp-path",
+		"hrsh7th/cmp-copilot",
+		"github/copilot.vim",
 	},
 
 	after = "nvim-autopairs",
@@ -72,7 +74,7 @@ return {
 
 		cmp.setup({
 			completion = {
-				autocomplete = true,
+				autocomplete = false,
 			},
 
 			mapping = {
@@ -90,6 +92,12 @@ return {
 						fallback()
 					end
 				end, { "i", "s" }),
+
+				-- https://github.com/zbirenbaum/copilot-cmp#setup
+				["<CR>"] = cmp.mapping.confirm({
+					behavior = cmp.ConfirmBehavior.Replace,
+					select = false,
+				}),
 			},
 
 			performance = {
@@ -105,6 +113,7 @@ return {
 			sources = cmp.config.sources({
 				{ name = "luasnip" },
 				{ name = "path" },
+				{ name = "copilot" },
 				{
 					name = "buffer",
 					option = {
