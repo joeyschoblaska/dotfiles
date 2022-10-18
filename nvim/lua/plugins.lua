@@ -56,6 +56,8 @@ return require("packer").startup(function(use)
 	use(require("plugins.lsp_format")) -- hooks into null-ls for formatting on save
 	use(require("plugins.fidget")) -- lsp progress indicator
 	use(require("plugins.trouble")) -- workplace diagnostics window
+	use(require("plugins.copilot")) -- github copilot
+	use(require("plugins.copilot_cmp")) -- github copilot completion source
 
 	if packer_bootstrap then
 		require("packer").sync()

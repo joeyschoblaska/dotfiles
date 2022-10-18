@@ -116,6 +116,9 @@ return {
 				hl.DiffDelete = { bg = util.blend(c.red, c.black, 0.25) }
 				hl.DiffChange = { bg = util.blend(c.yellow, c.black, 0.15) }
 				hl.DiffText = { bg = util.blend(c.yellow, c.black, 0.35) }
+
+				-- copilot
+				hl.CmpItemKindCopilot = { fg = c.purple }
 			end,
 		})
 

@@ -8,8 +8,6 @@ return {
 		"saadparwaiz1/cmp_luasnip",
 		"hrsh7th/cmp-buffer",
 		"hrsh7th/cmp-path",
-		"hrsh7th/cmp-copilot",
-		"github/copilot.vim",
 	},
 
 	after = "nvim-autopairs",
@@ -26,6 +24,7 @@ return {
 		local kind_icons = {
 			Class = " ",
 			Color = " ",
+			Copilot = "",
 			Constant = "ﲀ ",
 			Constructor = " ",
 			Enum = "練",
@@ -93,11 +92,21 @@ return {
 					end
 				end, { "i", "s" }),
 
-				-- https://github.com/zbirenbaum/copilot-cmp#setup
+				["<S-Tab>"] = cmp.mapping(function(fallback)
+					if cmp.visible() then
+						cmp.select_prev_item()
+					else
+						fallback()
+					end
+				end, { "i", "s" }),
+
+				-- https://github.com/zbirenbaum/copilot-cmp#configuration
 				["<CR>"] = cmp.mapping.confirm({
 					behavior = cmp.ConfirmBehavior.Replace,
 					select = false,
 				}),
+
+				["<ESC>"] = cmp.mapping.abort(),
 			},
 
 			performance = {
