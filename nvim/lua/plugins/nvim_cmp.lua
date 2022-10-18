@@ -15,7 +15,6 @@ return {
 	config = function()
 		local cmp = require("cmp")
 		local cmp_autopairs = require("nvim-autopairs.completion.cmp")
-		local copilot = require("copilot.suggestion")
 
 		local has_words_before = function()
 			local line, col = unpack(vim.api.nvim_win_get_cursor(0))
@@ -81,6 +80,8 @@ return {
 			mapping = {
 				-- SUPER tab: https://github.com/hrsh7th/nvim-cmp/wiki/Example-mappings#luasnip
 				["<Tab>"] = cmp.mapping(function(fallback)
+					local copilot = require("copilot.suggestion")
+
 					if cmp.visible() then
 						cmp.select_next_item()
 					-- elseif luasnip.expand_or_jumpable() then
@@ -89,12 +90,16 @@ return {
 						cmp.complete({
 							reason = cmp.ContextReason.Auto,
 						})
+					elseif copilot.is_visible() then
+						copilot.accept()
 					else
 						fallback()
 					end
 				end, { "i", "s" }),
 
 				["<S-Tab>"] = cmp.mapping(function(fallback)
+					local copilot = require("copilot.suggestion")
+
 					if copilot.is_visible() then
 						copilot.accept()
 					elseif cmp.visible() then
