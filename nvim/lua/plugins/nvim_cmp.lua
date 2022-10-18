@@ -1,5 +1,3 @@
--- lunarvim config: https://github.com/LunarVim/LunarVim/blob/master/lua/lvim/core/cmp.lua
-
 return {
 	"hrsh7th/nvim-cmp",
 
@@ -105,7 +103,7 @@ return {
 				-- https://github.com/zbirenbaum/copilot-cmp#configuration
 				["<CR>"] = cmp.mapping.confirm({
 					behavior = cmp.ConfirmBehavior.Replace,
-					select = false,
+					select = true,
 				}),
 
 				["<ESC>"] = cmp.mapping.abort(),
