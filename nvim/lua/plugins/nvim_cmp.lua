@@ -103,7 +103,7 @@ return {
 				-- https://github.com/zbirenbaum/copilot-cmp#configuration
 				["<CR>"] = cmp.mapping.confirm({
 					behavior = cmp.ConfirmBehavior.Replace,
-					select = true,
+					select = true, -- select first item if CR is hit but nothing was selected in completion menu
 				}),
 
 				["<ESC>"] = cmp.mapping.abort(),
