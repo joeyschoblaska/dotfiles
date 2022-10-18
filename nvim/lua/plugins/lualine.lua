@@ -24,9 +24,17 @@ return {
 				return parent and (" " .. parent) or ""
 			end
 
-		local copilot_main = function()
+		local copilot_main = function(bufn)
 			if vim.b.copilot_suggestion_auto_trigger then
-				return "🐸 [SLIPPY]:"
+				copilots = {
+					"🐸 [SLIPPY]:",
+					"🐰 [PEPPY]:",
+					"🐦 [FALCO]:",
+				}
+
+				index = (vim.api.nvim_get_current_buf() % 3) + 1
+
+				return copilots[index]
 			else
 				return ""
 			end
