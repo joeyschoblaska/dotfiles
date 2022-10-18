@@ -24,9 +24,17 @@ return {
 				return parent and (" " .. parent) or ""
 			end
 
-		local copilot = function()
+		local copilot_main = function()
 			if vim.b.copilot_suggestion_auto_trigger then
-				return " copilot"
+				return "🐸 [SLIPPY]:"
+			else
+				return ""
+			end
+		end
+
+		local copilot_sub = function()
+			if vim.b.copilot_suggestion_auto_trigger then
+				return "..."
 			else
 				return ""
 			end
@@ -41,8 +49,8 @@ return {
 			},
 
 			sections = {
-				lualine_a = { copilot },
-				lualine_b = {},
+				lualine_a = { copilot_main },
+				lualine_b = { copilot_sub },
 				lualine_c = {},
 				lualine_x = {
 					{ "diagnostics", sources = { "nvim_workspace_diagnostic" } },
