@@ -50,15 +50,16 @@ return {
 		}
 
 		local source_names = {
-			nvim_lsp = "(LSP)",
-			emoji = "(Emoji)",
-			path = "(Path)",
+			buffer = "(Buffer)",
 			calc = "(Calc)",
 			cmp_tabnine = "(Tabnine)",
-			vsnip = "(Snippet)",
+			copilot = "(Copilot)",
+			emoji = "(Emoji)",
 			luasnip = "(Snippet)",
-			buffer = "(Buffer)",
+			nvim_lsp = "(LSP)",
+			path = "(Path)",
 			tmux = "(TMUX)",
+			vsnip = "(Snippet)",
 		}
 
 		local duplicates = {
