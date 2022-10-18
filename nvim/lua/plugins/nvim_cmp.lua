@@ -23,9 +23,9 @@ return {
 		local kind_icons = {
 			Class = " ",
 			Color = " ",
-			Copilot = "",
 			Constant = "ﲀ ",
 			Constructor = " ",
+			Copilot = "",
 			Enum = "練",
 			EnumMember = " ",
 			Event = " ",
