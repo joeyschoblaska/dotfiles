@@ -11,7 +11,6 @@
 * * **telescope fb mappings:** more intuitive mappings, especially in insert mode (eg, `imap <C-foo>` should always do the same as `nmap foo`)
 * **scratch:** (persistent?) scratch buffers. shortcut opens or creates SCRATCH_DIR/<project>.md - put in dropbox to sync across machines
   * Use `:drop` to switch to scratch tab if already open: https://vimtricks.com/p/quickly-access-project-notes/
-* **nvim_cmp:** integrate LSP servers with nvim_cmp
 * **select_dir_for_grep warnings?:** sometimes I get a warning about a var being a table instead of a number or something. probably easiest to use a local copy of telescope and try to get a stack trace of where exactly it's coming from
 * **git blame:** see who wrote what in current file. easily open a commit in diffview
   * maybe I can just write this myself? there are a few git-blame options but I don't see any that will give me the diff. see: https://teukka.tech/vimtip-gitlens.html
@@ -22,8 +21,6 @@
   * range formatting might be nice for code blocks inside markdown too
 * **mason? lsp-zero?:** look into using these plugins to simplify my lsp setup (and per-project configs)
 * **telescope git highlighting:** possible to configure telescope git pickers to use delta / bat for paging?
-* **nvim_cmp delay:** figure out how to add a delay to cmp window: https://github.com/hrsh7th/nvim-cmp/issues/715#issuecomment-1069059428
-  * this link for disabling prompt in telescope: https://github.com/hrsh7th/nvim-cmp/issues/60#issuecomment-905632958
 * **text objects?:** treesitter for text objects? look for ruby examples maybe
 * **lua snippets?:** never used snippets before. look for examples of how to best use it in ruby / rails / ts / react
 * **lock plugin versions:** some way to lock versions and do manual upgrades - I don't want to be suprised by breaking changes when I need to get work done
