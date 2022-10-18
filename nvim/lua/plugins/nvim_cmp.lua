@@ -7,6 +7,7 @@ return {
 		"hrsh7th/cmp-buffer",
 		"hrsh7th/cmp-path",
 		"hrsh7th/cmp-nvim-lsp",
+		"zbirenbaum/copilot.lua",
 	},
 
 	after = "nvim-autopairs",
@@ -87,6 +88,8 @@ return {
 						cmp.complete({
 							reason = cmp.ContextReason.Auto,
 						})
+					elseif require("copilot.suggestion").is_visible() then
+						require("copilot.suggestion").accept()
 					else
 						fallback()
 					end

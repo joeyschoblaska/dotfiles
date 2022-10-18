@@ -138,6 +138,9 @@ local mappings = {
 
 	-- jargon
 	{ "n", "<leader>ja", [[:lua require("functions").jargon_insert_header()<CR>]], norm_silent },
+
+	-- copilot
+	{ "n", "<leader>co", [[:lua require("copilot.suggestion").toggle_auto_trigger()<CR>]], norm_silent },
 }
 
 for _, m in ipairs(mappings) do
