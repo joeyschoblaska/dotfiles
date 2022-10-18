@@ -15,6 +15,7 @@ return {
 	config = function()
 		local cmp = require("cmp")
 		local cmp_autopairs = require("nvim-autopairs.completion.cmp")
+		local copilot = require("copilot.suggestion")
 
 		local has_words_before = function()
 			local line, col = unpack(vim.api.nvim_win_get_cursor(0))
@@ -88,15 +89,15 @@ return {
 						cmp.complete({
 							reason = cmp.ContextReason.Auto,
 						})
-					elseif require("copilot.suggestion").is_visible() then
-						require("copilot.suggestion").accept()
 					else
 						fallback()
 					end
 				end, { "i", "s" }),
 
 				["<S-Tab>"] = cmp.mapping(function(fallback)
-					if cmp.visible() then
+					if copilot.is_visible() then
+						copilot.accept()
+					elseif cmp.visible() then
 						cmp.select_prev_item()
 					-- elseif luasnip.jumpable(-1) then
 					-- 	luasnip.jump(-1)
