@@ -24,6 +24,14 @@ return {
 				return parent and (" " .. parent) or ""
 			end
 
+		local copilot = function()
+			if vim.b.copilot_suggestion_auto_trigger then
+				return " copilot"
+			else
+				return ""
+			end
+		end
+
 		require("lualine").setup({
 			theme = "tokyonight",
 
@@ -33,7 +41,7 @@ return {
 			},
 
 			sections = {
-				lualine_a = {},
+				lualine_a = { copilot },
 				lualine_b = {},
 				lualine_c = {},
 				lualine_x = {
