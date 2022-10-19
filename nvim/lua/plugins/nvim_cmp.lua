@@ -114,7 +114,13 @@ return {
 					select = true, -- select first item if CR is hit but nothing was selected in completion menu
 				}),
 
-				["<ESC>"] = cmp.mapping.abort(),
+				["<ESC>"] = cmp.mapping(function(fallback)
+					if cmp.visible() then
+						cmp.mapping.abort()
+					else
+						fallback()
+					end
+				end),
 
 				["<C-u>"] = cmp.mapping.scroll_docs(-4),
 
