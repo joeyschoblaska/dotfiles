@@ -118,6 +118,10 @@ return {
 				}),
 
 				["<ESC>"] = cmp.mapping.abort(),
+
+				["<C-u>"] = cmp.mapping.scroll_docs(-4),
+
+				["<C-d>"] = cmp.mapping.scroll_docs(4),
 			},
 
 			performance = {
