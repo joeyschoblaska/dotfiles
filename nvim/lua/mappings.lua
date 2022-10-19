@@ -43,7 +43,7 @@ local mappings = {
 	{ "n", "<leader>no", [[:exec '!open obsidian://open?path="' . expand('%:.') . '"'<CR><CR>]] }, -- open file in obsidian (https://help.obsidian.md/Advanced+topics/Using+obsidian+URI)
 
 	-- copy path to current file to system clipboard
-	{ "n", "<leader>fc", ":let @+ = expand('%:.')<CR>" },
+	{ "n", "<leader>fc", [[:let @+ = expand('%:.')<CR>:echo "copied file path"<CR>]], norm_silent },
 
 	-- symbols / lsp
 	{ "n", "<leader>so", ":AerialOpen float<CR>" }, -- symbols outline (via aerial)
