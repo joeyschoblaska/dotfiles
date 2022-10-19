@@ -116,11 +116,11 @@ return {
 
 				["<ESC>"] = cmp.mapping(function(fallback)
 					if cmp.visible() then
-						cmp.mapping.abort()
+						cmp.mapping.abort()()
 					else
 						fallback()
 					end
-				end),
+				end, { "i", "s" }),
 
 				["<C-u>"] = cmp.mapping.scroll_docs(-4),
 
