@@ -110,7 +110,7 @@ return {
 					select = true, -- select first item if CR is hit but nothing was selected in completion menu
 				}),
 
-				["<ESC>"] = cmp.mapping(function(fallback)
+				["<BS>"] = cmp.mapping(function(fallback)
 					if cmp.visible() then
 						cmp.mapping.abort()()
 					else
