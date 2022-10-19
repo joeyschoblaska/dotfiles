@@ -64,10 +64,7 @@ return {
 		}
 
 		local duplicates = {
-			buffer = 1,
-			path = 1,
-			nvim_lsp = 0,
-			luasnip = 1,
+			nvim_lsp = 1,
 		}
 
 		local max_width = 50
