@@ -77,8 +77,6 @@ return {
 			mapping = {
 				-- SUPER tab: https://github.com/hrsh7th/nvim-cmp/wiki/Example-mappings#luasnip
 				["<Tab>"] = cmp.mapping(function(fallback)
-					local copilot = require("copilot.suggestion")
-
 					if cmp.visible() then
 						cmp.select_next_item()
 					-- elseif luasnip.expand_or_jumpable() then
@@ -87,8 +85,6 @@ return {
 						cmp.complete({
 							reason = cmp.ContextReason.Auto,
 						})
-					elseif copilot.is_visible() then
-						copilot.accept()
 					else
 						fallback()
 					end
@@ -97,10 +93,10 @@ return {
 				["<S-Tab>"] = cmp.mapping(function(fallback)
 					local copilot = require("copilot.suggestion")
 
-					if copilot.is_visible() then
-						copilot.accept()
-					elseif cmp.visible() then
+					if cmp.visible() then
 						cmp.select_prev_item()
+					elseif copilot.is_visible() then
+						copilot.accept()
 					-- elseif luasnip.jumpable(-1) then
 					-- 	luasnip.jump(-1)
 					else
