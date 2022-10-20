@@ -68,3 +68,5 @@
   plus-style = "#a6e3a1" "#2c323a"
 [credential]
   helper = osxkeychain
+[maintenance]
+  repo = /Users/joey.schoblaska/workspace/zenpayroll

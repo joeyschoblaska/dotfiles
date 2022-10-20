@@ -5,6 +5,7 @@ return {
 		"RRethy/nvim-treesitter-endwise",
 		"windwp/nvim-ts-autotag",
 		"JoosepAlviste/nvim-ts-context-commentstring",
+		"omnisyle/nvim-hidesig",
 	},
 
 	run = function()
@@ -23,6 +24,11 @@ return {
 			autotag = { enable = true },
 			context_commentstring = {
 				enable = true,
+			},
+			hidesig = {
+				enable = true,
+				opacity = 0.75,
+				delay = 200,
 			},
 		})
 	end,
