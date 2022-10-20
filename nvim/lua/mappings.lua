@@ -130,7 +130,7 @@ local mappings = {
 	{ "n", "m0", [[:lua require("functions").bookmarks.set_current(0)<CR>:echo "set mark 0"<CR>]] },
 	{ "n", "mm", [[:lua require("functions").bookmarks.set()<CR>]], norm_silent },
 	{ "n", "mc", [[:lua require("functions").bookmarks.delete_all()<CR>]], norm_silent }, -- (m)arks (c)lear
-	{ "n", "md", [[:lua require("marks").delete_bookmark()<CR>]], norm_silent }, -- (m)arks (d)elete
+	{ "n", "md", [[:lua require("marks").delete_bookmark()<CR>]], norm_silent }, -- (m)ark (d)elete
 	{ "n", "ml", [[:lua require("functions").bookmarks.quickfix()<CR>:Trouble quickfix<CR>]], norm_silent },
 	{ "n", "ma", [[:lua require("marks").annotate()<CR>]], norm_silent },
 	{ "n", "<", [[:lua require("functions").bookmarks.prev()<CR>]], norm_silent },
