@@ -8,7 +8,7 @@
   * and another that does `:DiffviewOpen sha^!` (eg, `:GS sha`)
   * is there a cool way do have this commands pop an interactive command prompt window? eg, type `<leader>pr`, then a box pops up asking you for the branch number to pass as argument
     * yes there is! https://github.com/stevearc/dressing.nvim
-* * **telescope fb mappings:** more intuitive mappings, especially in insert mode (eg, `imap <C-foo>` should always do the same as `nmap foo`)
+* **telescope fb mappings:** more intuitive mappings, especially in insert mode (eg, `imap <C-foo>` should always do the same as `nmap foo`)
 * **scratch:** (persistent?) scratch buffers. shortcut opens or creates SCRATCH_DIR/<project>.md - put in dropbox to sync across machines
   * Use `:drop` to switch to scratch tab if already open: https://vimtricks.com/p/quickly-access-project-notes/
 * **select_dir_for_grep warnings?:** sometimes I get a warning about a var being a table instead of a number or something. probably easiest to use a local copy of telescope and try to get a stack trace of where exactly it's coming from
