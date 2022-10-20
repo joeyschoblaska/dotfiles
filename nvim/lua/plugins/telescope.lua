@@ -7,7 +7,6 @@ return {
 		"nvim-telescope/telescope-live-grep-args.nvim",
 		"nvim-telescope/telescope-file-browser.nvim",
 		"stevearc/aerial.nvim",
-		"ThePrimeagen/harpoon",
 		"folke/trouble.nvim",
 	},
 
@@ -157,6 +156,5 @@ return {
 		telescope.load_extension("live_grep_args")
 		telescope.load_extension("file_browser")
 		telescope.load_extension("aerial")
-		telescope.load_extension("harpoon")
 	end,
 }
