@@ -13,12 +13,12 @@ end
 return require("packer").startup(function(use)
 	use("wbthomason/packer.nvim") -- without this, packer will try to delete itself on sync
 
-	use(require("plugins.telescope")) -- framework for fuzzy finding / picking
+	use(require("plugins.telescope")) -- framework for various finders (files, grep, git, LSP, etc)
 	use(require("plugins.fzf_lua")) -- faster file finder, good for large repos
-	use(require("plugins.gitsigns")) -- highlighting number col with git status
+	use(require("plugins.gitsigns")) -- highlighting number / sign col with git status
 	use(require("plugins.tabline")) -- tabline (top)
 	use(require("plugins.lualine")) -- statusline (bottom)
-	use("kyazdani42/nvim-web-devicons") -- icons, mostly for filetypes
+	use("kyazdani42/nvim-web-devicons") -- icons
 	use(require("plugins.hlslens")) -- advanced search highlighting
 	use(require("plugins.nvim_cmp")) -- completion window
 	use(require("plugins.registers")) -- show popup with register contents on `"` press
