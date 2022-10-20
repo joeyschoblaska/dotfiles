@@ -137,6 +137,7 @@ return {
 						["n"] = {},
 					},
 				},
+
 				live_grep_args = {
 					auto_quoting = false,
 					default_mappings = {
