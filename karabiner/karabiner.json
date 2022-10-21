@@ -36,6 +36,23 @@
                 "type": "basic"
               }
             ]
+          },
+          {
+            "description": "Mouse BTN4 to <C-up> (Mission Control)",
+            "manipulators": [
+              {
+                "from": {
+                  "pointing_button": "button4"
+                },
+                "to": [
+                  {
+                    "key_code": "up_arrow",
+                    "modifiers": ["left_control"]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
           }
         ]
       },
