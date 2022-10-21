@@ -26,31 +26,7 @@ return {
 
 		local copilot = function(bufn)
 			if vim.b.copilot_suggestion_auto_trigger then
-				local copilots = {
-					"🙇",
-					"🤦",
-					"🤷",
-					"💂",
-					"🥷",
-					"👷",
-					"🫅",
-					"🤴",
-					"🎅",
-					"🤶",
-					"🦸",
-					"🦹",
-					"🧙",
-					"🧚",
-					"🧛",
-					"🧜",
-					"🧝",
-					"🧞",
-					"🧟",
-					"🧌",
-				}
-
-				index = (vim.api.nvim_get_current_buf() % table.getn(copilots)) + 1
-				return copilots[index] .. " CPLT"
+				return " CPLT"
 			else
 				return ""
 			end
