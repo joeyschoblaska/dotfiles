@@ -6,6 +6,7 @@ return {
 		"windwp/nvim-ts-autotag",
 		"JoosepAlviste/nvim-ts-context-commentstring",
 		"omnisyle/nvim-hidesig",
+		"vim-scripts/applescript.vim",
 	},
 
 	run = function()
