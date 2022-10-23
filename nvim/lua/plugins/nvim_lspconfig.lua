@@ -15,6 +15,7 @@ return {
 		local servers = settings.nvim_lsp_servers
 			or {
 				"tsserver",
+				"rust_analyzer",
 
 				{
 					"solargraph",
