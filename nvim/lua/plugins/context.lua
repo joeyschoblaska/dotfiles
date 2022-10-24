@@ -4,6 +4,14 @@ return {
 	config = function()
 		require("treesitter-context").setup({
 			separator = "-",
+			patterns = {
+				default = {
+					"class",
+					"function",
+					"method",
+					"module",
+				},
+			},
 		})
 	end,
 }
