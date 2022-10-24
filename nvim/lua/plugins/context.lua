@@ -6,6 +6,7 @@ return {
 			separator = "-",
 			patterns = {
 				default = {
+					"block",
 					"class",
 					"function",
 					"method",
