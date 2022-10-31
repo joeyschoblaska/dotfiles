@@ -22,7 +22,6 @@
 * **mason? lsp-zero?:** look into using these plugins to simplify my lsp setup (and per-project configs)
 * **telescope git highlighting:** possible to configure telescope git pickers to use delta / bat for paging?
 * **text objects?:** treesitter for text objects? look for ruby examples maybe
-* **lua snippets?:** never used snippets before. look for examples of how to best use it in ruby / rails / ts / react
 * **lock plugin versions:** some way to lock versions and do manual upgrades - I don't want to be suprised by breaking changes when I need to get work done
 * **ruby debugger?:** new Ruby debugger stuff? need to research: https://blog.testdouble.com/talks/2022-08-22-debugging-ruby-on-rails-with-vscode/
 * **theme switching:** easy way to switch themes without reloading (eg, switching to a light theme temporarily while working outside)
