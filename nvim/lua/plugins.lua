@@ -32,6 +32,7 @@ return require("packer").startup(function(use)
 	use(require("plugins.markdown_preview")) -- live in-browser preview of markdown buffer
 	use(require("plugins.leap")) -- "neovim's answer to the mouse"
 	use(require("plugins.marks")) -- improve vim marks and add bookmarks
+	use(require("plugins.luasnip")) -- snippets
 
 	-- syntax / treesitter
 	use(require("plugins.treesitter")) -- syntax parsing for highlighting and indenting
