@@ -33,6 +33,7 @@ return require("packer").startup(function(use)
 	use(require("plugins.leap")) -- "neovim's answer to the mouse"
 	use(require("plugins.marks")) -- improve vim marks and add bookmarks
 	use(require("plugins.luasnip")) -- snippets
+	use(require("plugins.vim_pencil")) -- better ergonomics for editing prose
 
 	-- syntax / treesitter
 	use(require("plugins.treesitter")) -- syntax parsing for highlighting and indenting
