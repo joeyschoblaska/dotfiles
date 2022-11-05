@@ -1,5 +1,6 @@
 -- https://www.lunarvim.org/configuration/01-settings.html#example-options
 vim.opt.backup = false -- creates a backup file
+vim.opt.diffopt = "internal,filler,closeoff,linematch" -- https://neovim.io/doc/user/options.html#'diffopt'
 vim.opt.clipboard = "" -- don't link nvim and system clipboard
 vim.opt.cmdheight = 1 -- default commandline height
 vim.opt.colorcolumn = "99999" -- fixes indentline for now
