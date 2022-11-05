@@ -1,4 +1,3 @@
--- https://www.lunarvim.org/configuration/01-settings.html#example-options
 vim.opt.backup = false -- creates a backup file
 vim.opt.clipboard = "" -- don't link nvim and system clipboard
 vim.opt.cmdheight = 1 -- default commandline height
