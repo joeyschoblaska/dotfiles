@@ -33,3 +33,4 @@
 * **neo-tree:** Look at neo-tree as an alternative / addition to telescope-fb. Neo-tree seems highly configurable, so I can probably make it do what I want
 * **ruby namespaced constant completion** If I have a Long::Constant::Name it's annoying to autocomplete each module individually.
   * Maybe configure the cmp menu to show automatically if the cursor is after ::
+  * Or use fuzzy-matched workspace symbols as a completion source?
