@@ -8,6 +8,29 @@ M.toggle_diagnostic_virtual_text = function()
 	})
 end
 
+M.toggle_cmp = function()
+	local new_val = not vim.g.disableAutoCmp
+	vim.g.disableAutoCmp = new_val
+
+	if new_val then
+		require("cmp").setup({
+			completion = {
+				autocomplete = false,
+			},
+		})
+
+		vim.cmd([[echo "cmp disabled"]])
+	else
+		require("cmp").setup({
+			completion = {
+				autocomplete = { "TextChanged" },
+			},
+		})
+
+		vim.cmd([[echo "cmp enabled"]])
+	end
+end
+
 M.leap_all_windows = function()
 	require("leap").leap({
 		target_windows = vim.tbl_filter(function(win)

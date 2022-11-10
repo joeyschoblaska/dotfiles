@@ -73,20 +73,20 @@ return {
 
 		cmp.setup({
 			completion = {
-				autocomplete = false,
+				autocomplete = { "TextChanged" },
 			},
 
 			mapping = {
 				-- SUPER tab: https://github.com/hrsh7th/nvim-cmp/wiki/Example-mappings#luasnip
 				["<Tab>"] = cmp.mapping(function(fallback)
-					if cmp.visible() then
-						cmp.select_next_item()
-					elseif luasnip.jumpable() then
+					if luasnip.jumpable() then
 						luasnip.jump()
-					elseif has_words_before() then
-						cmp.complete({
-							reason = cmp.ContextReason.Auto,
-						})
+					elseif cmp.visible() then
+						cmp.select_next_item()
+					-- elseif has_words_before() then
+					-- 	cmp.complete({
+					-- 		reason = cmp.ContextReason.Auto,
+					-- 	})
 					else
 						fallback()
 					end
@@ -107,18 +107,18 @@ return {
 				end, { "i", "s" }),
 
 				-- https://github.com/zbirenbaum/copilot-cmp#configuration
-				["<CR>"] = cmp.mapping.confirm({
-					behavior = cmp.ConfirmBehavior.Replace,
-					select = true, -- select first item if CR is hit but nothing was selected in completion menu
-				}),
+				-- ["<CR>"] = cmp.mapping.confirm({
+				-- 	behavior = cmp.ConfirmBehavior.Replace,
+				-- 	select = true, -- select first item if CR is hit but nothing was selected in completion menu
+				-- }),
 
-				["<BS>"] = cmp.mapping(function(fallback)
-					if cmp.visible() then
-						cmp.mapping.abort()()
-					else
-						fallback()
-					end
-				end, { "i", "s" }),
+				-- ["<BS>"] = cmp.mapping(function(fallback)
+				-- 	if cmp.visible() then
+				-- 		cmp.mapping.abort()()
+				-- 	else
+				-- 		fallback()
+				-- 	end
+				-- end, { "i", "s" }),
 
 				["<C-u>"] = cmp.mapping.scroll_docs(-4),
 
@@ -136,12 +136,13 @@ return {
 			},
 
 			sources = cmp.config.sources({
-				{ name = "luasnip" },
-				{ name = "path" },
-				{ name = "copilot" },
-				{ name = "nvim_lsp" },
+				{ name = "luasnip", priority = 2 },
+				{ name = "path", priority = 3 },
+				{ name = "copilot", priority = 3 },
+				{ name = "nvim_lsp", priority = 1 },
 				{
 					name = "buffer",
+					priority = 3,
 					option = {
 						-- https://github.com/hrsh7th/cmp-buffer#all-buffers
 						get_bufnrs = function()
