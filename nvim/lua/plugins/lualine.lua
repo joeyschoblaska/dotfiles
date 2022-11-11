@@ -32,6 +32,10 @@ return {
 			end
 		end
 
+		local current_mark = function(bufn)
+			return "m:" .. require("functions").bookmarks.get_current()
+		end
+
 		require("lualine").setup({
 			theme = "tokyonight",
 
@@ -42,7 +46,7 @@ return {
 
 			sections = {
 				lualine_a = { copilot },
-				lualine_b = {},
+				lualine_b = { current_mark },
 				lualine_c = {},
 				lualine_x = {
 					{ "diagnostics", sources = { "nvim_workspace_diagnostic" } },

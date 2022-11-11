@@ -118,16 +118,16 @@ local mappings = {
 	{ "n", "s", [[:lua require("functions").leap_all_windows()<CR>]], norm_silent },
 
 	-- marks
-	{ "n", "m1", [[:lua require("functions").bookmarks.set_current(1)<CR>:echo "set mark 1"<CR>]] },
-	{ "n", "m2", [[:lua require("functions").bookmarks.set_current(2)<CR>:echo "set mark 2"<CR>]] },
-	{ "n", "m3", [[:lua require("functions").bookmarks.set_current(3)<CR>:echo "set mark 3"<CR>]] },
-	{ "n", "m4", [[:lua require("functions").bookmarks.set_current(4)<CR>:echo "set mark 4"<CR>]] },
-	{ "n", "m5", [[:lua require("functions").bookmarks.set_current(5)<CR>:echo "set mark 5"<CR>]] },
-	{ "n", "m6", [[:lua require("functions").bookmarks.set_current(6)<CR>:echo "set mark 6"<CR>]] },
-	{ "n", "m7", [[:lua require("functions").bookmarks.set_current(7)<CR>:echo "set mark 7"<CR>]] },
-	{ "n", "m8", [[:lua require("functions").bookmarks.set_current(8)<CR>:echo "set mark 8"<CR>]] },
-	{ "n", "m9", [[:lua require("functions").bookmarks.set_current(9)<CR>:echo "set mark 9"<CR>]] },
-	{ "n", "m0", [[:lua require("functions").bookmarks.set_current(0)<CR>:echo "set mark 0"<CR>]] },
+	{ "n", "m1", [[:lua require("functions").bookmarks.set_current(1)<CR>]], norm_silent },
+	{ "n", "m2", [[:lua require("functions").bookmarks.set_current(2)<CR>]], norm_silent },
+	{ "n", "m3", [[:lua require("functions").bookmarks.set_current(3)<CR>]], norm_silent },
+	{ "n", "m4", [[:lua require("functions").bookmarks.set_current(4)<CR>]], norm_silent },
+	{ "n", "m5", [[:lua require("functions").bookmarks.set_current(5)<CR>]], norm_silent },
+	{ "n", "m6", [[:lua require("functions").bookmarks.set_current(6)<CR>]], norm_silent },
+	{ "n", "m7", [[:lua require("functions").bookmarks.set_current(7)<CR>]], norm_silent },
+	{ "n", "m8", [[:lua require("functions").bookmarks.set_current(8)<CR>]], norm_silent },
+	{ "n", "m9", [[:lua require("functions").bookmarks.set_current(9)<CR>]], norm_silent },
+	{ "n", "m0", [[:lua require("functions").bookmarks.set_current(0)<CR>]], norm_silent },
 	{ "n", "mm", [[:lua require("functions").bookmarks.set()<CR>]], norm_silent },
 	{ "n", "mc", [[:lua require("functions").bookmarks.delete_all()<CR>]], norm_silent }, -- (m)arks (c)lear
 	{ "n", "md", [[:lua require("marks").delete_bookmark()<CR>]], norm_silent }, -- (m)ark (d)elete
