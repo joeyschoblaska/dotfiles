@@ -8,28 +8,44 @@ M.toggle_diagnostic_virtual_text = function()
 	})
 end
 
-M.toggle_cmp = function()
-	local new_val = not vim.g.disableAutoCmp
-	vim.g.disableAutoCmp = new_val
+M.cmp = {
+	toggle = function()
+		local new_val = not vim.g.disableAutoCmp
+		vim.g.disableAutoCmp = new_val
 
-	if new_val then
+		if new_val then
+			require("functions").cmp.disable(false)
+		else
+			require("functions").cmp.enable(false)
+		end
+	end,
+
+	disable = function(silent)
+		vim.g.disableAutoCmp = true
 		require("cmp").setup({
 			completion = {
 				autocomplete = false,
 			},
 		})
 
-		vim.cmd([[echo "cmp disabled"]])
-	else
+		if not silent then
+			vim.cmd([[echo "cmp disabled"]])
+		end
+	end,
+
+	enable = function(silent)
+		vim.g.disableAutoCmp = false
 		require("cmp").setup({
 			completion = {
 				autocomplete = { "TextChanged" },
 			},
 		})
 
-		vim.cmd([[echo "cmp enabled"]])
-	end
-end
+		if not silent then
+			vim.cmd([[echo "cmp enabled"]])
+		end
+	end,
+}
 
 M.leap_all_windows = function()
 	require("leap").leap({
@@ -39,33 +55,35 @@ M.leap_all_windows = function()
 	})
 end
 
-M.ts_select_dir_for_grep = function(prompt_bufnr)
-	local action_state = require("telescope.actions.state")
-	local fb = require("telescope").extensions.file_browser
-	local lga = require("telescope").extensions.live_grep_args
-	local current_line = action_state.get_current_line()
+M.ts = {
+	select_dir_for_grep = function(prompt_bufnr)
+		local action_state = require("telescope.actions.state")
+		local fb = require("telescope").extensions.file_browser
+		local lga = require("telescope").extensions.live_grep_args
+		local current_line = action_state.get_current_line()
 
-	fb.file_browser({
-		files = false,
-		depth = false,
-		attach_mappings = function(prompt_bufnr)
-			require("telescope.actions").select_default:replace(function()
-				local entry_path = action_state.get_selected_entry().Path
-				local dir = entry_path:is_dir() and entry_path or entry_path:parent()
-				local relative = dir:make_relative(vim.fn.getcwd())
-				local absolute = dir:absolute()
+		fb.file_browser({
+			files = false,
+			depth = false,
+			attach_mappings = function(prompt_bufnr)
+				require("telescope.actions").select_default:replace(function()
+					local entry_path = action_state.get_selected_entry().Path
+					local dir = entry_path:is_dir() and entry_path or entry_path:parent()
+					local relative = dir:make_relative(vim.fn.getcwd())
+					local absolute = dir:absolute()
 
-				lga.live_grep_args({
-					results_title = relative .. "/",
-					cwd = absolute,
-					default_text = current_line,
-				})
-			end)
+					lga.live_grep_args({
+						results_title = relative .. "/",
+						cwd = absolute,
+						default_text = current_line,
+					})
+				end)
 
-			return true
-		end,
-	})
-end
+				return true
+			end,
+		})
+	end,
+}
 
 M.jargon_insert_header = function()
 	local line = vim.api.nvim_win_get_cursor(0)[1]
