@@ -57,10 +57,11 @@ local mappings = {
 	-- git
 	{ "n", "<leader>gs", ":Telescope git_status<CR>" },
 	{ "n", "<leader>gc", ":Telescope git_commits<CR>" },
-	{ "n", "<leader>gb", ":Telescope git_branches<CR>" },
+	{ "n", "<leader>gb", [[:lua require("gitsigns").blame_line{full=true}<CR>]] },
 	{ "n", "<leader>lg", ":lua _lazygit_toggle()<CR>", norm_silent },
 	{ "n", "<leader>gh", ":DiffviewFileHistory %<CR>", norm_silent }, -- git history for current file
 	{ "n", "<leader>gd", ":DiffviewOpen main...head<CR>", norm_silent }, -- git diff for current branch against main
+	{ "n", "<leader>gp", ":Gitsigns preview_hunk<CR>", norm_silent },
 
 	-- [a f]ile
 	{ "v", "af", ":<C-U>silent! normal! ggVG<CR>", { noremap = true } },
@@ -109,7 +110,9 @@ local mappings = {
 	{ "n", "#", [[#<Cmd>lua require('hlslens').start()<CR>]], norm_silent },
 	{ "n", "g*", [[g*<Cmd>lua require('hlslens').start()<CR>]], norm_silent },
 	{ "n", "g#", [[g#<Cmd>lua require('hlslens').start()<CR>]], norm_silent },
-	{ "n", "<Esc>", ":noh<CR>", norm_silent }, -- clear highlights on escape
+
+	-- clear highlights and close floating windows on escape
+	{ "n", "<Esc>", [[:noh<CR>:lua require("functions").close_floating_windows()<CR>]], norm_silent },
 
 	-- markdown preview
 	{ "n", "<leader>mp", ":MarkdownPreview<CR>" },
@@ -144,6 +147,10 @@ local mappings = {
 
 	-- nvim-cmp
 	{ "n", "<leader>cm", [[:lua require("functions").cmp.toggle()<CR>]], norm_silent },
+
+	-- gitsigns
+	{ "n", "g>", [[:lua require("gitsigns").next_hunk()<CR>]], norm_silent },
+	{ "n", "g<", [[:lua require("gitsigns").prev_hunk()<CR>]], norm_silent },
 }
 
 for _, m in ipairs(mappings) do

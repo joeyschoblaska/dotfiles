@@ -134,6 +134,19 @@ M.bookmarks = {
 		local current = require("functions").bookmarks.get_current()
 		require("marks").bookmark_state:to_list("quickfixlist", current)
 	end,
+
+	-- putting a change here to find
 }
+
+-- https://www.reddit.com/r/neovim/comments/nrz9hp/comment/h0lg5m1/?utm_source=reddit&utm_medium=web2x&context=3
+M.close_floating_windows = function()
+	for _, win in ipairs(vim.api.nvim_list_wins()) do
+		local config = vim.api.nvim_win_get_config(win)
+		if config.relative ~= "" then
+			vim.api.nvim_win_close(win, false)
+			print("Closing window", win)
+		end
+	end
+end
 
 return M
