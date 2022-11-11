@@ -8,6 +8,8 @@ return {
 		"nvim-telescope/telescope-file-browser.nvim",
 		"stevearc/aerial.nvim",
 		"folke/trouble.nvim",
+		"kkharji/sqlite.lua", -- used by smarty-history
+		"nvim-telescope/telescope-smart-history.nvim",
 	},
 
 	after = "aerial.nvim",
@@ -22,7 +24,11 @@ return {
 		telescope.setup({
 			defaults = {
 				mappings = {
-					i = { ["<c-q>"] = trouble.open_with_trouble },
+					i = {
+						["<c-q>"] = trouble.open_with_trouble,
+						["<C-Left>"] = require("telescope.actions").cycle_history_prev,
+						["<C-Right>"] = require("telescope.actions").cycle_history_next,
+					},
 					n = { ["<c-q>"] = trouble.open_with_trouble },
 				},
 				sorting_strategy = "ascending",
@@ -59,6 +65,10 @@ return {
 					height = 0.95,
 				},
 				file_ignore_patterns = { "^.git/" },
+				history = {
+					path = "~/.local/share/nvim/telescope_history.sqlite3",
+					limit = 100,
+				},
 			},
 
 			pickers = {
@@ -157,5 +167,6 @@ return {
 		telescope.load_extension("live_grep_args")
 		telescope.load_extension("file_browser")
 		telescope.load_extension("aerial")
+		telescope.load_extension("smart_history")
 	end,
 }
