@@ -1,4 +1,6 @@
 # TODO
+* **git marks:** use `mg` to set mark to "git". `<` and `>` go back and forth to hunks using git-signs; `ml` uses [this script](https://gist.github.com/romainl/a3ddb1d08764b93183260f8cdf0f524f) to open hunks in quickfix menu
+* **better markdown highlights:** I swear the bold text itself used to be highlighted...
 * **consolidate mappings:** mappings.lua can export mappings for other plugins (that need to be set in the plugin's setup call)
 * **testing integration:** This looks super interesting: https://github.com/nvim-neotest/neotest
   * in addition to running tests, it'd be great to have a way to jump to / automatically create the test file corresponding to the current file
