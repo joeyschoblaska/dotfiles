@@ -112,30 +112,47 @@ M.bookmarks = {
 
 	next = function()
 		local current = require("functions").bookmarks.get_current()
-		require("marks")["next_bookmark" .. current]()
+
+		if current == "git" then
+			require("gitsigns").next_hunk()
+		else
+			require("marks")["next_bookmark" .. current]()
+		end
 	end,
 
 	prev = function()
 		local current = require("functions").bookmarks.get_current()
-		require("marks")["prev_bookmark" .. current]()
+
+		if current == "git" then
+			require("gitsigns").prev_hunk()
+		else
+			require("marks")["prev_bookmark" .. current]()
+		end
 	end,
 
 	set = function()
 		local current = require("functions").bookmarks.get_current()
-		require("marks")["set_bookmark" .. current]()
+
+		if current ~= "git" then
+			require("marks")["set_bookmark" .. current]()
+		end
 	end,
 
 	delete_all = function()
 		local current = require("functions").bookmarks.get_current()
-		require("marks")["delete_bookmark" .. current]()
+
+		if current ~= "git" then
+			require("marks")["delete_bookmark" .. current]()
+		end
 	end,
 
 	quickfix = function()
 		local current = require("functions").bookmarks.get_current()
-		require("marks").bookmark_state:to_list("quickfixlist", current)
-	end,
 
-	-- putting a change here to find
+		if current ~= "git" then
+			require("marks").bookmark_state:to_list("quickfixlist", current)
+		end
+	end,
 }
 
 -- https://www.reddit.com/r/neovim/comments/nrz9hp/comment/h0lg5m1/?utm_source=reddit&utm_medium=web2x&context=3

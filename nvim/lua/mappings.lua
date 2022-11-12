@@ -131,6 +131,7 @@ local mappings = {
 	{ "n", "m8", [[:lua require("functions").bookmarks.set_current(8)<CR>]], norm_silent },
 	{ "n", "m9", [[:lua require("functions").bookmarks.set_current(9)<CR>]], norm_silent },
 	{ "n", "m0", [[:lua require("functions").bookmarks.set_current(0)<CR>]], norm_silent },
+	{ "n", "mg", [[:lua require("functions").bookmarks.set_current("git")<CR>]], norm_silent },
 	{ "n", "mm", [[:lua require("functions").bookmarks.set()<CR>]], norm_silent },
 	{ "n", "mc", [[:lua require("functions").bookmarks.delete_all()<CR>]], norm_silent }, -- (m)arks (c)lear
 	{ "n", "md", [[:lua require("marks").delete_bookmark()<CR>]], norm_silent }, -- (m)ark (d)elete
@@ -147,10 +148,6 @@ local mappings = {
 
 	-- nvim-cmp
 	{ "n", "<leader>cm", [[:lua require("functions").cmp.toggle()<CR>]], norm_silent },
-
-	-- gitsigns
-	{ "n", "g>", [[:lua require("gitsigns").next_hunk()<CR>]], norm_silent },
-	{ "n", "g<", [[:lua require("gitsigns").prev_hunk()<CR>]], norm_silent },
 }
 
 for _, m in ipairs(mappings) do
