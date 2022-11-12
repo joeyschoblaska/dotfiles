@@ -149,8 +149,8 @@ local mappings = {
 	{ "n", "<leader>cm", [[:lua require("functions").cmp.toggle()<CR>]], norm_silent },
 
 	-- gitsigns
-	{ "n", "g>", [[:lua require("gitsigns").next_hunk()<CR>]], norm_silent },
-	{ "n", "g<", [[:lua require("gitsigns").prev_hunk()<CR>]], norm_silent },
+	{ "n", "gj", [[:lua require("gitsigns").next_hunk()<CR>]], norm_silent },
+	{ "n", "gk", [[:lua require("gitsigns").prev_hunk()<CR>]], norm_silent },
 }
 
 for _, m in ipairs(mappings) do
