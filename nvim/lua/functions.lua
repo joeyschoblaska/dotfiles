@@ -148,4 +148,16 @@ M.close_floating_windows = function()
 	end
 end
 
+M.reset = function()
+	local luasnip = require("luasnip")
+	local functions = require("functions")
+
+	vim.cmd("noh")
+	functions.close_floating_windows()
+
+	if luasnip.get_active_snip() then
+		luasnip.unlink_current()
+	end
+end
+
 return M

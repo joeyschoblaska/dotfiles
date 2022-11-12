@@ -106,13 +106,13 @@ local mappings = {
 		[[<Cmd>execute('normal! ' . v:count1 . 'N')<CR><Cmd>lua require('hlslens').start()<CR>]],
 		norm_silent,
 	},
-	{ "n", "*", [[*<Cmd>lua require('hlslens').start()<CR>]], norm_silent },
-	{ "n", "#", [[#<Cmd>lua require('hlslens').start()<CR>]], norm_silent },
-	{ "n", "g*", [[g*<Cmd>lua require('hlslens').start()<CR>]], norm_silent },
-	{ "n", "g#", [[g#<Cmd>lua require('hlslens').start()<CR>]], norm_silent },
+	{ "n", "*", [[*<Cmd>lua require("hlslens").start()<CR>]], norm_silent },
+	{ "n", "#", [[#<Cmd>lua require("hlslens").start()<CR>]], norm_silent },
+	{ "n", "g*", [[g*<Cmd>lua require("hlslens").start()<CR>]], norm_silent },
+	{ "n", "g#", [[g#<Cmd>lua require("hlslens").start()<CR>]], norm_silent },
 
 	-- clear highlights and close floating windows on escape
-	{ "n", "<Esc>", [[:noh<CR>:lua require("functions").close_floating_windows()<CR>]], norm_silent },
+	{ "n", "<Esc>", [[:lua require("functions").reset()<CR>]], norm_silent },
 
 	-- markdown preview
 	{ "n", "<leader>mp", ":MarkdownPreview<CR>" },
