@@ -24,17 +24,13 @@ return {
 				return parent and (" " .. parent) or ""
 			end
 
-		local copilot = function(bufn)
-			if vim.b.copilot_suggestion_auto_trigger then
-				return " "
-			else
-				return ""
-			end
-		end
-
-		local cmp = function(bufn)
-			if require("functions").auto_cmp.is_enabled() then
+		local completion = function(bufn)
+			if require("luasnip").get_active_snip() then
+				return " "
+			elseif require("functions").auto_cmp.is_enabled() then
 				return " "
+			elseif vim.b.copilot_suggestion_auto_trigger then
+				return " "
 			else
 				return ""
 			end
@@ -53,7 +49,7 @@ return {
 			},
 
 			sections = {
-				lualine_a = { copilot, cmp },
+				lualine_a = { completion },
 				lualine_b = { current_mark },
 				lualine_c = {},
 				lualine_x = {
