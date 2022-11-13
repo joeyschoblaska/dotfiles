@@ -3,10 +3,11 @@ return {
 
 	requires = {
 		"L3MON4D3/LuaSnip",
-		"saadparwaiz1/cmp_luasnip",
 		"hrsh7th/cmp-buffer",
-		"hrsh7th/cmp-path",
 		"hrsh7th/cmp-nvim-lsp",
+		"hrsh7th/cmp-path",
+		"saadparwaiz1/cmp_luasnip",
+		"zbirenbaum/copilot-cmp",
 		"zbirenbaum/copilot.lua",
 	},
 
@@ -107,6 +108,9 @@ return {
 						copilot.accept()
 					elseif luasnip.jumpable(-1) then
 						luasnip.jump(-1)
+					-- TODO:
+					-- else if line_is_blank then
+					--   copilot.suggest
 					else
 						fallback()
 					end
@@ -151,7 +155,10 @@ return {
 				{ name = "luasnip", priority = 3 },
 				{ name = "nvim_lsp", priority = 2 },
 				{ name = "path", priority = 1 },
-				{ name = "copilot", priority = 1 },
+				{
+					name = "copilot",
+					priority = 1,
+				},
 				{
 					name = "buffer",
 					priority = 1,
