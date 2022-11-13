@@ -8,7 +8,6 @@ return {
 		"hrsh7th/cmp-path",
 		"hrsh7th/cmp-nvim-lsp",
 		"zbirenbaum/copilot.lua",
-		"L3MON4D3/LuaSnip",
 	},
 
 	after = "nvim-autopairs",
