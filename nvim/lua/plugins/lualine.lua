@@ -26,7 +26,7 @@ return {
 
 		local copilot = function(bufn)
 			if vim.b.copilot_suggestion_auto_trigger then
-				return " CPLT"
+				return " "
 			else
 				return ""
 			end
@@ -34,7 +34,7 @@ return {
 
 		local cmp = function(bufn)
 			if require("functions").cmp.is_enabled() then
-				return "CMP"
+				return " "
 			else
 				return ""
 			end
