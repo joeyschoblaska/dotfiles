@@ -108,7 +108,9 @@ return {
 						copilot.accept()
 					elseif luasnip.jumpable(-1) then
 						luasnip.jump(-1)
-					elseif string.find(vim.fn.getline("."), "^%s*$") then -- current line is empty or only contains spaces
+					elseif string.find(vim.fn.getline("."), "^%s*$") then
+						-- current line is empty or only contains spaces
+						-- copilot-cmp will not trigger on empty lines, so we have to launch it manually if we want to see it
 						copilot.next()
 					else
 						fallback()
