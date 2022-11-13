@@ -16,6 +16,7 @@ return {
 	config = function()
 		local cmp = require("cmp")
 		local cmp_autopairs = require("nvim-autopairs.completion.cmp")
+		local functions = require("functions")
 		local luasnip = require("luasnip")
 
 		local has_words_before = function()
@@ -107,13 +108,19 @@ return {
 				end, { "i", "s" }),
 
 				-- https://github.com/zbirenbaum/copilot-cmp#configuration
-				["<CR>"] = cmp.mapping.confirm({
-					behavior = cmp.ConfirmBehavior.Replace,
-					select = true, -- select first item if CR is hit but nothing was selected in completion menu
-				}),
+				["<CR>"] = cmp.mapping(function(fallback)
+					if cmp.get_selected_entry() then
+						cmp.mapping.confirm({
+							behavior = cmp.ConfirmBehavior.Replace,
+						})()
+					else
+						fallback()
+					end
+				end),
 
 				["<BS>"] = cmp.mapping(function(fallback)
-					if cmp.visible() then
+					if cmp.get_selected_entry() then
+						-- cancel cmp, but only if an item has been selected
 						cmp.mapping.abort()()
 					else
 						fallback()
