@@ -5,5 +5,9 @@ return {
 
 	config = function()
 		require("luasnip.loaders.from_vscode").lazy_load()
+
+		require("luasnip").setup({
+			region_check_events = "CursorMoved",
+		})
 	end,
 }
