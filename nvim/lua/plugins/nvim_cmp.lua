@@ -108,9 +108,8 @@ return {
 						copilot.accept()
 					elseif luasnip.jumpable(-1) then
 						luasnip.jump(-1)
-					-- TODO:
-					-- else if line_is_blank then
-					--   copilot.suggest
+					elseif string.find(vim.fn.getline("."), "^%s*$") then -- current line is empty or only contains spaces
+						copilot.next()
 					else
 						fallback()
 					end
