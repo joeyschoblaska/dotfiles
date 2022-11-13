@@ -68,6 +68,7 @@ return {
 
 		local duplicates = {
 			nvim_lsp = 1,
+			luasnip = 1,
 		}
 
 		local max_width = 50
@@ -143,13 +144,13 @@ return {
 			},
 
 			sources = cmp.config.sources({
-				{ name = "luasnip", priority = 2 },
-				{ name = "path", priority = 3 },
-				{ name = "copilot", priority = 3 },
-				{ name = "nvim_lsp", priority = 1 },
+				{ name = "luasnip", priority = 3 },
+				{ name = "nvim_lsp", priority = 2 },
+				{ name = "path", priority = 1 },
+				{ name = "copilot", priority = 1 },
 				{
 					name = "buffer",
-					priority = 3,
+					priority = 1,
 					option = {
 						-- https://github.com/hrsh7th/cmp-buffer#all-buffers
 						get_bufnrs = function()
