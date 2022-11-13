@@ -144,7 +144,7 @@ local mappings = {
 	{ "n", "<leader>ja", [[:lua require("functions").jargon_insert_header()<CR>]], norm_silent },
 
 	-- copilot
-	{ "n", "<leader>co", [[:lua require("copilot.suggestion").toggle_auto_trigger()<CR>]], norm_silent },
+	{ "n", "<leader>co", [[:lua require("functions").copilot.toggle()<CR>]], norm_silent },
 
 	-- nvim-cmp
 	{ "n", "<leader>cm", [[:lua require("functions").cmp.toggle()<CR>]], norm_silent },

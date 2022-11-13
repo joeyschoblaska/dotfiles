@@ -107,18 +107,18 @@ return {
 				end, { "i", "s" }),
 
 				-- https://github.com/zbirenbaum/copilot-cmp#configuration
-				-- ["<CR>"] = cmp.mapping.confirm({
-				-- 	behavior = cmp.ConfirmBehavior.Replace,
-				-- 	select = true, -- select first item if CR is hit but nothing was selected in completion menu
-				-- }),
+				["<CR>"] = cmp.mapping.confirm({
+					behavior = cmp.ConfirmBehavior.Replace,
+					select = true, -- select first item if CR is hit but nothing was selected in completion menu
+				}),
 
-				-- ["<BS>"] = cmp.mapping(function(fallback)
-				-- 	if cmp.visible() then
-				-- 		cmp.mapping.abort()()
-				-- 	else
-				-- 		fallback()
-				-- 	end
-				-- end, { "i", "s" }),
+				["<BS>"] = cmp.mapping(function(fallback)
+					if cmp.visible() then
+						cmp.mapping.abort()()
+					else
+						fallback()
+					end
+				end, { "i", "s" }),
 
 				["<C-u>"] = cmp.mapping.scroll_docs(-4),
 

@@ -32,6 +32,14 @@ return {
 			end
 		end
 
+		local cmp = function(bufn)
+			if require("functions").cmp.is_enabled() then
+				return "CMP"
+			else
+				return ""
+			end
+		end
+
 		local current_mark = function(bufn)
 			return "m:" .. require("functions").bookmarks.get_current()
 		end
@@ -45,7 +53,7 @@ return {
 			},
 
 			sections = {
-				lualine_a = { copilot },
+				lualine_a = { copilot, cmp },
 				lualine_b = { current_mark },
 				lualine_c = {},
 				lualine_x = {

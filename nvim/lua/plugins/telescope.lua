@@ -17,7 +17,7 @@ return {
 	config = function()
 		local telescope = require("telescope")
 		local fb_actions = require("telescope").extensions.file_browser.actions
-		local select_dir_for_grep = require("functions").ts.select_dir_for_grep
+		local select_dir_for_grep = require("functions").telescope.select_dir_for_grep
 		local settings = require("settings")
 		local trouble = require("trouble.providers.telescope")
 

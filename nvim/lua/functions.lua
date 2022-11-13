@@ -9,40 +9,66 @@ M.toggle_diagnostic_virtual_text = function()
 end
 
 M.cmp = {
-	toggle = function()
-		local new_val = not vim.g.disableAutoCmp
-		vim.g.disableAutoCmp = new_val
-
-		if new_val then
-			require("functions").cmp.disable(false)
+	is_enabled = function()
+		if vim.b.autoCmpIsEnabled == nil then
+			-- enabled by default, so if buffer val is nil then auto cmp is enabled
+			return true
 		else
-			require("functions").cmp.enable(false)
+			return vim.b.autoCmpIsEnabled
 		end
 	end,
 
-	disable = function(silent)
-		vim.g.disableAutoCmp = true
-		require("cmp").setup({
+	toggle = function()
+		vim.b.autoCmpIsEnabled = not require("functions").cmp.is_enabled()
+
+		if vim.b.autoCmpIsEnabled then
+			require("functions").copilot.disable()
+			require("functions").cmp.enable()
+		else
+			require("functions").cmp.disable()
+		end
+	end,
+
+	disable = function()
+		vim.b.autoCmpIsEnabled = false
+
+		require("cmp").setup.buffer({
 			completion = {
 				autocomplete = false,
 			},
 		})
-
-		if not silent then
-			vim.cmd([[echo "cmp disabled"]])
-		end
 	end,
 
-	enable = function(silent)
-		vim.g.disableAutoCmp = false
-		require("cmp").setup({
+	enable = function()
+		vim.b.autoCmpIsEnabled = true
+
+		require("cmp").setup.buffer({
 			completion = {
 				autocomplete = { "TextChanged" },
 			},
 		})
+	end,
+}
 
-		if not silent then
-			vim.cmd([[echo "cmp enabled"]])
+M.copilot = {
+	toggle = function()
+		if vim.b.copilot_suggestion_auto_trigger then
+			require("functions").copilot.disable()
+		else
+			require("functions").cmp.disable()
+			require("functions").copilot.enable()
+		end
+	end,
+
+	enable = function()
+		if not vim.b.copilot_suggestion_auto_trigger then
+			require("copilot.suggestion").toggle_auto_trigger()
+		end
+	end,
+
+	disable = function()
+		if vim.b.copilot_suggestion_auto_trigger then
+			require("copilot.suggestion").toggle_auto_trigger()
 		end
 	end,
 }
@@ -55,7 +81,7 @@ M.leap_all_windows = function()
 	})
 end
 
-M.ts = {
+M.telescope = {
 	select_dir_for_grep = function(prompt_bufnr)
 		local action_state = require("telescope.actions.state")
 		local fb = require("telescope").extensions.file_browser
@@ -149,7 +175,9 @@ M.bookmarks = {
 	quickfix = function()
 		local current = require("functions").bookmarks.get_current()
 
-		if current ~= "git" then
+		if current == "git" then
+			print("TODO")
+		else
 			require("marks").bookmark_state:to_list("quickfixlist", current)
 		end
 	end,
@@ -169,9 +197,10 @@ M.reset = function()
 	local luasnip = require("luasnip")
 	local functions = require("functions")
 
-	vim.cmd("noh")
+	vim.cmd("noh") -- clear highlights
 	functions.close_floating_windows()
 
+	-- cancel active luasnip, if any
 	if luasnip.get_active_snip() then
 		luasnip.unlink_current()
 	end
