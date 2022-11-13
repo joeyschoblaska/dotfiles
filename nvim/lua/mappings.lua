@@ -147,7 +147,7 @@ local mappings = {
 	{ "n", "<leader>co", [[:lua require("functions").copilot.toggle()<CR>]], norm_silent },
 
 	-- nvim-cmp
-	{ "n", "<leader>cm", [[:lua require("functions").cmp.toggle()<CR>]], norm_silent },
+	{ "n", "<leader>cm", [[:lua require("functions").auto_cmp.toggle()<CR>]], norm_silent },
 }
 
 for _, m in ipairs(mappings) do

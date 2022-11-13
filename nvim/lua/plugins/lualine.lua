@@ -33,7 +33,7 @@ return {
 		end
 
 		local cmp = function(bufn)
-			if require("functions").cmp.is_enabled() then
+			if require("functions").auto_cmp.is_enabled() then
 				return " "
 			else
 				return ""

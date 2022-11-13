@@ -8,7 +8,7 @@ M.toggle_diagnostic_virtual_text = function()
 	})
 end
 
-M.cmp = {
+M.auto_cmp = {
 	is_enabled = function()
 		if vim.b.autoCmpIsEnabled == nil then
 			-- enabled by default, so if buffer val is nil then auto cmp is enabled
@@ -19,13 +19,13 @@ M.cmp = {
 	end,
 
 	toggle = function()
-		vim.b.autoCmpIsEnabled = not require("functions").cmp.is_enabled()
+		vim.b.autoCmpIsEnabled = not require("functions").auto_cmp.is_enabled()
 
 		if vim.b.autoCmpIsEnabled then
 			require("functions").copilot.disable()
-			require("functions").cmp.enable()
+			require("functions").auto_cmp.enable()
 		else
-			require("functions").cmp.disable()
+			require("functions").auto_cmp.disable()
 		end
 	end,
 
@@ -55,7 +55,7 @@ M.copilot = {
 		if vim.b.copilot_suggestion_auto_trigger then
 			require("functions").copilot.disable()
 		else
-			require("functions").cmp.disable()
+			require("functions").auto_cmp.disable()
 			require("functions").copilot.enable()
 		end
 	end,
