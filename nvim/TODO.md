@@ -35,3 +35,4 @@
 * **ruby namespaced constant completion** If I have a Long::Constant::Name it's annoying to autocomplete each module individually.
   * Maybe configure the cmp menu to show automatically if the cursor is after ::
   * Or use fuzzy-matched workspace symbols as a completion source?
+* **structural search and replace:** this plugin looks interesting: https://github.com/cshuaimin/ssr.nvim/
