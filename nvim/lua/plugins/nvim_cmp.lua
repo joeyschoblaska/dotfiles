@@ -80,12 +80,10 @@ return {
 			mapping = {
 				-- SUPER tab: https://github.com/hrsh7th/nvim-cmp/wiki/Example-mappings#luasnip
 				["<Tab>"] = cmp.mapping(function(fallback)
-					if cmp.visible() and cmp.get_selected_entry() then
+					if cmp.visible() then
 						cmp.select_next_item()
 					elseif luasnip.jumpable() then
 						luasnip.jump(1)
-					elseif cmp.visible() then
-						cmp.select_next_item()
 					elseif has_words_before() then
 						cmp.complete({
 							reason = cmp.ContextReason.Auto,
@@ -100,8 +98,8 @@ return {
 
 					if luasnip.jumpable() and cmp.visible() and (not cmp.get_selected_entry()) then
 						-- if inside a snippet, but the cmp menu is visible and nothing has
-						-- been selected yet, S-TAB will enter the cmp menu
-						cmp.select_next_item()
+						-- been selected yet, S-TAB will force a snippet jump
+						luasnip.jump(1)
 					elseif cmp.visible() and cmp.get_selected_entry() then
 						cmp.select_prev_item()
 					elseif copilot.is_visible() then

@@ -4,10 +4,14 @@ return {
 	requires = "rafamadriz/friendly-snippets",
 
 	config = function()
+		local luasnip = require("luasnip")
+
 		require("luasnip.loaders.from_vscode").lazy_load()
 
-		require("luasnip").setup({
-			region_check_events = "CursorMoved",
+		luasnip.filetype_extend("ruby", { "rails" })
+
+		luasnip.setup({
+			region_check_events = "CursorMovedI,CursorMoved",
 		})
 	end,
 }
