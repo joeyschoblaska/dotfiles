@@ -6,6 +6,6 @@ vim.api.nvim_create_autocmd({ "VimResized" }, {
 
 -- disable cmp in git commit messages
 vim.api.nvim_create_autocmd({ "FileType" }, {
-	pattern = "gitcommit",
+	pattern = "gitcommit,markdown,md",
 	command = [[lua require("functions").auto_cmp.disable()]],
 })
