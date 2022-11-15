@@ -94,9 +94,8 @@ return {
 				["<S-Tab>"] = cmp.mapping(function(fallback)
 					local copilot = require("copilot.suggestion")
 
-					if luasnip.jumpable() and (not cmp.get_selected_entry()) then
-						-- if inside a snippet and not inside the cmp menu
-						luasnip.jump(1)
+					if luasnip.expand_or_jumpable() and (not cmp.get_selected_entry()) then
+						luasnip.expand_or_jump()
 					elseif cmp.visible() and cmp.get_selected_entry() then
 						cmp.select_prev_item()
 					elseif copilot.is_visible() then
