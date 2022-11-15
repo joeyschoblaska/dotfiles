@@ -82,8 +82,6 @@ return {
 				["<Tab>"] = cmp.mapping(function(fallback)
 					if cmp.visible() then
 						cmp.select_next_item()
-					elseif luasnip.jumpable() then
-						luasnip.jump(1)
 					elseif has_words_before() then
 						cmp.complete({
 							reason = cmp.ContextReason.Auto,
@@ -96,16 +94,13 @@ return {
 				["<S-Tab>"] = cmp.mapping(function(fallback)
 					local copilot = require("copilot.suggestion")
 
-					if luasnip.jumpable() and cmp.visible() and (not cmp.get_selected_entry()) then
-						-- if inside a snippet, but the cmp menu is visible and nothing has
-						-- been selected yet, S-TAB will force a snippet jump
+					if luasnip.jumpable() and (not cmp.get_selected_entry()) then
+						-- if inside a snippet and not inside the cmp menu
 						luasnip.jump(1)
 					elseif cmp.visible() and cmp.get_selected_entry() then
 						cmp.select_prev_item()
 					elseif copilot.is_visible() then
 						copilot.accept()
-					elseif luasnip.jumpable(-1) then
-						luasnip.jump(-1)
 					elseif string.find(vim.fn.getline("."), "^%s*$") then
 						-- current line is empty or only contains spaces
 						-- copilot-cmp will not trigger on empty lines, so we have to launch it manually if we want to see it
