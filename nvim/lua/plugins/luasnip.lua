@@ -1,7 +1,10 @@
 return {
 	"L3MON4D3/LuaSnip",
 
-	requires = "rafamadriz/friendly-snippets",
+	requires = { {
+		"joeyschoblaska/friendly-snippets",
+		branch = "joey",
+	} },
 
 	config = function()
 		local luasnip = require("luasnip")
