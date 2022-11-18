@@ -1,8 +1,5 @@
 # dotfiles
 
-## Mac OS
-Make the app switched display on all monitors: https://superuser.com/a/1625752
-
 ## Dependencies
 ### tmux
 https://linuxize.com/post/getting-started-with-tmux/#installing-tmux
