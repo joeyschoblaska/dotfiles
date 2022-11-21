@@ -24,6 +24,7 @@
 * **telescope git highlighting:** possible to configure telescope git pickers to use delta / bat for paging?
 * **text objects?:** treesitter for text objects? look for ruby examples maybe
 * **lock plugin versions:** some way to lock versions and do manual upgrades - I don't want to be suprised by breaking changes when I need to get work done
+  * https://github.com/wbthomason/packer.nvim/pull/1010
 * **ruby debugger?:** new Ruby debugger stuff? need to research: https://blog.testdouble.com/talks/2022-08-22-debugging-ruby-on-rails-with-vscode/
 * **theme switching:** easy way to switch themes without reloading (eg, switching to a light theme temporarily while working outside)
 * **? cheat sheet:** weird idea, but a plugin that lets me show a little pop-up window on demand (this, probably: https://github.com/nvim-lua/popup.nvim). I could map one to `?` that has keymaps and hints for how to use my config that someone who was pairing with me could reference
