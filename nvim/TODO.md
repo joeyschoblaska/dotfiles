@@ -37,3 +37,4 @@
   * Maybe configure the cmp menu to show automatically if the cursor is after ::
   * Or use fuzzy-matched workspace symbols as a completion source?
 * **structural search and replace:** this plugin looks interesting: https://github.com/cshuaimin/ssr.nvim/
+* **treeclimber:** also looks interesting... https://github.com/Dkendal/nvim-treeclimber
