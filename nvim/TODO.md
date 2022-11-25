@@ -38,3 +38,4 @@
   * Or use fuzzy-matched workspace symbols as a completion source?
 * **structural search and replace:** this plugin looks interesting: https://github.com/cshuaimin/ssr.nvim/
 * **treeclimber:** also looks interesting... https://github.com/Dkendal/nvim-treeclimber
+* **glance:** a better way to preview LSP refs / defs? https://github.com/DNLHC/glance.nvim
