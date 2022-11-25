@@ -33,6 +33,7 @@ return {
 				}),
 
 				null_ls.builtins.formatting.rustfmt,
+				null_ls.builtins.formatting.prismaFmt,
 			}
 
 		null_ls.setup({
