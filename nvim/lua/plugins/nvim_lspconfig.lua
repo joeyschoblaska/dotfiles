@@ -16,6 +16,7 @@ return {
 			or {
 				"tsserver",
 				"rust_analyzer",
+				"prismals",
 
 				{
 					"solargraph",
