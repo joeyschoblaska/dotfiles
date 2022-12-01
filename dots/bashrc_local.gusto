@@ -1,9 +1,0 @@
-PS1="joey@gusto:\W \$ "
-
-export NOTES_DIR="$HOME/Dropbox (Gusto)/obsidian"
-export GEM_HOME="$HOME/.gem"
-export PATH="$PATH:$(yarn global bin)"
-export NODE_PATH="/opt/homebrew/lib/node_modules/"
-
-source /opt/homebrew/share/chruby/chruby.sh
-source /opt/homebrew/share/chruby/auto.sh

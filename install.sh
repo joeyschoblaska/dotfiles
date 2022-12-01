@@ -20,10 +20,10 @@ if [[ ${localenv} == "gusto" ]]; then
       delta "$HOME/.config/nvim/lua/local.lua" "nvim/locals/gusto.lua"
     fi
 
-    if ! cmp -s "dots/bashrc_local.gusto" "$HOME/.bashrc_local"; then
+    if ! cmp -s "dots/bashrc.gusto" "$HOME/.bashrc"; then
       abort="true"
       printf "\n🚨 local bash config differs from repo - aborting"
-      delta "$HOME/.bashrc_local" "dots/bashrc_local.gusto"
+      delta "$HOME/.bashrc" "dots/bashrc.gusto"
     fi
 
     if ! cmp -s "dots/gitconfig.gusto" "$HOME/.gitconfig"; then
@@ -92,13 +92,12 @@ if [[ ${localenv} == "gusto" ]]; then
   # update gusto-managed .bash_profile to source local .bashrc
   grep -q bashrc ~/.bash_profile || echo "[[ -r ${HOME}/.bashrc ]] && source ${HOME}/.bashrc" >> ~/.bash_profile
 
-  cp dots/bashrc_local.gusto ~/.bashrc_local
+  cp dots/bashrc.gusto ~/.bashrc
 else
   cp dots/bash_profile ~/.bash_profile
+  cp dots/bashrc ~/.bashrc
+  cp dots/git-completion.bash ~/.git-completion.bash
 fi
-
-cp dots/bashrc ~/.bashrc
-cp dots/git-completion.bash ~/.git-completion.bash
 
 #################################################################################
 

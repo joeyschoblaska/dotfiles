@@ -1,0 +1,27 @@
+PS1="joey@gusto:\W \$ "
+
+export NOTES_DIR="$HOME/Dropbox (Gusto)/obsidian"
+export GEM_HOME="$HOME/.gem"
+export NODE_PATH="/opt/homebrew/lib/node_modules/"
+export BASH_SILENCE_DEPRECATION_WARNING=1
+export RIPGREP_CONFIG_PATH=$HOME/.ripgreprc
+export LS_COLORS="$(vivid generate $HOME/.config/vivid/tokyonight.yml)"
+export EDITOR=nvim
+
+# Tokyo Night
+export FZF_DEFAULT_OPTS=" \
+--color=bg+:#292e42,bg:#1a1b26,spinner:#b4f9f8,hl:#f7768e \
+--color=fg:#c0caf5,header:#f7768e,info:#bb9af7,pointer:#b4f9f8 \
+--color=marker:#b4f9f8,fg+:#c0caf5,prompt:#bb9af7,hl+:#f7768e"
+
+export PATH=$PATH:/usr/local/bin # $(yarn global bin)
+export PATH=$PATH:$HOME/.config/dotscripts
+
+alias vim="nvim"
+alias be="bundle exec "
+alias ls="gls --color" # colorized ls output - managed by vivid config
+
+source /opt/homebrew/share/chruby/chruby.sh
+source /opt/homebrew/share/chruby/auto.sh
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

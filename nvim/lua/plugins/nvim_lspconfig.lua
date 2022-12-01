@@ -1,7 +1,17 @@
 return {
 	"neovim/nvim-lspconfig",
 
+	requires = {
+		"williamboman/mason.nvim",
+		"williamboman/mason-lspconfig.nvim",
+	},
+
 	config = function()
+		require("mason").setup()
+		require("mason-lspconfig").setup({
+			ensure_installed = { "tsserver" },
+		})
+
 		local lspconfig = require("lspconfig")
 		local settings = require("settings")
 		local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
