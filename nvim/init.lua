@@ -1,12 +1,16 @@
 local settings = require("settings")
 
-settings.before_config()
+if vim.g.vscode then
+	-- VSCode extension
+else
+	settings.before_config()
 
-require("plugins")
+	require("plugins")
 
-require("opts")
-require("config")
-require("mappings")
-require("autocmds")
+	require("opts")
+	require("config")
+	require("mappings")
+	require("autocmds")
 
-settings.after_config()
+	settings.after_config()
+end
