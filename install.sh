@@ -89,9 +89,9 @@ cp dots/tmux.conf ~/.tmux.conf
 echo "installing prettier config"
 
 if [[ ${localenv} == "gusto" ]]; then
-  cp dots/prettierrc ~/projects/.prettierrc
+  cp dots/prettierrc.js ~/projects/.prettierrc.js
 else
-  cp dots/prettierrc ~/.prettierrc
+  cp dots/prettierrc.js ~/.prettierrc.js
 fi
 
 #################################################################################
