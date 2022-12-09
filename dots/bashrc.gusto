@@ -20,6 +20,7 @@ export PATH=$PATH:$HOME/.config/dotscripts
 alias vim="nvim"
 alias be="bundle exec "
 alias ls="gls --color" # colorized ls output - managed by vivid config
+alias zpserve="bundle && yarn && be rake db:migrate && bin/setup && redis-cli flushall && bin/server"
 
 source /opt/homebrew/share/chruby/chruby.sh
 source /opt/homebrew/share/chruby/auto.sh
