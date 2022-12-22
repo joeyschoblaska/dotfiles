@@ -139,13 +139,6 @@ return {
 							preview_width = 0.45,
 						},
 					},
-
-					mappings = { -- TODO
-						i = {
-							["<C-c>"] = fb_actions.create,
-						},
-						["n"] = {},
-					},
 				},
 
 				live_grep_args = {

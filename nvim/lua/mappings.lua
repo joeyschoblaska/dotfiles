@@ -30,12 +30,13 @@ local mappings = {
 	{ "v", "<leader>a", [["9y<ESC>:Telescope live_grep_args default_text=<C-r>9<CR>]] }, -- yank selection into reg 9 and grep for it
 	{ "n", "<leader>km", ":Telescope keymaps<CR>" },
 	{ "n", "<leader>be", ":Telescope buffers<CR>" }, -- buffer explore
-	{ "n", "<leader>fb", ":Telescope file_browser<CR>" },
-	{ "n", "<leader>fo", ":Telescope file_browser files=false<CR>" }, -- open browser in folder mode
-	{ "n", "<leader>ff", ":Telescope file_browser path=%:p:h select_buffer=true<CR>" }, -- open current file in browser
 	{ "n", "<leader>fh", ":cd " .. vim.fn.getcwd() .. "<CR>" }, -- reset cwd to its value when vim session began
 	{ "n", "<leader>ba", ":Telescope live_grep grep_open_files=true<CR>" }, -- live grep in all open buffers
 	{ "v", "<leader>ba", [["9y<ESC>:Telescope live_grep grep_open_files=true default_text=<C-r>9<CR>]] }, -- yank selection into reg 9 and grep open files for it
+
+	-- file browsing
+	{ "n", "<leader>fb", ":NvimTreeToggle<CR>" },
+	{ "n", "<leader>ff", ":NvimTreeFindFile<CR>" }, -- open current file in browser
 
 	-- notes
 	{ "n", "<leader>nt", ":Telescope find_files hidden=false cwd=$NOTES_DIR<CR>" }, -- open file in notes dir

@@ -34,6 +34,7 @@ return require("packer").startup(function(use)
 	use(require("plugins.marks")) -- improve vim marks and add bookmarks
 	use(require("plugins.luasnip")) -- snippets
 	use(require("plugins.vim_pencil")) -- better ergonomics for editing prose
+	use(require("plugins.nvim_tree")) -- file tree
 
 	-- syntax / treesitter
 	use(require("plugins.treesitter")) -- syntax parsing for highlighting and indenting
