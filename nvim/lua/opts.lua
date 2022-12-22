@@ -15,6 +15,7 @@ vim.opt.hidden = true -- required to keep multiple buffers and open multiple buf
 vim.opt.hlsearch = true -- highlight all matches on previous search pattern
 vim.opt.ignorecase = true -- ignore case in search patterns
 vim.opt.mouse = "a" -- enable mouse support
+vim.opt.mousescroll = "ver:6,hor:6" -- how far to scroll for each click of the mouse wheel
 vim.opt.number = true -- set numbered lines
 vim.opt.numberwidth = 3 -- width for col containing line numbers
 vim.opt.pumheight = 10 -- pop up menu height
