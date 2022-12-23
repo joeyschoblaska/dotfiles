@@ -1,10 +1,4 @@
 # TODO
-* **nvim-tree:**  
-  * hide lualine in tree window
-  * tab in tree window works as normal - BUT, set it up so that tab never _enters_ the tree split
-  * ? in tree window opens shortcuts
-  * fix git signs in tree window? currently using non-standard icons and colors
-  * look at neo-tree as an alternative? https://github.com/nvim-neo-tree/neo-tree.nvim
 * **git marks:** use `mg` to set mark to "git". `<` and `>` go back and forth to hunks using git-signs; `ml` uses [this script](https://gist.github.com/romainl/a3ddb1d08764b93183260f8cdf0f524f) to open hunks in quickfix menu
 * **consolidate mappings:** mappings.lua can export mappings for other plugins (that need to be set in the plugin's setup call)
 * **testing integration:** This looks super interesting: https://github.com/nvim-neotest/neotest
