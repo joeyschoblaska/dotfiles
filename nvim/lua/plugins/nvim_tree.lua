@@ -3,25 +3,25 @@ return {
 	config = function()
 		require("nvim-tree").setup({
 			view = {
-				width = 35,
-				float = {
-					enable = true,
-					-- todo: make this dynamic https://pastebin.com/5Hi876Md
-					open_win_config = {
-						width = 50,
-					},
-				},
+				width = 45,
+				adaptive_size = true,
+				centralize_selection = true,
 				mappings = {
 					list = {
 						{ key = "s", action = "" },
 					},
 				},
 			},
-			tab = {
-				sync = {
-					open = true,
-					close = true,
-					ignore = {},
+			renderer = {
+				group_empty = true,
+				highlight_opened_files = "all",
+			},
+			actions = {
+				open_file = {
+					quit_on_open = true,
+					window_picker = {
+						enable = false,
+					},
 				},
 			},
 		})
