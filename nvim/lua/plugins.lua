@@ -61,7 +61,8 @@ return require("packer").startup(function(use)
 	use(require("plugins.trouble")) -- workplace diagnostics window
 	use(require("plugins.copilot")) -- github copilot
 	use(require("plugins.copilot_cmp")) -- github copilot completion source
-	use(require("plugins.typescript")) -- auto-add and organize imports
+	use(require("plugins.typescript")) -- glue to make some tsserver actions available to nvim
+	use("weilbith/nvim-code-action-menu") -- floating code action menu
 
 	if packer_bootstrap then
 		require("packer").sync()

@@ -54,6 +54,7 @@ local mappings = {
 	{ "n", "<leader>er", ":TroubleToggle workspace_diagnostics<CR>" }, -- toggle diagnostics window (ERrors)
 	{ "n", "<leader>ws", ":Telescope lsp_dynamic_workspace_symbols<CR>" },
 	{ "n", "E", [[:lua require("functions").toggle_diagnostic_virtual_text()<CR>]], norm_silent },
+	{ "n", "<leader>ca", ":CodeActionMenu<CR>" },
 
 	-- git
 	{ "n", "<leader>gs", ":Telescope git_status<CR>" },

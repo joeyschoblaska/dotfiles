@@ -33,6 +33,7 @@ return {
 				}),
 
 				null_ls.builtins.formatting.rustfmt,
+				require("typescript.extensions.null-ls.code-actions"),
 			}
 
 		null_ls.setup({
