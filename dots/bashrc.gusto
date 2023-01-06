@@ -22,6 +22,8 @@ alias be="bundle exec "
 alias ls="gls --color" # colorized ls output - managed by vivid config
 alias zpserve="bundle && yarn && be rake db:migrate && bin/setup && redis-cli flushall && bin/server"
 
+alias gwip="git add --all && git commit -a --no-verify -m wip"
+
 source /opt/homebrew/share/chruby/chruby.sh
 source /opt/homebrew/share/chruby/auto.sh
 

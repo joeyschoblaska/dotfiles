@@ -49,6 +49,8 @@ alias mbrew="arch -arm64e /opt/homebrew/bin/brew"
 alias archi="arch -x86_64"
 alias archm="arch -arm64e"
 
+alias gwip="git add --all && git commit -a --no-verify -m wip"
+
 alias ls="gls --color" # colorized ls output - managed by vivid config
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
