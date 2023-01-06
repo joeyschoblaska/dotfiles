@@ -37,6 +37,8 @@ local mappings = {
 	-- file browsing
 	{ "n", "<leader>fb", ":NvimTreeToggle<CR>" },
 	{ "n", "<leader>ff", ":NvimTreeFindFile<CR>" }, -- open current file in browser
+	{ "n", "<leader>fo", ":Telescope file_browser files=false<CR>" }, -- open browser in folder mode
+	{ "n", "<leader>ft", ":Telescope file_browser path=%:p:h select_buffer=true<CR>" }, -- open current file in browser
 
 	-- notes
 	{ "n", "<leader>nt", ":Telescope find_files hidden=false cwd=$NOTES_DIR<CR>" }, -- open file in notes dir
