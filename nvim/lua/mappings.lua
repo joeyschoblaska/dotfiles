@@ -59,13 +59,13 @@ local mappings = {
 	{ "n", "<leader>ca", ":CodeActionMenu<CR>" },
 
 	-- git
-	{ "n", "<leader>gs", ":Telescope git_status<CR>" },
 	{ "n", "<leader>gc", ":Telescope git_commits<CR>" },
 	{ "n", "<leader>gb", [[:lua require("gitsigns").blame_line{full=true}<CR>]] },
 	{ "n", "<leader>lg", ":lua _lazygit_toggle()<CR>", norm_silent },
 	{ "n", "<leader>gh", ":DiffviewFileHistory %<CR>", norm_silent }, -- git history for current file
 	{ "n", "<leader>gd", ":DiffviewOpen main...head<CR>", norm_silent }, -- git diff for current branch against main
 	{ "n", "<leader>gp", ":Gitsigns preview_hunk<CR>", norm_silent },
+	{ "n", "<leader>gs", ":DiffviewOpen<CR>" },
 
 	-- [a f]ile
 	{ "v", "af", ":<C-U>silent! normal! ggVG<CR>", { noremap = true } },
