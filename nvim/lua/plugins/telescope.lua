@@ -135,6 +135,16 @@ return {
 							preview_width = 0.45,
 						},
 					},
+
+					mappings = {
+						["i"] = {
+							["<C-c>"] = fb_actions.create,
+							["<C-p>"] = fb_actions.goto_parent_dir,
+						},
+						["n"] = {
+							["P"] = fb_actions.goto_parent_dir,
+						},
+					},
 				},
 
 				live_grep_args = {
