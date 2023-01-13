@@ -50,12 +50,12 @@ local mappings = {
 
 	-- symbols / lsp
 	{ "n", "<leader>so", ":AerialOpen float<CR>" }, -- symbols outline (via aerial)
-	{ "n", "gd", ":Telescope lsp_definitions<CR>" },
+	{ "n", "gd", ":lua vim.lsp.buf.definition()<CR>" },
 	{ "n", "gr", ":Telescope lsp_references<CR>" },
 	{ "n", "K", ":lua vim.lsp.buf.hover()<CR>" },
-	{ "n", "<leader>er", ":TroubleToggle workspace_diagnostics<CR>" }, -- toggle diagnostics window (ERrors)
 	{ "n", "<leader>ws", ":Telescope lsp_dynamic_workspace_symbols<CR>" },
-	{ "n", "E", [[:lua require("functions").toggle_diagnostic_virtual_text()<CR>]], norm_silent },
+	-- { "n", "E", [[:lua require("functions").toggle_diagnostic_virtual_text()<CR>]], norm_silent },
+	{ "n", "E", [[:lua vim.diagnostic.open_float({ border = "rounded" })<CR>]], norm_silent },
 	{ "n", "<leader>ca", ":CodeActionMenu<CR>" },
 
 	-- git
@@ -139,7 +139,7 @@ local mappings = {
 	{ "n", "mm", [[:lua require("functions").bookmarks.set()<CR>]], norm_silent },
 	{ "n", "mc", [[:lua require("functions").bookmarks.delete_all()<CR>]], norm_silent }, -- (m)arks (c)lear
 	{ "n", "md", [[:lua require("marks").delete_bookmark()<CR>]], norm_silent }, -- (m)ark (d)elete
-	{ "n", "ml", [[:lua require("functions").bookmarks.quickfix()<CR>:Trouble quickfix<CR>]], norm_silent },
+	{ "n", "ml", [[:lua require("functions").bookmarks.quickfix()<CR>:copen<CR>]], norm_silent },
 	{ "n", "ma", [[:lua require("marks").annotate()<CR>]], norm_silent },
 	{ "n", "<", [[:lua require("functions").bookmarks.prev()<CR>]], norm_silent },
 	{ "n", ">", [[:lua require("functions").bookmarks.next()<CR>]], norm_silent },

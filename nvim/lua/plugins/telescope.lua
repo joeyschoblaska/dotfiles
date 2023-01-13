@@ -7,7 +7,6 @@ return {
 		"nvim-telescope/telescope-live-grep-args.nvim",
 		"nvim-telescope/telescope-file-browser.nvim",
 		"stevearc/aerial.nvim",
-		"folke/trouble.nvim",
 		"kkharji/sqlite.lua", -- used by smarty-history
 		"nvim-telescope/telescope-smart-history.nvim",
 	},
@@ -19,17 +18,14 @@ return {
 		local fb_actions = require("telescope").extensions.file_browser.actions
 		local select_dir_for_grep = require("functions").telescope.select_dir_for_grep
 		local settings = require("settings")
-		local trouble = require("trouble.providers.telescope")
 
 		telescope.setup({
 			defaults = {
 				mappings = {
 					i = {
-						["<c-q>"] = trouble.open_with_trouble,
 						["<C-Left>"] = require("telescope.actions").cycle_history_prev,
 						["<C-Right>"] = require("telescope.actions").cycle_history_next,
 					},
-					n = { ["<c-q>"] = trouble.open_with_trouble },
 				},
 				sorting_strategy = "ascending",
 				layout_strategy = settings.telescope_layout_strategy or "flex",

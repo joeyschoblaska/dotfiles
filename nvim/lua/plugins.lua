@@ -35,6 +35,7 @@ return require("packer").startup(function(use)
 	use(require("plugins.luasnip")) -- snippets
 	use(require("plugins.vim_pencil")) -- better ergonomics for editing prose
 	use(require("plugins.nvim_tree")) -- file tree
+	use(require("plugins.nvim_bqf")) -- better quickfix menu
 
 	-- syntax / treesitter
 	use(require("plugins.treesitter")) -- syntax parsing for highlighting and indenting
@@ -58,7 +59,6 @@ return require("packer").startup(function(use)
 	use(require("plugins.null_ls")) -- allows non-LSP sources (eg, prettier) to hook into nvim's LSP client
 	use(require("plugins.lsp_format")) -- hooks into null-ls for formatting on save
 	use(require("plugins.fidget")) -- lsp progress indicator
-	use(require("plugins.trouble")) -- workplace diagnostics window
 	use(require("plugins.copilot")) -- github copilot
 	use(require("plugins.copilot_cmp")) -- github copilot completion source
 	use(require("plugins.typescript")) -- glue to make some tsserver actions available to nvim

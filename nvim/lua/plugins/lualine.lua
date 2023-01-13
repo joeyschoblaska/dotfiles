@@ -54,7 +54,7 @@ return {
 				lualine_b = { current_mark },
 				lualine_c = {},
 				lualine_x = {
-					{ "diagnostics", sources = { "nvim_workspace_diagnostic" } },
+					{ "diagnostics", sources = { "nvim_lsp" } },
 					{ "branch", separator = "", fmt = shortgit },
 					{ "diff", padding = { left = 0, right = 1 } },
 				},
